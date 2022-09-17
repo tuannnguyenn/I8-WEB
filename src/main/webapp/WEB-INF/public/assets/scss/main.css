@@ -1,0 +1,409 @@
+/* Header Navbar */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+.header__navbar{
+    display: flex;
+    background-color: var(--black-color);
+    justify-content: space-between;
+}
+.header__navbar-list{
+    list-style: none;
+    padding: 0; 
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.header__navbar-item{
+    text-decoration: none;
+    color: var(--white-color);
+    text-transform: uppercase;
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 15px 24px;
+    height: 46px;
+}
+.header__navbar-item:hover{
+    background-color: #ccc;
+    color: var(--black-color);
+}
+.header__navbar-more{
+    position: relative;
+    cursor: pointer;
+   
+}
+.header__navbar-more:hover .more__list{
+    display: block;
+}
+.more__list{
+    display: block;
+    list-style: none;
+    background-color: var(--white-color);
+    min-width: 160px;
+    padding: 0;  
+    text-transform: none;
+    position: absolute;
+    top: 46px;
+    display: none;
+}
+.more__list li{
+    padding: 10px 16px;
+}
+.more__item{
+    text-decoration: none;
+    color: var(--black-color); 
+    font-size: 1.5rem;
+}
+.more__list li:hover{
+    background-color: #ccc;
+}
+
+.header__navbar--icon-search:hover{
+    background-color: var(--orange-color);
+    color: var(--white-color);
+}
+/* Slider */
+.slider{
+    margin: 46px auto 0;
+    position: relative;
+    text-align: center;
+}
+.slider img{
+    width: var(--width-parent);
+}
+.slider__text{
+    position: absolute;
+    color: var(--white-color);
+    font-size: 1.6rem;
+    bottom: 47px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.slider__text p:nth-child(1){
+    font-size: 2rem;
+}
+/* The Band */
+.the-band{
+    width: var(--width-parent);
+    margin: 88px auto 112px;
+    text-align: justify;
+}
+.the-band__heading{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-top: 90px 0 30px;
+}
+
+.the-band__description{
+    color: var(--gray-color);
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+.the-band__paragraph{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: var(--width-content);
+    font-size: 1.47rem;
+    line-height: 2.2rem;
+}
+.the-band__img-list{
+    display: flex;
+    list-style: none;
+    text-align: center;
+    font-size: 1.4rem;
+    justify-content: center;
+    padding: 0;
+
+}
+.the-band__img-item{
+    margin: 72px 102px 0px 0;
+}
+.the-band__img-item img{
+    display: block;
+    width: 152px;
+    height: 152px;
+    border-radius: 4px;
+}
+/* Tour Dates */
+.tour-dates{
+    width: var(--width-parent);
+    margin: auto;
+    background-color: var(--black-color);
+    padding-top: 86px;
+    padding-bottom: 112px;
+    text-align: center;
+}
+.tour-dates__heading{
+    color: var(--white-color);
+    font-size: 3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 22px;
+    letter-spacing: 5px;
+}
+.tour-dates__description{
+    color: var(--gray-color);
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-style: italic;
+    margin-top: 32px;
+}
+.tour-dates__sale-list{
+    margin: 42px auto 32px;
+    background-color: var(--white-color);
+    display: block;
+    max-width: var(--width-content);
+    padding: 0;
+}
+.tour-dates__sale-item{
+    position: relative;
+    text-align: left;
+    display: flex;
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+    color: var(--gray-color);
+    font-weight: 400;
+    height: 42px;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+   
+}
+.sale-item__month{
+    width: 100px;
+    margin-left: 18px;
+}
+.sale-item__sold-out{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 22px;
+    color: var(--white-color);
+    font-weight: 400;
+    background-color: var(--orange-color);
+    margin-left: 20px;
+}
+.tour-dates__sale-item--on-sale{
+    display: flex;
+    justify-content: space-between;
+}
+.sale-item__selling{
+    display: flex;
+    background-color: var(--black-color);
+    width: 24px;
+    height: 24px;
+    color: var(--white-color);
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    line-height: 1.4rem;
+    margin-right: 32px;
+}
+
+.tour-dates__tickets-list{
+    display: flex;
+    background-color: var(--black-color);
+    max-width: var(--width-content);
+    margin: 0 auto;
+    padding: 0;
+}
+.tour-dates__tickets-item{
+    color: var(--black-color);
+    background-color: var(--white-color);
+}
+
+.tour-dates__tickets-item:nth-child(2){
+    margin: 0 16px;
+}
+.tickets-item__img{
+    width: 245px;
+    height: 186px;
+}
+.tickets-item__information{
+    font-size: 1.4rem;
+    text-align: left;
+    margin: 14px 28px 18px 16px;
+}
+.tickets-item__name{
+    font-weight: 600;
+   margin: 0;
+}
+.tickets-item__schedule{
+    margin: 24px 0;
+    font-weight: 400;
+    color: var(--gray-color);
+}
+.tickets-item__description{
+    font-weight: 400;
+}
+.tickets-item__button{
+    display: flex;
+    width: 108px;
+    margin: 0 0 16px 16px;
+}
+/* Contact */
+.contact{
+    width: var(--width-parent);
+    margin: 88px auto 112px;
+    padding: 0 380px;
+}
+.contact__heading{
+    color: var(--black-color);
+    font-size: 3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 22px;
+    letter-spacing: 5px;
+    text-align: center;
+    
+}
+.contact__description{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--gray-color);
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.contact__information{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+.contact__information-company-list{
+    list-style: none;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.contact__information-company-item{
+    line-height: 28px;
+}
+.contact__information-company-icon{
+    font-size: 1.6rem;
+    margin-right: 8px;
+    width: 18px;
+}
+.contact__information-customer-list{
+    display: flex;
+    flex-direction: column;
+}
+.contact__information-customer-item--up{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.contact__information-customer-name{
+    width: 184px;
+    height: 40px;
+    margin-right: 12px;
+    padding-left: 8px;
+    border:1px solid #ccc;
+}
+.contact__information-customer-email{
+    width: 184px;
+    height: 40px;
+    padding-left: 8px;
+    border:1px solid #ccc;
+}
+.contact__information-customer-message{
+    font-size: 1.5rem;
+    height: 40px;
+    padding-left: 8px;
+    border:1px solid #ccc;
+}
+.contact__send-button{
+    text-transform: uppercase;
+    width: 72px;
+    margin-top: 18px;
+    float: right;
+}
+/* Footer */
+.footer{
+   text-align: center;
+}
+.footer__map{ 
+    height: 100%;
+}
+.footer__map img{
+    width: 100%;
+    border: none;
+}
+.footer__icon{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    margin-top: 74px;
+    margin-bottom: 28px;
+    color: #666;
+}
+.footer__icon-item{
+    margin-left: 5px;
+    cursor: pointer;
+}
+.footer__icon-item:hover{
+    color: var(--gray-color);
+}
+.footer__icon-facebook{
+    position: relative;
+    background-color: #666;
+    color: var(--white-color);
+    font-size: 1.4rem;
+    text-align: right;
+    top: 1px;
+    width: 16px;
+    height: 17px;
+    border-radius: 2px;
+}
+.footer__icon-facebook:hover{
+    background-color: var(--gray-color);
+    color: var(--white-color);
+}
+.footer__icon-facebook-text{
+    position: relative;
+    top: 3px;
+    left: -2px;
+}
+.footer__icon-snapchat{
+    position: relative;
+    background-color: #666;
+    color: var(--white-color);
+    font-size: 1.2rem;
+    top: 1px;
+    width: 17px;
+    height: 18px;
+    border-radius: 50%;
+    
+}
+.footer__icon-snapchat:hover{
+    background-color: var(--gray-color);
+    color: var(--white-color);
+}
+.footer__icon-snapchat-text{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 3px;
+}
+.footer__text{
+    color: var(--gray-color);
+    font-size: 1.4rem;
+    margin-bottom: 84px;
+}
+.footer__text a{
+    color: var(--gray-color);
+}
