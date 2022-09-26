@@ -19,12 +19,14 @@
 
         http://www.springframework.org/schema/context
 
-              http://www.springframework.org/schema/context/spring-context.xsd">
+        http://www.springframework.org/schema/context/spring-context.xsd">
 
    <context:component-scan
       base-package="com.i8web.controller" />
 
    <mvc:annotation-driven />
+   
+   <mvc:resources location="/WEB-INF/resources/" mapping="/resources/**"/>
 
    <bean
       class="org.springframework.web.servlet.view.InternalResourceViewResolver">
