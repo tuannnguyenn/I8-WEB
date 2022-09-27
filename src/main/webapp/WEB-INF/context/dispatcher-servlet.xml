@@ -23,6 +23,8 @@
 
    <context:component-scan
       base-package="com.i8web.controller" />
+   <context:component-scan
+      base-package="com.i8web.controller.Admin" />
 
    <mvc:annotation-driven />
    
@@ -31,8 +33,8 @@
    <bean
       class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 
-      <property name="prefix" value="/WEB-INF/views/home/" />
-
+	  <property name="prefix" value="/WEB-INF/views/" />
+      
       <property name="suffix" value=".jsp" />
 
    </bean>
