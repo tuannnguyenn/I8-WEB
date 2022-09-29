@@ -91,7 +91,7 @@
                                         <ul class="list-cart">
                                             <li class="clearfix">
                                                 <a href="" title="" class="thumb fl-left">
-                                                    <img src="public/images/img-pro-11.png" alt="">
+                                                    <img src="resources/assets/images/img-pro-11.png" alt="">
                                                 </a>
                                                 <div class="info fl-right">
                                                     <a href="" title="" class="product-name">Sony Express X6</a>
@@ -101,7 +101,7 @@
                                             </li>
                                             <li class="clearfix">
                                                 <a href="" title="" class="thumb fl-left">
-                                                    <img src="public/images/img-pro-23.png" alt="">
+                                                    <img src="resources/assets/images/img-pro-23.png" alt="">
                                                 </a>
                                                 <div class="info fl-right">
                                                     <a href="" title="" class="product-name">Laptop Lenovo 10</a>

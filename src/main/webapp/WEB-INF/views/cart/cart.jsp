@@ -1,5 +1,6 @@
 <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@include file = "/WEB-INF/views/layout/header.jsp" %>
 <div id="main-content-wp" class="cart-page">
     <div class="section" id="breadcrumb-wp">
         <div class="wp-inner">
@@ -100,3 +101,4 @@
         </div>
     </div>
 </div>
+<%@include file = "/WEB-INF/views/layout/footer.jsp" %>
