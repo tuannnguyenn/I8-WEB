@@ -8,7 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class PostsController {
  
-   @RequestMapping(value = "/admin/post/create", method = RequestMethod.GET)
+   @RequestMapping(value = "/admin", method = RequestMethod.GET)
    public ModelAndView orderPage() {
       ModelAndView mav = new ModelAndView("/admin/post/create");
       return mav;

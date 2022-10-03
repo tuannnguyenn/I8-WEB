@@ -11,6 +11,7 @@
    <jstl.version>1.2</jstl.version>
    <maven.compiler.source>1.8</maven.compiler.source>
    <maven.compiler.target>1.8</maven.compiler.target>
+   <mysql.version>8.1.6</mysql.version>
 </properties>
 
 <dependencies>
@@ -71,6 +72,8 @@
       <artifactId>jstl</artifactId>
       <version>${jstl.version}</version>
    </dependency>
+    <!-- My SQL -->
+    
 </dependencies>
 
 <build>
