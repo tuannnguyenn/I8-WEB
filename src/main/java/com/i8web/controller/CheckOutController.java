@@ -7,7 +7,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class CheckOutController {
-	@RequestMapping(value="/check-out", method = RequestMethod.GET)
+	@RequestMapping(value="/thanh-toan", method = RequestMethod.GET)
 	public ModelAndView checkoutpage() {
 		ModelAndView mav = new ModelAndView ("checkout/checkout");
 		return mav;

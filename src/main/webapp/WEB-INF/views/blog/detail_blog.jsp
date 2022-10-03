@@ -1,13 +1,12 @@
 <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@include file = "/WEB-INF/views/layout/header.jsp" %>
-<div id="main-content-wp" class="clearfix blog-page">
+<div id="main-content-wp" class="clearfix detail-blog-page">
     <div class="wp-inner">
         <div class="secion" id="breadcrumb-wp">
             <div class="secion-detail">
                 <ul class="list-item clearfix">
                     <li>
-                        <a href="/i8-web/trang-chu" title="">Trang chủ</a>
+                        <a href="" title="">Trang chủ</a>
                     </li>
                     <li>
                         <a href="" title="">Blog</a>
@@ -16,88 +15,33 @@
             </div>
         </div>
         <div class="main-content fl-right">
-            <div class="section" id="list-blog-wp">
+            <div class="section" id="detail-blog-wp">
                 <div class="section-head clearfix">
-                    <h3 class="section-title">Blog</h3>
+                    <h3 class="section-title">Doanh nghiệp EU tìm kiếm cơ hội hợp tác đầu tư công nghệ xanh tại Việt Nam</h3>
                 </div>
                 <div class="section-detail">
-                    <ul class="list-item">
-                        <li class="clearfix">
-                            <a href="/i8-web/chi-tiet-blog" title="" class="thumb fl-left">
-                                <img src="resources/assets/images/img-post-01.jpg" alt="">
-                            </a>
-                            <div class="info fl-right">
-                                <a href="/i8-web/chi-tiet-blog" title="" class="title">Mời gọi kiều bào hiến kế, chung sức xây dựng phát triển TP. Hồ Chí Minh</a>
-                                <span class="create-date">28/11/2017</span>
-                                <p class="desc">Trong ngày hôm nay (11/11) đoàn kiều bào đã tổ chức thành 4 nhóm đi tham quan các điểm như huyện Cần Giờ, Đại học Quốc gia, Khu công nghệ cao TP.HCM, Công viên phần mềm Quang Trung, Khu Nông nghiệp Công nghệ cao, Khu Đô thị mới Thủ Thiêm, Cảng Cát Lái... để kiều bào hiểu thêm về tình hình phát [...]</p>
-                            </div>
-                        </li>
-                        <li class="clearfix">
-                            <a href="/i8-web/chi-tiet-blog" title="" class="thumb fl-left">
-                                <img src="resources/assets/images/img-post-01.jpg" alt="">
-                            </a>
-                            <div class="info fl-right">
-                                <a href="/i8-web/chi-tiet-blog" title="" class="title">Mời gọi kiều bào hiến kế, chung sức xây dựng phát triển TP. Hồ Chí Minh</a>
-                                <span class="create-date">28/11/2017</span>
-                                <p class="desc">Trong ngày hôm nay (11/11) đoàn kiều bào đã tổ chức thành 4 nhóm đi tham quan các điểm như huyện Cần Giờ, Đại học Quốc gia, Khu công nghệ cao TP.HCM, Công viên phần mềm Quang Trung, Khu Nông nghiệp Công nghệ cao, Khu Đô thị mới Thủ Thiêm, Cảng Cát Lái... để kiều bào hiểu thêm về tình hình phát [...]</p>
-                            </div>
-                        </li>
-                        <li class="clearfix">
-                            <a href="/i8-web/chi-tiet-blog" title="" class="thumb fl-left">
-                                <img src="resources/assets/images/img-post-01.jpg" alt="">
-                            </a>
-                            <div class="info fl-right">
-                                <a href="/i8-web/chi-tiet-blog" title="" class="title">Mời gọi kiều bào hiến kế, chung sức xây dựng phát triển TP. Hồ Chí Minh</a>
-                                <span class="create-date">28/11/2017</span>
-                                <p class="desc">Trong ngày hôm nay (11/11) đoàn kiều bào đã tổ chức thành 4 nhóm đi tham quan các điểm như huyện Cần Giờ, Đại học Quốc gia, Khu công nghệ cao TP.HCM, Công viên phần mềm Quang Trung, Khu Nông nghiệp Công nghệ cao, Khu Đô thị mới Thủ Thiêm, Cảng Cát Lái... để kiều bào hiểu thêm về tình hình phát [...]</p>
-                            </div>
-                        </li>
-                        <li class="clearfix">
-                            <a href="/i8-web/chi-tiet-blog" title="" class="thumb fl-left">
-                                <img src="resources/assets/images/img-post-01.jpg" alt="">
-                            </a>
-                            <div class="info fl-right">
-                                <a href="/i8-web/chi-tiet-blog" title="" class="title">Mời gọi kiều bào hiến kế, chung sức xây dựng phát triển TP. Hồ Chí Minh</a>
-                                <span class="create-date">28/11/2017</span>
-                                <p class="desc">Trong ngày hôm nay (11/11) đoàn kiều bào đã tổ chức thành 4 nhóm đi tham quan các điểm như huyện Cần Giờ, Đại học Quốc gia, Khu công nghệ cao TP.HCM, Công viên phần mềm Quang Trung, Khu Nông nghiệp Công nghệ cao, Khu Đô thị mới Thủ Thiêm, Cảng Cát Lái... để kiều bào hiểu thêm về tình hình phát [...]</p>
-                            </div>
-                        </li>
-                        <li class="clearfix">
-                            <a href="/i8-web/chi-tiet-blog" title="" class="thumb fl-left">
-                                <img src="resources/assets/images/img-post-01.jpg" alt="">
-                            </a>
-                            <div class="info fl-right">
-                                <a href="/i8-web/chi-tiet-blog" title="" class="title">Mời gọi kiều bào hiến kế, chung sức xây dựng phát triển TP. Hồ Chí Minh</a>
-                                <span class="create-date">28/11/2017</span>
-                                <p class="desc">Trong ngày hôm nay (11/11) đoàn kiều bào đã tổ chức thành 4 nhóm đi tham quan các điểm như huyện Cần Giờ, Đại học Quốc gia, Khu công nghệ cao TP.HCM, Công viên phần mềm Quang Trung, Khu Nông nghiệp Công nghệ cao, Khu Đô thị mới Thủ Thiêm, Cảng Cát Lái... để kiều bào hiểu thêm về tình hình phát [...]</p>
-                            </div>
-                        </li>
-                        <li class="clearfix">
-                            <a href="/i8-web/chi-tiet-blog" title="" class="thumb fl-left">
-                                <img src="resources/assets/images/img-post-01.jpg" alt="">
-                            </a>
-                            <div class="info fl-right">
-                                <a href="/i8-web/chi-tiet-blog" title="" class="title">Mời gọi kiều bào hiến kế, chung sức xây dựng phát triển TP. Hồ Chí Minh</a>
-                                <span class="create-date">28/11/2017</span>
-                                <p class="desc">Trong ngày hôm nay (11/11) đoàn kiều bào đã tổ chức thành 4 nhóm đi tham quan các điểm như huyện Cần Giờ, Đại học Quốc gia, Khu công nghệ cao TP.HCM, Công viên phần mềm Quang Trung, Khu Nông nghiệp Công nghệ cao, Khu Đô thị mới Thủ Thiêm, Cảng Cát Lái... để kiều bào hiểu thêm về tình hình phát [...]</p>
-                            </div>
-                        </li>
-                    </ul>
+                    <span class="create-date">28/11/2017</span>
+                    <div class="detail">
+                        <p><strong>Elon Musk nghĩ rằng các công ty lưới điện không có gì phải lo sợ các hệ thống mái ngói năng lượng mặt trời. Nhiều báo cáo cho rằng đang có một “cuộc chiến” giữa các công ty năng lượng mặt trời và các công ty lưới điện tại Hoa Kỳ, xoay quanh một số vấn đề quan trọng.</strong></p>
+                        <p>Một trong số đó là nhiều tiểu bang có luật “mua lại điện” đỏi hỏi các công ty lưới điện phải mua lại lượng điện dư thừa mà khách hàng tạo ra bởi năng lượng mặt trời. Cũng có những lo ngại rằng người ta có thể dùng ngói năng lượng mặt trời tự sản xuất điện năng lượng mặt trời độc lập với lưới – và như vậy sẽ giảm số người phụ thuộc vào lưới điện và chuyển các chi phí điện lưới đó cho những người không dùng điện năng lượng mặt trời.</p>
+                        <p>Phát biểu tại buổi ra mắt sản phẩm mái ngói năng lượng mặt trời và hệ thống pin dự trữ mới của Tesla và SolarCity vào thứ Sáu vừa rồi, Musk, người vừa là chủ tịch của cả hai công ty vừa là CEO của Tesla, nói về lý do tại sao tầm nhìn của ông ấy về điện năng lượng mặt trời tại Mỹ sâu xa hơn sẽ có nhiều việc cho các công lưới điện chứ không phải ít hơn</p>
+                        <p style="text-align: center;">
+                            <img src="resources/assets/images/img-detail.jpg" alt="">
+                        </p>
+                        <p>Một trong số đó là nhiều tiểu bang có luật “mua lại điện” đỏi hỏi các công ty lưới điện phải mua lại lượng điện dư thừa mà khách hàng tạo ra bởi năng lượng mặt trời. Cũng có những lo ngại rằng người ta có thể dùng ngói năng lượng mặt trời tự sản xuất điện năng lượng mặt trời độc lập với lưới – và như vậy sẽ giảm số người phụ thuộc vào lưới điện và chuyển các chi phí điện lưới đó cho những người không dùng điện năng lượng mặt trời. Phát biểu tại buổi ra mắt sản phẩm mái ngói năng lượng mặt trời và hệ thống pin dự trữ mới của Tesla và SolarCity vào thứ Sáu vừa rồi, Musk, người vừa là chủ tịch của cả hai công ty vừa là CEO của Tesla, nói về lý do tại sao tầm nhìn của ông ấy về điện năng lượng mặt trời tại Mỹ sâu xa hơn sẽ có nhiều việc cho các công lưới điện chứ không phải ít hơn.</p>
+                        <p>Một trong số đó là nhiều tiểu bang có luật “mua lại điện” đỏi hỏi các công ty lưới điện phải mua lại lượng điện dư thừa mà khách hàng tạo ra bởi năng lượng mặt trời. Cũng có những lo ngại rằng người ta có thể dùng ngói năng lượng mặt trời tự sản xuất điện năng lượng mặt trời độc lập với lưới – và như vậy sẽ giảm số người phụ thuộc vào lưới điện và chuyển các chi phí điện lưới đó cho những người không dùng điện năng lượng mặt trời.</p>
+                        <p>Một trong số đó là nhiều tiểu bang có luật “mua lại điện” đỏi hỏi các công ty lưới điện phải mua lại lượng điện dư thừa mà khách hàng tạo ra bởi năng lượng mặt trời. Cũng có những lo ngại rằng người ta có thể dùng ngói năng lượng mặt trời tự sản xuất điện năng lượng mặt trời độc lập với lưới – và như vậy sẽ giảm số người phụ thuộc vào lưới điện và chuyển các chi phí điện lưới đó cho những người không dùng điện năng lượng mặt trời. Phát biểu tại buổi ra mắt sản phẩm mái ngói năng lượng mặt trời và hệ thống pin dự trữ mới của Tesla và SolarCity vào thứ Sáu vừa rồi, Musk, người vừa là chủ tịch của cả hai công ty vừa là CEO của Tesla, nói về lý do tại sao tầm nhìn của ông ấy về điện năng lượng mặt trời tại Mỹ sâu xa hơn sẽ có nhiều việc cho các công lưới điện chứ không phải ít hơn.</p>
+                        <p>Một trong số đó là nhiều tiểu bang có luật “mua lại điện” đỏi hỏi các công ty lưới điện phải mua lại lượng điện dư thừa mà khách hàng tạo ra bởi năng lượng mặt trời. Cũng có những lo ngại rằng người ta có thể dùng ngói năng lượng mặt trời tự sản xuất điện năng lượng mặt trời độc lập với lưới – và như vậy sẽ giảm số người phụ thuộc vào lưới điện và chuyển các chi phí điện lưới đó cho những người không dùng điện năng lượng mặt trời.</p>
+                    </div>
                 </div>
             </div>
-            <div class="section" id="paging-wp">
+            <div class="section" id="social-wp">
                 <div class="section-detail">
-                    <ul class="list-item clearfix">
-                        <li>
-                            <a href="" title="">1</a>
-                        </li>
-                        <li>
-                            <a href="" title="">2</a>
-                        </li>
-                        <li>
-                            <a href="" title="">3</a>
-                        </li>
-                    </ul>
+                    <div class="fb-like" data-href="" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+                    <div class="g-plusone-wp">
+                        <div class="g-plusone" data-size="medium"></div>
+                    </div>
+                    <div class="fb-comments" id="fb-comment" data-href="" data-numposts="5"></div>
                 </div>
             </div>
         </div>
@@ -217,7 +161,7 @@
             </div>
             <div class="section" id="banner-wp">
                 <div class="section-detail">
-                    <a href="/i8-web/chi-tiet-blog_product" title="" class="thumb">
+                    <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
                         <img src="resources/assets/images/banner.png" alt="">
                     </a>
                 </div>

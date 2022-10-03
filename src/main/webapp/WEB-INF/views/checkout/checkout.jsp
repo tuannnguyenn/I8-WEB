@@ -6,7 +6,7 @@
             <div class="section-detail">
                 <ul class="list-item clearfix">
                     <li>
-                        <a href="?page=home" title="">Trang chủ</a>
+                        <a href="/i8-web/trang-chu" title="">Trang chủ</a>
                     </li>
                     <li>
                         <a href="" title="">Thanh toán</a>
