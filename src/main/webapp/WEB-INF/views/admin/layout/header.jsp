@@ -3,20 +3,29 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Quáº£n lÃ½ ISMART</title>
+        <title>ISMART</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="<c:url value="resources/adminassets/css/bootstrap/bootstrap.min.css" />" rel="stylesheet" type="text/css"/>
-        <link href="<c:url value="resources/adminassets/css/bootstrap/bootstrap-theme.min.css" />" rel="stylesheet" type="text/css"/>
-        <link href="<c:url value="resources/adminassets/reset.css" />" rel="stylesheet" type="text/css"/>
-        <link href="<c:url value="resources/adminassets/css/font-awesome/css/font-awesome.min.css" />" rel="stylesheet" type="text/css"/>
-        <link href="public/style.css" rel="stylesheet" type="text/css"/>
+        <link href="http://localhost:8080/i8-web/resources/adminassets/css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="http://localhost:8080/i8-web/resources/adminassets/css/bootstrap/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+        <link href="http://localhost:8080/i8-web/resources/adminassets/reset.css" rel="stylesheet" type="text/css"/>
+        <link href="http://localhost:8080/i8-web/resources/adminassets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
         <link href="public/responsive.css" rel="stylesheet" type="text/css"/>
+        <link href="http://localhost:8080/i8-web/resources/adminassets/css/import/fonts.css" rel="stylesheet">
+        <link href="http://localhost:8080/i8-web/resources/adminassets/css/import/global.css" rel="stylesheet">
+        <link href="http://localhost:8080/i8-web/resources/adminassets/css/import/list_post.css" rel="stylesheet">
+        <link href="http://localhost:8080/i8-web/resources/adminassets/css/import/list_product.css" rel="stylesheet">
+        <link href="http://localhost:8080/i8-web/resources/adminassets/css/import/add_cat.css" rel="stylesheet">
+        <link href="http://localhost:8080/i8-web/resources/adminassets/css/import/info_account.css" rel="stylesheet">
+        <link href="http://localhost:8080/i8-web/resources/adminassets/css/import/change_pass.css" rel="stylesheet">
+        <link href="http://localhost:8080/i8-web/resources/adminassets/css/import/sidebar.css" rel="stylesheet">
+        <link href="http://localhost:8080/i8-web/resources/adminassets/css/import/menu.css" rel="stylesheet">
+        <link href="http://localhost:8080/i8-web/resources/adminassets/css/import/detail_order.css" rel="stylesheet">
 
-        <script src="public/js/jquery-2.2.4.min.js" type="text/javascript"></script>
-        <script src="public/js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
-        <script src="public/js/plugins/ckeditor/ckeditor.js" type="text/javascript"></script>
-        <script src="public/js/main.js" type="text/javascript"></script>
+        <script src="http://localhost:8080/i8-web/resources/adminassets/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+        <script src="http://localhost:8080/i8-web/resources/adminassets/js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+        <script src="http://localhost:8080/i8-web/resources/adminassets/js/plugins/ckeditor/ckeditor.js" type="text/javascript"></script>
+        <script src="http://localhost:8080/i8-web/resources/adminassets/js/main.js" type="text/javascript"></script>
     </head>
     <body>
         <div id="site">
