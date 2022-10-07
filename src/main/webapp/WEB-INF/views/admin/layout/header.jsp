@@ -35,69 +35,69 @@
                         <a href="?page=list_post" title="" id="logo" class="fl-left">ADMIN</a>
                         <ul id="main-menu" class="fl-left">
                             <li>
-                                <a href="?page=list_post" title="">Trang</a>
+                                <a href="/i8-web/admin/page/list" title="">Trang</a>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a href="?page=add_page" title="">ThÃªm má»i</a> 
+                                        <a href="/i8-web/admin/page/create" title="">Thêm mới</a> 
                                     </li>
                                     <li>
-                                        <a href="?page=list_page" title="">Danh sÃ¡ch trang</a> 
+                                        <a href="/i8-web/admin/page/list" title="">Danh sách trang</a> 
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="?page=list_post" title="">BÃ i viáº¿t</a>
+                                <a href="/i8-web/admin/post/list" title="">Bài viết</a>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a href="?page=add_post" title="">ThÃªm má»i</a> 
+                                        <a href="/i8-web/admin/post/create" title="">Thêm mới</a> 
                                     </li>
                                     <li>
-                                        <a href="?page=list_post" title="">Danh sÃ¡ch bÃ i viáº¿t</a> 
+                                        <a href="/i8-web/admin/post/list" title="">Danh sách bài viết</a> 
                                     </li>
                                     <li>
-                                        <a href="?page=list_cat" title="">Danh má»¥c bÃ i viáº¿t</a> 
+                                        <a href="/i8-web/admin/post/category/list" title="">Danh mục bài viết</a> 
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="?page=list_product" title="">Sáº£n pháº©m</a>
+                                <a href="/i8-web/admin/product/list" title="">Sản phẩm</a>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a href="?page=add_product" title="">ThÃªm má»i</a> 
+                                        <a href="/i8-web/admin/product/create" title="">Thêm mới</a> 
                                     </li>
                                     <li>
-                                        <a href="?page=list_product" title="">Danh sÃ¡ch sáº£n pháº©m</a> 
+                                        <a href="/i8-web/admin/product/list" title="">Danh sách sản phẩm</a> 
                                     </li>
                                     <li>
-                                        <a href="?page=list_cat" title="">Danh má»¥c sáº£n pháº©m</a> 
+                                        <a href="/i8-web/admin/product/category/list" title="">Danh mục sản phẩm</a> 
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="" title="">BÃ¡n hÃ ng</a>
+                                <a href="/i8-web/admin/order/list" title="">Bán hàng</a>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a href="?page=list_order" title="">Danh sÃ¡ch ÄÆ¡n hÃ ng</a> 
+                                        <a href="/i8-web/admin/order/list" title="">Danh sách đơn hàng</a> 
                                     </li>
                                     <li>
-                                        <a href="?page=list_order" title="">Danh sÃ¡ch khÃ¡ch hÃ ng</a> 
+                                        <a href="/i8-web/admin/order/list" title="">Danh sách khách hàng</a> 
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="?page=menu" title="">Menu</a>
+                                <a href="/i8-web/admin/menu/list" title="">Menu</a>
                             </li>
                         </ul>
                         <div id="dropdown-user" class="dropdown dropdown-extended fl-right">
                             <button class="dropdown-toggle clearfix" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                 <div id="thumb-circle" class="fl-left">
-                                    <img src="public/images/img-admin.png">
+                                    <img src="http://localhost:8080/i8-web/resources/adminassets/images/img-admin.png">
                                 </div>
                                 <h3 id="account" class="fl-right">Admin</h3>
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a href="?page=info_account" title="ThÃ´ng tin cÃ¡ nhÃ¢n">ThÃ´ng tin tÃ i khoáº£n</a></li>
-                                <li><a href="#" title="ThoÃ¡t">ThoÃ¡t</a></li>
+                                <li><a href="?page=info_account" title="Thông tin cá nhân">Thông tin tài khoản</a></li>
+                                <li><a href="#" title="Thoát">Thoát</a></li>
                             </ul>
                         </div>
                     </div>
