@@ -1,4 +1,4 @@
-package com.i8web.controller;
+package com.i8web.controller.Client;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
