@@ -7,7 +7,7 @@
             <div class="section-detail">
                 <ul class="list-item clearfix">
                     <li>
-                        <a href="?page=home" title="">Trang chủ</a>
+                        <a href="/i8-web/trang-chu" title="">Trang chủ</a>
                     </li>
                     <li>
                         <a href="" title="">Sản phẩm làm đẹp da</a>
@@ -83,7 +83,7 @@
                                 <div class="clearfix">
                                     <div class="fl-right">
                                         <a href="" title="" id="update-cart">Cập nhật giỏ hàng</a>
-                                        <a href="?page=checkout" title="" id="checkout-cart">Thanh toán</a>
+                                        <a href="/i8-web/thanh-toan" title="" id="checkout-cart">Thanh toán</a>
                                     </div>
                                 </div>
                             </td>
@@ -95,7 +95,7 @@
         <div class="section" id="action-cart-wp">
             <div class="section-detail">
                 <p class="title">Click vào <span>“Cập nhật giỏ hàng”</span> để cập nhật số lượng. Nhập vào số lượng <span>0</span> để xóa sản phẩm khỏi giỏ hàng. Nhấn vào thanh toán để hoàn tất mua hàng.</p>
-                <a href="?page=home" title="" id="buy-more">Mua tiếp</a><br/>
+                <a href="/i8-web/trang-chu" title="" id="buy-more">Mua tiếp</a><br/>
                 <a href="" title="" id="delete-cart">Xóa giỏ hàng</a>
             </div>
         </div>

@@ -62,42 +62,42 @@
 </div>
 </div>
 <div id="menu-respon">
-    <a href="?page=home" title="" class="logo">VSHOP</a>
+    <a href="/i8-web/trang-chu" title="" class="logo">VSHOP</a>
     <div id="menu-respon-wp">
         <ul class="" id="main-menu-respon">
             <li>
-                <a href="?page=home" title>Trang chủ</a>
+                <a href="/i8-web/trang-chu" title>Trang chủ</a>
             </li>
             <li>
-                <a href="?page=category_product" title>Điện thoại</a>
+                <a href="/i8-web/danh-sach-san-pham" title>Điện thoại</a>
                 <ul class="sub-menu">
                     <li>
-                        <a href="?page=category_product" title="">Iphone</a>
+                        <a href="/i8-web/danh-sach-san-pham" title="">Iphone</a>
                     </li>
                     <li>
-                        <a href="?page=category_product" title="">Samsung</a>
+                        <a href="/i8-web/danh-sach-san-pham" title="">Samsung</a>
                         <ul class="sub-menu">
                             <li>
-                                <a href="?page=category_product" title="">Iphone X</a>
+                                <a href="/i8-web/danh-sach-san-pham" title="">Iphone X</a>
                             </li>
                             <li>
-                                <a href="?page=category_product" title="">Iphone 8</a>
+                                <a href="/i8-web/danh-sach-san-pham" title="">Iphone 8</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="?page=category_product" title="">Nokia</a>
+                        <a href="/i8-web/danh-sach-san-pham" title="">Nokia</a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="?page=category_product" title>Máy tính bảng</a>
+                <a href="/i8-web/danh-sach-san-pham" title>Máy tính bảng</a>
             </li>
             <li>
-                <a href="?page=category_product" title>Laptop</a>
+                <a href="/i8-web/danh-sach-san-pham" title>Laptop</a>
             </li>
             <li>
-                <a href="?page=category_product" title>Đồ dùng sinh hoạt</a>
+                <a href="/i8-web/danh-sach-san-pham" title>Đồ dùng sinh hoạt</a>
             </li>
             <li>
                 <a href="?page=blog" title>Blog</a>

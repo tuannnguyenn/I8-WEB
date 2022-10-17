@@ -7,7 +7,7 @@
             <div class="secion-detail">
                 <ul class="list-item clearfix">
                     <li>
-                        <a href="" title="">Trang chủ</a>
+                        <a href="/i8-web/trang-chu" title="">Trang chủ</a>
                     </li>
                     <li>
                         <a href="" title="">Blog</a>
@@ -23,61 +23,61 @@
                 <div class="section-detail">
                     <ul class="list-item">
                         <li class="clearfix">
-                            <a href="?page=detail_blog" title="" class="thumb fl-left">
+                            <a href="/i8-web/chi-tiet-blog" title="" class="thumb fl-left">
                                 <img src="resources/assets/images/img-post-01.jpg" alt="">
                             </a>
                             <div class="info fl-right">
-                                <a href="?page=detail_blog" title="" class="title">Mời gọi kiều bào hiến kế, chung sức xây dựng phát triển TP. Hồ Chí Minh</a>
+                                <a href="/i8-web/chi-tiet-blog" title="" class="title">Mời gọi kiều bào hiến kế, chung sức xây dựng phát triển TP. Hồ Chí Minh</a>
                                 <span class="create-date">28/11/2017</span>
                                 <p class="desc">Trong ngày hôm nay (11/11) đoàn kiều bào đã tổ chức thành 4 nhóm đi tham quan các điểm như huyện Cần Giờ, Đại học Quốc gia, Khu công nghệ cao TP.HCM, Công viên phần mềm Quang Trung, Khu Nông nghiệp Công nghệ cao, Khu Đô thị mới Thủ Thiêm, Cảng Cát Lái... để kiều bào hiểu thêm về tình hình phát [...]</p>
                             </div>
                         </li>
                         <li class="clearfix">
-                            <a href="?page=detail_blog" title="" class="thumb fl-left">
+                            <a href="/i8-web/chi-tiet-blog" title="" class="thumb fl-left">
                                 <img src="resources/assets/images/img-post-01.jpg" alt="">
                             </a>
                             <div class="info fl-right">
-                                <a href="?page=detail_blog" title="" class="title">Mời gọi kiều bào hiến kế, chung sức xây dựng phát triển TP. Hồ Chí Minh</a>
+                                <a href="/i8-web/chi-tiet-blog" title="" class="title">Mời gọi kiều bào hiến kế, chung sức xây dựng phát triển TP. Hồ Chí Minh</a>
                                 <span class="create-date">28/11/2017</span>
                                 <p class="desc">Trong ngày hôm nay (11/11) đoàn kiều bào đã tổ chức thành 4 nhóm đi tham quan các điểm như huyện Cần Giờ, Đại học Quốc gia, Khu công nghệ cao TP.HCM, Công viên phần mềm Quang Trung, Khu Nông nghiệp Công nghệ cao, Khu Đô thị mới Thủ Thiêm, Cảng Cát Lái... để kiều bào hiểu thêm về tình hình phát [...]</p>
                             </div>
                         </li>
                         <li class="clearfix">
-                            <a href="?page=detail_blog" title="" class="thumb fl-left">
+                            <a href="/i8-web/chi-tiet-blog" title="" class="thumb fl-left">
                                 <img src="resources/assets/images/img-post-01.jpg" alt="">
                             </a>
                             <div class="info fl-right">
-                                <a href="?page=detail_blog" title="" class="title">Mời gọi kiều bào hiến kế, chung sức xây dựng phát triển TP. Hồ Chí Minh</a>
+                                <a href="/i8-web/chi-tiet-blog" title="" class="title">Mời gọi kiều bào hiến kế, chung sức xây dựng phát triển TP. Hồ Chí Minh</a>
                                 <span class="create-date">28/11/2017</span>
                                 <p class="desc">Trong ngày hôm nay (11/11) đoàn kiều bào đã tổ chức thành 4 nhóm đi tham quan các điểm như huyện Cần Giờ, Đại học Quốc gia, Khu công nghệ cao TP.HCM, Công viên phần mềm Quang Trung, Khu Nông nghiệp Công nghệ cao, Khu Đô thị mới Thủ Thiêm, Cảng Cát Lái... để kiều bào hiểu thêm về tình hình phát [...]</p>
                             </div>
                         </li>
                         <li class="clearfix">
-                            <a href="?page=detail_blog" title="" class="thumb fl-left">
+                            <a href="/i8-web/chi-tiet-blog" title="" class="thumb fl-left">
                                 <img src="resources/assets/images/img-post-01.jpg" alt="">
                             </a>
                             <div class="info fl-right">
-                                <a href="?page=detail_blog" title="" class="title">Mời gọi kiều bào hiến kế, chung sức xây dựng phát triển TP. Hồ Chí Minh</a>
+                                <a href="/i8-web/chi-tiet-blog" title="" class="title">Mời gọi kiều bào hiến kế, chung sức xây dựng phát triển TP. Hồ Chí Minh</a>
                                 <span class="create-date">28/11/2017</span>
                                 <p class="desc">Trong ngày hôm nay (11/11) đoàn kiều bào đã tổ chức thành 4 nhóm đi tham quan các điểm như huyện Cần Giờ, Đại học Quốc gia, Khu công nghệ cao TP.HCM, Công viên phần mềm Quang Trung, Khu Nông nghiệp Công nghệ cao, Khu Đô thị mới Thủ Thiêm, Cảng Cát Lái... để kiều bào hiểu thêm về tình hình phát [...]</p>
                             </div>
                         </li>
                         <li class="clearfix">
-                            <a href="?page=detail_blog" title="" class="thumb fl-left">
+                            <a href="/i8-web/chi-tiet-blog" title="" class="thumb fl-left">
                                 <img src="resources/assets/images/img-post-01.jpg" alt="">
                             </a>
                             <div class="info fl-right">
-                                <a href="?page=detail_blog" title="" class="title">Mời gọi kiều bào hiến kế, chung sức xây dựng phát triển TP. Hồ Chí Minh</a>
+                                <a href="/i8-web/chi-tiet-blog" title="" class="title">Mời gọi kiều bào hiến kế, chung sức xây dựng phát triển TP. Hồ Chí Minh</a>
                                 <span class="create-date">28/11/2017</span>
                                 <p class="desc">Trong ngày hôm nay (11/11) đoàn kiều bào đã tổ chức thành 4 nhóm đi tham quan các điểm như huyện Cần Giờ, Đại học Quốc gia, Khu công nghệ cao TP.HCM, Công viên phần mềm Quang Trung, Khu Nông nghiệp Công nghệ cao, Khu Đô thị mới Thủ Thiêm, Cảng Cát Lái... để kiều bào hiểu thêm về tình hình phát [...]</p>
                             </div>
                         </li>
                         <li class="clearfix">
-                            <a href="?page=detail_blog" title="" class="thumb fl-left">
+                            <a href="/i8-web/chi-tiet-blog" title="" class="thumb fl-left">
                                 <img src="resources/assets/images/img-post-01.jpg" alt="">
                             </a>
                             <div class="info fl-right">
-                                <a href="?page=detail_blog" title="" class="title">Mời gọi kiều bào hiến kế, chung sức xây dựng phát triển TP. Hồ Chí Minh</a>
+                                <a href="/i8-web/chi-tiet-blog" title="" class="title">Mời gọi kiều bào hiến kế, chung sức xây dựng phát triển TP. Hồ Chí Minh</a>
                                 <span class="create-date">28/11/2017</span>
                                 <p class="desc">Trong ngày hôm nay (11/11) đoàn kiều bào đã tổ chức thành 4 nhóm đi tham quan các điểm như huyện Cần Giờ, Đại học Quốc gia, Khu công nghệ cao TP.HCM, Công viên phần mềm Quang Trung, Khu Nông nghiệp Công nghệ cao, Khu Đô thị mới Thủ Thiêm, Cảng Cát Lái... để kiều bào hiểu thêm về tình hình phát [...]</p>
                             </div>
@@ -109,11 +109,11 @@
                 <div class="section-detail">
                     <ul class="list-item">
                         <li class="clearfix">
-                            <a href="?page=detail_product" title="" class="thumb fl-left">
+                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb fl-left">
                                 <img src="resources/assets/images/img-pro-13.png" alt="">
                             </a>
                             <div class="info fl-right">
-                                <a href="?page=detail_product" title="" class="product-name">Laptop Asus A540UP I5</a>
+                                <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Laptop Asus A540UP I5</a>
                                 <div class="price">
                                     <span class="new">5.190.000đ</span>
                                     <span class="old">7.190.000đ</span>
@@ -122,11 +122,11 @@
                             </div>
                         </li>
                         <li class="clearfix">
-                            <a href="?page=detail_product" title="" class="thumb fl-left">
+                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb fl-left">
                                 <img src="resources/assets/images/img-pro-11.png" alt="">
                             </a>
                             <div class="info fl-right">
-                                <a href="?page=detail_product" title="" class="product-name">Iphone X Plus</a>
+                                <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Iphone X Plus</a>
                                 <div class="price">
                                     <span class="new">15.190.000đ</span>
                                     <span class="old">17.190.000đ</span>
@@ -135,11 +135,11 @@
                             </div>
                         </li>
                         <li class="clearfix">
-                            <a href="?page=detail_product" title="" class="thumb fl-left">
+                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb fl-left">
                                 <img src="resources/assets/images/img-pro-12.png" alt="">
                             </a>
                             <div class="info fl-right">
-                                <a href="?page=detail_product" title="" class="product-name">Iphone X Plus</a>
+                                <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Iphone X Plus</a>
                                 <div class="price">
                                     <span class="new">15.190.000đ</span>
                                     <span class="old">17.190.000đ</span>
@@ -148,11 +148,11 @@
                             </div>
                         </li>
                         <li class="clearfix">
-                            <a href="?page=detail_product" title="" class="thumb fl-left">
+                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb fl-left">
                                 <img src="resources/assets/images/img-pro-05.png" alt="">
                             </a>
                             <div class="info fl-right">
-                                <a href="?page=detail_product" title="" class="product-name">Iphone X Plus</a>
+                                <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Iphone X Plus</a>
                                 <div class="price">
                                     <span class="new">15.190.000đ</span>
                                     <span class="old">17.190.000đ</span>
@@ -161,11 +161,11 @@
                             </div>
                         </li>
                         <li class="clearfix">
-                            <a href="?page=detail_product" title="" class="thumb fl-left">
+                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb fl-left">
                                 <img src="resources/assets/images/img-pro-22.png" alt="">
                             </a>
                             <div class="info fl-right">
-                                <a href="?page=detail_product" title="" class="product-name">Iphone X Plus</a>
+                                <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Iphone X Plus</a>
                                 <div class="price">
                                     <span class="new">15.190.000đ</span>
                                     <span class="old">17.190.000đ</span>
@@ -174,11 +174,11 @@
                             </div>
                         </li>
                         <li class="clearfix">
-                            <a href="?page=detail_product" title="" class="thumb fl-left">
+                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb fl-left">
                                 <img src="resources/assets/images/img-pro-23.png" alt="">
                             </a>
                             <div class="info fl-right">
-                                <a href="?page=detail_product" title="" class="product-name">Iphone X Plus</a>
+                                <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Iphone X Plus</a>
                                 <div class="price">
                                     <span class="new">15.190.000đ</span>
                                     <span class="old">17.190.000đ</span>
@@ -187,11 +187,11 @@
                             </div>
                         </li>
                         <li class="clearfix">
-                            <a href="?page=detail_product" title="" class="thumb fl-left">
+                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb fl-left">
                                 <img src="resources/assets/images/img-pro-18.png" alt="">
                             </a>
                             <div class="info fl-right">
-                                <a href="?page=detail_product" title="" class="product-name">Iphone X Plus</a>
+                                <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Iphone X Plus</a>
                                 <div class="price">
                                     <span class="new">15.190.000đ</span>
                                     <span class="old">17.190.000đ</span>
@@ -200,11 +200,11 @@
                             </div>
                         </li>
                         <li class="clearfix">
-                            <a href="?page=detail_product" title="" class="thumb fl-left">
+                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb fl-left">
                                 <img src="resources/assets/images/img-pro-15.png" alt="">
                             </a>
                             <div class="info fl-right">
-                                <a href="?page=detail_product" title="" class="product-name">Iphone X Plus</a>
+                                <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Iphone X Plus</a>
                                 <div class="price">
                                     <span class="new">15.190.000đ</span>
                                     <span class="old">17.190.000đ</span>
@@ -217,7 +217,7 @@
             </div>
             <div class="section" id="banner-wp">
                 <div class="section-detail">
-                    <a href="?page=detail_blog_product" title="" class="thumb">
+                    <a href="/i8-web/chi-tiet-blog_product" title="" class="thumb">
                         <img src="resources/assets/images/banner.png" alt="">
                     </a>
                 </div>
