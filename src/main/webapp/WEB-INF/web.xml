@@ -5,16 +5,7 @@
          version="2.5">
     <display-name>spring-mvc</display-name>
 
-    <listener>
-        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-    </listener>
-
-    <context-param>
-        <param-name>contextConfigLocation</param-name>
-        <param-value>
-            /WEB-INF/context/applicationContext.xml
-        </param-value>
-    </context-param>
+    
 
     <!-- Spring MVC -->
     <servlet>

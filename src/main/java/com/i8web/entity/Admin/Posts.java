@@ -1,12 +1,14 @@
-package com.i8web.controller.models.admin;
+package com.i8web.entity.Admin;
 
-public class Admin {
+public class Posts {
 	private int id;
 	private String image;
 	private String title;
-    private String date;
+	private String date;
 	private String description;
-
+	public Posts() {
+		super();
+	}
 	public int getId() {
 		return id;
 	}
@@ -16,10 +18,10 @@ public class Admin {
 	public String getImage() {
 		return image;
 	}
-    public void setImage(String image) {
+	public void setImage(String image) {
 		this.image = image;
-	}	
-    public String getTitle() {
+	}
+	public String getTitle() {
 		return title;
 	}
 	public void setTitle(String title) {
@@ -39,5 +41,3 @@ public class Admin {
 	}
 
 }
-
-
