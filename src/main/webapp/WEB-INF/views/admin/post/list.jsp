@@ -46,7 +46,9 @@
 								<tr>
 									<td><input type="checkbox" name="checkAll" id="checkAll"></td>
 									<td><span class="thead-text">STT</span></td>
+									<td><span class="thead-text">Hình ảnh</span></td>
 									<td><span class="thead-text">Tiêu đề</span></td>
+									<td><span class="thead-text">Mô tả</span></td>
 									<td><span class="thead-text">Danh mục</span></td>
 									<td><span class="thead-text">Trạng thái</span></td>
 									<td><span class="thead-text">Người tạo</span></td>
@@ -59,35 +61,34 @@
 										<td><input type="checkbox" name="checkItem"
 											class="checkItem"></td>
 										<td><span class="tbody-text">${item.id }</span>
+										<td>
+											<span class="tbody-text">
+												<img src=${item.image } alt="" style="width: 60px; height: 60px" />
+											</span>
+										</td>
 										<td class="clearfix">
 											<div class="tb-title fl-left">
-												<a href="" title="">${item.description }</a>
+												<a href="" title="">${item.title }</a>
 											</div>
-											<ul class="list-operation fl-right">
-												<li><a href="" title="Sửa" class="edit"><i
-														class="fa fa-pencil" aria-hidden="true"></i></a></li>
-												<li><a href="" title="Xóa" class="delete"><i
-														class="fa fa-trash" aria-hidden="true"></i></a></li>
-											</ul>
 										</td>
+										<td><span class="tbody-text">${item.description }</span></td>
 										<td><span class="tbody-text">Danh mục 1</span></td>
 										<td><span class="tbody-text">Hoạt động</span></td>
 										<td><span class="tbody-text">Admin</span></td>
 										<td><span class="tbody-text">${item.date }</span></td>
+										<td>
+											<span class="tbody-text">
+												<ul class="list-operation fl-right">
+													<li><a href="" title="Sửa" class="edit"><i
+															class="fa fa-pencil" aria-hidden="true"></i></a></li>
+													<li><a href="" title="Xóa" class="delete"><i
+															class="fa fa-trash" aria-hidden="true"></i></a></li>
+												</ul>
+											</span>
+										</td>
 									</tr>
 								</c:forEach>
 							</tbody>
-							<tfoot>
-								<tr>
-									<td><input type="checkbox" name="checkAll" id="checkAll"></td>
-									<td><span class="tfoot-text">STT</span></td>
-									<td><span class="tfoot-text">Tiêu đề</span></td>
-									<td><span class="tfoot-text">Danh mục</span></td>
-									<td><span class="tfoot-text">Trạng thái</span></td>
-									<td><span class="tfoot-text">Người tạo</span></td>
-									<td><span class="tfoot-text">Thời gian</span></td>
-								</tr>
-							</tfoot>
 						</table>
 					</div>
 
