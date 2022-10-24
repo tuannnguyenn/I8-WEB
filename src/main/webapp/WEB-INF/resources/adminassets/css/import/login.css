@@ -260,3 +260,16 @@ input[type=text]:placeholder {
 #icon {
   width:60%;
 }
+
+h1.error-message-login {
+    color: white;
+    padding-bottom: 17px;
+}
+
+div#formContent {
+    background-color: #f12a43;
+}
+
+.fadeIn.first {
+    padding: 15px;
+}
