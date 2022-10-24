@@ -28,7 +28,7 @@
 	src="http://localhost:8080/i8-web/resources/adminassets/js/main.js"
 	type="text/javascript"></script>
 <link
-	href="http://localhost:8080/i8-web/resources/adminassets/css/import/login.css"
+	href="http://localhost:8080/i8-web/resources/adminassets/css/import/register.css"
 	rel="stylesheet">
 
 <div class="wrapper fadeInDown">
@@ -42,18 +42,18 @@
 
 		<!-- Login Form -->
 		<form action="../admin/login" method="post">
-			<input type="text" id="login" class="fadeIn second" name="username"
-				placeholder="User Name"> <input type="text" id="password"
-				class="fadeIn third" name="password" placeholder="Password">
-			<input type="submit" class="fadeIn fourth" value="Log In">
+			<input type="text" id="login" class="fadeIn second" name="name" placeholder="Tên Người Dùng"> 
+			<input type="text" id="login" class="fadeIn second" name="email" placeholder="Email"> 
+			<input type="text" id="login" class="fadeIn second" name="username" placeholder="Tên Tài Khoản"> 
+			<input type="password" id="password" class="fadeIn third" name="password" placeholder="Mật Khẩu">
+			<input type="submit" class="fadeIn fourth" value="Sign In">
 		</form>
-		<c:if test="${ isError == true }">
-			<h1 class="error-message-login">Đăng nhập thất bại!</h1>
+		<c:if test="${ isError != ''}">
+			<h1 class="error-message-login">${ isError }</h1>
 		</c:if>
-
 		<!-- Remind Passowrd -->
 		<div id="formFooter">
-			<a class="underlineHover" href="../">Chưa có tài khoản</a>
+			<a class="underlineHover" href="../admin/login">Đã có tài khoản</a>
 		</div>
 
 	</div>
