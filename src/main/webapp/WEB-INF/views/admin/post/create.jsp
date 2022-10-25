@@ -1,4 +1,7 @@
+<%@page import="com.i8web.model.Admin.PostsModel"%>
 <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>  
 <%@include file = "/WEB-INF/views/admin/layout/header.jsp" %>
 <div id="main-content-wp" class="add-cat-page">
     <div class="wrap clearfix">
@@ -11,28 +14,29 @@
             </div>
             <div class="section" id="detail-page">
                 <div class="section-detail">
-                    <form method="POST">
+                    <form:form action="" method="POST" modelAttribute="post"> 
                         <label for="title">Tiêu đề</label>
-                        <input type="text" name="title" id="title">
+                        <form:input type="text" name="title" id="title" path="title" />  
                         <label for="title">Slug ( Friendly_url )</label>
-                        <input type="text" name="slug" id="slug">
+                        <form:input type="text" name="slug" id="slug" path="slug" />       
                         <label for="desc">Mô tả</label>
-                        <textarea name="desc" id="desc" class="ckeditor"></textarea>
+                        <form:input type="text" name="desc" id="desc" class="ckeditor" path = "description" />
                         <label>Hình ảnh</label>
                         <div id="uploadFile">
-                            <input type="file" name="file" id="upload-thumb">
-                            <input type="submit" name="btn-upload-thumb" value="Upload" id="btn-upload-thumb">
-                            <img src="public/images/img-thumb.png">
+                            <form:input type="file" name="file" id="upload-thumb" path="image" />  
+                            <img src="resources/assets/images/img-thumb.png">
                         </div>
                         <label>Danh mục cha</label>
-                        <select name="parent-Cat">
+                        <form:select name="parent-Cat" path="post_id">
                             <option value="">-- Chọn danh mục --</option>
                             <option value="1">Thể thao</option>
                             <option value="2">Xã hội</option>
                             <option value="3">Tài chính</option>
-                        </select>
-                        <button type="submit" name="btn-submit" id="btn-submit">Thêm mới</button>
-                    </form>
+                        </form:select>
+                        <div>
+                        	<button type="submit" name="btn-submit" id="btn-submit">Thêm mới</button>
+                        </div>    
+                    </form:form>
                 </div>
             </div>
         </div>

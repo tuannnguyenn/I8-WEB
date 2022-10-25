@@ -15,4 +15,7 @@ public class AdminService {
 	 public List<Posts> getDataPost() {
 		  return postsModel.GetDataPost();
 	}
+	 public void insertPost (Posts post) {
+		 postsModel.InsertDataPost(post);
+	 }
 }

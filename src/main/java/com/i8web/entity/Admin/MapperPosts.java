@@ -14,8 +14,9 @@ public class MapperPosts implements RowMapper<Posts> {
 		posts.setImage(rs.getString("image"));
 		posts.setTitle(rs.getString("title"));
 		posts.setDate(rs.getString("date"));
-		posts.setDescription(rs.getString("description"));
-		
+        posts.setDescription(rs.getString("description"));
+        posts.setSlug(rs.getString("slug"));
+        posts.setPost_id(rs.getString("post_id"));
 		return posts;
 	}
 

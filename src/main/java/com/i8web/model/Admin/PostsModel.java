@@ -22,4 +22,8 @@ public class PostsModel {
 		list = _jdbcTemplate.query(sql, new MapperPosts());
 		return list;
 	}
+	public void InsertDataPost(Posts post) {
+		String sql = "INSERT INTO posts(image,title,date,description,post_id,slug)" + "VALUES(?,?,?,?,?,?)";
+		_jdbcTemplate.update(sql,post.getImage(),post.getTitle(),post.getDate(),post.getDescription(),post.getPost_id(),post.getSlug());
+	}
 }
