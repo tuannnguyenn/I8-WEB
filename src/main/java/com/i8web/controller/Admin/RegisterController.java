@@ -8,13 +8,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
+@SessionAttributes("user")
 public class RegisterController {
 	@Autowired
 	public LoginModel loginModel;
-	public SignupModel signupModel = new SignupModel();
+	@Autowired
+	public SignupModel signupModel;
 
 	public static class LoginState {
 		public static boolean isLogin = false;
@@ -50,7 +53,6 @@ public class RegisterController {
 	@RequestMapping(value = "/admin/login", method = RequestMethod.POST)
 	public ModelAndView checkSignup(@RequestParam("username") String username, @RequestParam("password") String password, @RequestParam("email") String email, @RequestParam("name") String name) {
 		if (signupModel.signupAccount(username, password, email, name)) {
-			LoginState.isLogin = true;
 			ModelAndView mav = new ModelAndView("admin/register/login");
 			return mav;
 		} else {
