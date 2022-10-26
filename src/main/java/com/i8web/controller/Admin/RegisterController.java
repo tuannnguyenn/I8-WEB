@@ -8,11 +8,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@SessionAttributes("user")
 public class RegisterController {
 	@Autowired
 	public LoginModel loginModel;
@@ -23,7 +21,7 @@ public class RegisterController {
 		public static boolean isLogin = false;
 	}
 
-	@RequestMapping(value = "/admin/login", method = RequestMethod.GET)
+	@RequestMapping(value = "/admin", method = RequestMethod.GET)
 	public ModelAndView loginPage() {
 		ModelAndView mav = new ModelAndView("admin/register/login");
 		mav.addObject("isError", false);
