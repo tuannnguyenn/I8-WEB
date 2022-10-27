@@ -37,11 +37,11 @@
 
 		<!-- Icon -->
 		<div class="fadeIn first">
-			<img src="../resources/assets/images/logo.png">
+			<img src="./resources/assets/images/logo.png">
 		</div>
 
 		<!-- Login Form -->
-		<form action="../useradmin/login" method="post">
+		<form action="./useradmin/login" method="post">
 			<input type="text" id="login" class="fadeIn second" name="username"
 				placeholder="Tên Tài Khoản"> <input type="password" id="password"
 				class="fadeIn third" name="password" placeholder="Mật Khẩu">
