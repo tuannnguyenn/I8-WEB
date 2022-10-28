@@ -8,16 +8,20 @@
                     <li>
                         <a href="/i8-web/trang-chu" title="">Trang chủ</a>
                     </li>
-                    <li>
-                        <a href="/i8-web/danh-sach-san-pham" title="">Điện thoại</a>
-                    </li>
+                    <c:forEach var="item" items="${ CatId }">	
+	                    <li>
+	                        <a href="/i8-web/danh-sach-san-pham" title="">${item.name }</a>
+	                    </li>
+                    </c:forEach>
                 </ul>
             </div>
         </div>
         <div class="main-content fl-right">
             <div class="section" id="list-product-wp">
                 <div class="section-head clearfix">
-                    <h3 class="section-title fl-left">Laptop</h3>
+                	<c:forEach var="item" items="${ CatId }">	  
+                    	<h3 class="section-title fl-left">${item.name }</h3>
+                    </c:forEach>
                     <div class="filter-wp fl-right">
                         <p class="desc">Hiển thị 45 trên 50 sản phẩm</p>
                         <div class="form-filter">
@@ -36,286 +40,22 @@
                 </div>
                 <div class="section-detail">
                     <ul class="list-item clearfix">
-                        <li>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-                                <img src="resources/assets/images/img-pro-17.png">
-                            </a>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Laptop HP Probook 4430s</a>
-                            <div class="price">
-                                <span class="new">17.900.000đ</span>
-                                <span class="old">20.900.000đ</span>
-                            </div>
-                            <div class="action clearfix">
-                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-                                <img src="resources/assets/images/img-pro-18.png">
-                            </a>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Laptop HP Probook 4430s</a>
-                            <div class="price">
-                                <span class="new">17.900.000đ</span>
-                                <span class="old">20.900.000đ</span>
-                            </div>
-                            <div class="action clearfix">
-                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-                                <img src="resources/assets/images/img-pro-19.png">
-                            </a>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Laptop HP Probook 4430s</a>
-                            <div class="price">
-                                <span class="new">17.900.000đ</span>
-                                <span class="old">20.900.000đ</span>
-                            </div>
-                            <div class="action clearfix">
-                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-                                <img src="resources/assets/images/img-pro-20.png">
-                            </a>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Laptop HP Probook 4430s</a>
-                            <div class="price">
-                                <span class="new">17.900.000đ</span>
-                                <span class="old">20.900.000đ</span>
-                            </div>
-                            <div class="action clearfix">
-                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-                                <img src="resources/assets/images/img-pro-21.png">
-                            </a>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Laptop HP Probook 4430s</a>
-                            <div class="price">
-                                <span class="new">17.900.000đ</span>
-                                <span class="old">20.900.000đ</span>
-                            </div>
-                            <div class="action clearfix">
-                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-                                <img src="resources/assets/images/img-pro-22.png">
-                            </a>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Laptop HP Probook 4430s</a>
-                            <div class="price">
-                                <span class="new">17.900.000đ</span>
-                                <span class="old">20.900.000đ</span>
-                            </div>
-                            <div class="action clearfix">
-                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-                                <img src="resources/assets/images/img-pro-23.png">
-                            </a>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Laptop HP Probook 4430s</a>
-                            <div class="price">
-                                <span class="new">17.900.000đ</span>
-                                <span class="old">20.900.000đ</span>
-                            </div>
-                            <div class="action clearfix">
-                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-                                <img src="resources/assets/images/img-pro-17.png">
-                            </a>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Laptop HP Probook 4430s</a>
-                            <div class="price">
-                                <span class="new">17.900.000đ</span>
-                                <span class="old">20.900.000đ</span>
-                            </div>
-                            <div class="action clearfix">
-                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-                                <img src="resources/assets/images/img-pro-18.png">
-                            </a>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Laptop HP Probook 4430s</a>
-                            <div class="price">
-                                <span class="new">17.900.000đ</span>
-                                <span class="old">20.900.000đ</span>
-                            </div>
-                            <div class="action clearfix">
-                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-                                <img src="resources/assets/images/img-pro-19.png">
-                            </a>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Laptop HP Probook 4430s</a>
-                            <div class="price">
-                                <span class="new">17.900.000đ</span>
-                                <span class="old">20.900.000đ</span>
-                            </div>
-                            <div class="action clearfix">
-                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-                                <img src="resources/assets/images/img-pro-20.png">
-                            </a>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Laptop HP Probook 4430s</a>
-                            <div class="price">
-                                <span class="new">17.900.000đ</span>
-                                <span class="old">20.900.000đ</span>
-                            </div>
-                            <div class="action clearfix">
-                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-                                <img src="resources/assets/images/img-pro-21.png">
-                            </a>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Laptop HP Probook 4430s</a>
-                            <div class="price">
-                                <span class="new">17.900.000đ</span>
-                                <span class="old">20.900.000đ</span>
-                            </div>
-                            <div class="action clearfix">
-                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-                                <img src="resources/assets/images/img-pro-22.png">
-                            </a>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Laptop HP Probook 4430s</a>
-                            <div class="price">
-                                <span class="new">17.900.000đ</span>
-                                <span class="old">20.900.000đ</span>
-                            </div>
-                            <div class="action clearfix">
-                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-                                <img src="resources/assets/images/img-pro-23.png">
-                            </a>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Laptop HP Probook 4430s</a>
-                            <div class="price">
-                                <span class="new">17.900.000đ</span>
-                                <span class="old">20.900.000đ</span>
-                            </div>
-                            <div class="action clearfix">
-                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-                                <img src="resources/assets/images/img-pro-17.png">
-                            </a>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Laptop HP Probook 4430s</a>
-                            <div class="price">
-                                <span class="new">17.900.000đ</span>
-                                <span class="old">20.900.000đ</span>
-                            </div>
-                            <div class="action clearfix">
-                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-                                <img src="resources/assets/images/img-pro-18.png">
-                            </a>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Laptop HP Probook 4430s</a>
-                            <div class="price">
-                                <span class="new">17.900.000đ</span>
-                                <span class="old">20.900.000đ</span>
-                            </div>
-                            <div class="action clearfix">
-                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-                                <img src="resources/assets/images/img-pro-19.png">
-                            </a>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Laptop HP Probook 4430s</a>
-                            <div class="price">
-                                <span class="new">17.900.000đ</span>
-                                <span class="old">20.900.000đ</span>
-                            </div>
-                            <div class="action clearfix">
-                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-                                <img src="resources/assets/images/img-pro-20.png">
-                            </a>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Laptop HP Probook 4430s</a>
-                            <div class="price">
-                                <span class="new">17.900.000đ</span>
-                                <span class="old">20.900.000đ</span>
-                            </div>
-                            <div class="action clearfix">
-                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-                                <img src="resources/assets/images/img-pro-21.png">
-                            </a>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Laptop HP Probook 4430s</a>
-                            <div class="price">
-                                <span class="new">17.900.000đ</span>
-                                <span class="old">20.900.000đ</span>
-                            </div>
-                            <div class="action clearfix">
-                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-                                <img src="resources/assets/images/img-pro-22.png">
-                            </a>
-                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Laptop HP Probook 4430s</a>
-                            <div class="price">
-                                <span class="new">17.900.000đ</span>
-                                <span class="old">20.900.000đ</span>
-                            </div>
-                            <div class="action clearfix">
-                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-                            </div>
-                        </li>
+                    	<c:forEach var="item" items="${ listProduct }">	
+	                        <li>
+	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
+	                                <img src="resources/assets/images/img-pro-17.png">
+	                            </a>
+	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Laptop HP Probook 4430s</a>
+	                            <div class="price">
+	                                <span class="new">17.900.000đ</span>
+	                                <span class="old">20.900.000đ</span>
+	                            </div>
+	                            <div class="action clearfix">
+	                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
+	                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
+	                            </div>
+	                        </li>
+                        </c:forEach>
                     </ul>
                 </div>
             </div>
@@ -342,52 +82,11 @@
                 </div>
                 <div class="secion-detail">
                     <ul class="list-item">
+                    <c:forEach var="item" items="${ listCat }">	
                         <li>
-                            <a href="/i8-web/danh-sach-san-pham" title="">Điện thoại</a>
-                            <ul class="sub-menu">
-                                <li>
-                                    <a href="/i8-web/danh-sach-san-pham" title="">Iphone</a>
-                                </li>
-                                <li>
-                                    <a href="/i8-web/danh-sach-san-pham" title="">Samsung</a>
-                                    <ul class="sub-menu">
-                                        <li>
-                                            <a href="/i8-web/danh-sach-san-pham" title="">Iphone X</a>
-                                        </li>
-                                        <li>
-                                            <a href="/i8-web/danh-sach-san-pham" title="">Iphone 8</a>
-                                        </li>
-                                        <li>
-                                            <a href="/i8-web/danh-sach-san-pham" title="">Iphone 8 Plus</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="/i8-web/danh-sach-san-pham" title="">Oppo</a>
-                                </li>
-                                <li>
-                                    <a href="/i8-web/danh-sach-san-pham" title="">Bphone</a>
-                                </li>
-                            </ul>
+                            <a href="/i8-web/${item.slug}?id=${item.id}" title="">${item.name}</a>
                         </li>
-                        <li>
-                            <a href="/i8-web/danh-sach-san-pham" title="">Máy tính bảng</a>
-                        </li>
-                        <li>
-                            <a href="/i8-web/danh-sach-san-pham" title="">laptop</a>
-                        </li>
-                        <li>
-                            <a href="/i8-web/danh-sach-san-pham" title="">Tai nghe</a>
-                        </li>
-                        <li>
-                            <a href="/i8-web/danh-sach-san-pham" title="">Thời trang</a>
-                        </li>
-                        <li>
-                            <a href="/i8-web/danh-sach-san-pham" title="">Đồ gia dụng</a>
-                        </li>
-                        <li>
-                            <a href="/i8-web/danh-sach-san-pham" title="">Thiết bị văn phòng</a>
-                        </li>
+                      </c:forEach>
                     </ul>
                 </div>
             </div>

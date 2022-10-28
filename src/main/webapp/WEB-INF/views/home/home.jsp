@@ -401,52 +401,11 @@
 	                </div>
 	                <div class="secion-detail">
 	                    <ul class="list-item">
-	                        <li>
-	                            <a href="/i8-web/danh-sach-san-pham" title="">Điện thoại</a>
-	                            <ul class="sub-menu">
-	                                <li>
-	                                    <a href="/i8-web/danh-sach-san-pham" title="">Iphone</a>
-	                                </li>
-	                                <li>
-	                                    <a href="/i8-web/danh-sach-san-pham" title="">Samsung</a>
-	                                    <ul class="sub-menu">
-	                                        <li>
-	                                            <a href="/i8-web/danh-sach-san-pham" title="">Iphone X</a>
-	                                        </li>
-	                                        <li>
-	                                            <a href="/i8-web/danh-sach-san-pham" title="">Iphone 8</a>
-	                                        </li>
-	                                        <li>
-	                                            <a href="/i8-web/danh-sach-san-pham" title="">Iphone 8 Plus</a>
-	                                        </li>
-	                                    </ul>
-	                                </li>
-	                                <li>
-	                                    <a href="/i8-web/danh-sach-san-pham" title="">Oppo</a>
-	                                </li>
-	                                <li>
-	                                    <a href="/i8-web/danh-sach-san-pham" title="">Bphone</a>
-	                                </li>
-	                            </ul>
-	                        </li>
-	                        <li>
-	                            <a href="/i8-web/danh-sach-san-pham" title="">Máy tính bảng</a>
-	                        </li>
-	                        <li>
-	                            <a href="/i8-web/danh-sach-san-pham" title="">laptop</a>
-	                        </li>
-	                        <li>
-	                            <a href="/i8-web/danh-sach-san-pham" title="">Tai nghe</a>
-	                        </li>
-	                        <li>
-	                            <a href="/i8-web/danh-sach-san-pham" title="">Thời trang</a>
-	                        </li>
-	                        <li>
-	                            <a href="/i8-web/danh-sach-san-pham" title="">Đồ gia dụng</a>
-	                        </li>
-	                        <li>
-	                            <a href="/i8-web/danh-sach-san-pham" title="">Thiết bị văn phòng</a>
-	                        </li>
+	                        <c:forEach var="item" items="${ listCat }">	                        
+		                        <li>
+		                            <a href="/i8-web/${item.slug}?id=${item.id}" title="">${item.name }</a>
+		                        </li>
+	                        </c:forEach>
 	                    </ul>
 	                </div>
 	            </div>
