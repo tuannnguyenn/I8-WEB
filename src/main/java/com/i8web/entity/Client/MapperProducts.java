@@ -26,4 +26,14 @@ public class MapperProducts implements RowMapper<Products> {
 		products.setCreated_at(rs.getString("created_at"));
 		return products;
 	}
+	
+	public Category mapRow1(ResultSet rs, int rowNum) throws SQLException {
+		Category category = new Category();
+		category.setId(rs.getInt("id"));
+		category.setName(rs.getString("name"));
+		category.setSlug(rs.getString("slug"));
+		category.setCat_id(rs.getString("cat_id"));
+		category.setCreated_at(rs.getString("created_at"));
+		return category;
+	}
 }

@@ -42,13 +42,13 @@
                     <ul class="list-item clearfix">
                     	<c:forEach var="item" items="${ listProduct }">	
 	                        <li>
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-	                                <img src="resources/assets/images/img-pro-17.png">
+	                            <a href="/i8-web/chi-tiet-san-pham/${item.slug }?id=${item.id }" title="" class="thumb">
+	                                <img src="${item.image }">
 	                            </a>
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Laptop HP Probook 4430s</a>
+	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">${item.name }</a>
 	                            <div class="price">
-	                                <span class="new">17.900.000đ</span>
-	                                <span class="old">20.900.000đ</span>
+	                                <span class="new">${item.price_new }</span>
+	                                <span class="old">${item.price_old }</span>
 	                            </div>
 	                            <div class="action clearfix">
 	                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
