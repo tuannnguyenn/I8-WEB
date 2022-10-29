@@ -79,9 +79,9 @@
 										<td>
 											<span class="tbody-text">
 												<ul class="list-operation fl-right">
-													<li><a href="" title="Sửa" class="edit"><i
+													<li><a href="<c:url value="/EditPost/${item.id}"/>" title="Sửa" class="edit"><i
 															class="fa fa-pencil" aria-hidden="true"></i></a></li>
-													<li><a href="" title="Xóa" class="delete"><i
+													<li><a href="<c:url value="/DeletePost/${item.id}"/>"  title="Xóa" class="delete"><i
 															class="fa fa-trash" aria-hidden="true"></i></a></li>
 												</ul>
 											</span>

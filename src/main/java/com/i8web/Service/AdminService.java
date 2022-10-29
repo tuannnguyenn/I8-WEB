@@ -12,10 +12,20 @@ import com.i8web.model.Admin.PostsModel;
 public class AdminService {
 	@Autowired
 	 private PostsModel postsModel;
-	 public List<Posts> getDataPost() {
-		  return postsModel.GetDataPost();
+	 public List<Posts> getListPosts() {
+		  return postsModel.GetListPosts();
 	}
+	 public List<Posts> GetPostById(int id){
+		 return postsModel.GetPostById(id);
+	 }
 	 public void insertPost (Posts post) {
 		 postsModel.InsertDataPost(post);
 	 }
+	 public void deletePost (int id) {
+		 postsModel.DeleteDataPost(id);
+	 }
+	 public void updatePost (Posts post) {
+		 postsModel.UpdateDataPost(post);
+	 }
+
 }
