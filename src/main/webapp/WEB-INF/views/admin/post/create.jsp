@@ -20,11 +20,10 @@
                         <label for="title">Slug ( Friendly_url )</label>
                         <form:input type="text" name="slug" id="slug" path="slug" />       
                         <label for="desc">Mô tả</label>
-                        <form:input type="text" name="desc" id="desc" class="ckeditor" path = "description" />
+                        <form:textarea name="desc" id="desc" class="ckeditor" path = "description"></form:textarea>
                         <label>Hình ảnh</label>
                         <div id="uploadFile">
                             <form:input type="file" name="file" id="upload-thumb" path="image" />  
-                            <img src="resources/assets/images/img-thumb.png">
                         </div>
                         <label>Danh mục cha</label>
                         <form:select name="parent-Cat" path="post_id">

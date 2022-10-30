@@ -1,6 +1,13 @@
 package com.i8web.controller.Admin;
 
 
+
+
+import java.util.Date;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.swing.JOptionPane;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -10,9 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.i8web.Service.AdminService;
-import com.i8web.Service.Admin.PostServiceImpl;
 import com.i8web.entity.Admin.Posts;
-import com.i8web.model.Admin.PostsModel;
 
 @Controller
 public class PostsController {
@@ -39,11 +44,10 @@ public class PostsController {
    }
    
    @RequestMapping(value = "DeletePost/{id}")
-   public ModelAndView delete(@PathVariable int id) {
+   public String delete(@PathVariable int id,HttpServletRequest req) {
    adminService.deletePost(id);
-   ModelAndView mav = new ModelAndView("/admin/post/list");
-   mav.addObject("posts", adminService.getListPosts());
-   return mav;
+   JOptionPane.showMessageDialog(null,"Record deleted successfully","Information",JOptionPane.INFORMATION_MESSAGE);
+   return "redirect:/admin/post/list";
    } 
    @RequestMapping(value = "/EditPost/{id}", method = RequestMethod.GET)
    public ModelAndView getEdit(@PathVariable int id,@ModelAttribute("post") Posts post) {
@@ -54,21 +58,10 @@ public class PostsController {
       return mav;
    }
    @RequestMapping(value = "/EditPost/{id}", method = RequestMethod.POST)
-   public ModelAndView postEdit(@PathVariable int id,@ModelAttribute("post") Posts post) {
+   public String postEdit(@PathVariable int id,@ModelAttribute("post") Posts post,HttpServletRequest req) {
 	  adminService.updatePost(post);
-      ModelAndView mav = new ModelAndView("/admin/post/edit");
-      mav.addObject("PostId", adminService.GetPostById(id));
-      return mav;
+      return "redirect:/admin/post/list";
    }
-  
-  
-	/*
-	 * @RequestMapping(value = "EditPost/{id}", method = RequestMethod.GET) public
-	 * ModelAndView edit() { ModelAndView mav = new
-	 * ModelAndView("/admin/post/edit");
-	 * 
-	 * return mav; }
-	 */
   
    
    @RequestMapping(value = "/admin/post/category/create", method = RequestMethod.GET)

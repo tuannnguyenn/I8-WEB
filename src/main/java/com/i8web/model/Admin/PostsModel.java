@@ -1,6 +1,8 @@
 package com.i8web.model.Admin;
 
 
+import java.sql.Date;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -31,7 +33,7 @@ public class PostsModel {
 	}
 	public void InsertDataPost(Posts post) {
 		String sql = "INSERT INTO posts(image,title,date,description,post_id,slug)" + "VALUES(?,?,?,?,?,?)";
-		_jdbcTemplate.update(sql,post.getImage(),post.getTitle(),post.getDate(),post.getDescription(),post.getPost_id(),post.getSlug());
+		_jdbcTemplate.update(sql,post.getImage(),post.getTitle(),LocalDate.now().toString(),post.getDescription(),post.getPost_id(),post.getSlug());
 	}
 	public void DeleteDataPost(int id) {
 		String sql = "DELETE FROM posts WHERE id = " + id;
@@ -39,7 +41,7 @@ public class PostsModel {
 	}
 	public void UpdateDataPost(Posts post) {
 		String sql = "UPDATE posts SET image = ?,title = ?, date = ?,description = ?, post_id = ?, slug = ? WHERE id = ?";
-		_jdbcTemplate.update(sql,post.getImage(),post.getTitle(),post.getDate(),post.getDescription(),post.getPost_id(),post.getSlug(),post.getId());
+		_jdbcTemplate.update(sql,post.getImage(),post.getTitle(),LocalDate.now().toString(),post.getDescription(),post.getPost_id(),post.getSlug(),post.getId());
 
 	}
 	
