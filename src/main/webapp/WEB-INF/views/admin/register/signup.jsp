@@ -53,7 +53,7 @@
 		</c:if>
 		<!-- Remind Passowrd -->
 		<div id="formFooter">
-			<a class="underlineHover" href="../admin/login">Đã có tài khoản</a>
+			<a class="underlineHover" href="/i8-web/admin">Đã có tài khoản</a>
 		</div>
 
 	</div>
