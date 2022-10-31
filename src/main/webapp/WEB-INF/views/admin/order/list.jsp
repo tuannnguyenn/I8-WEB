@@ -92,7 +92,7 @@
 					<p id="desc" class="fl-left">Chọn vào checkbox để lựa chọn tất
 						cả</p>
 					<ul id="list-paging" class="fl-right">
-						<li><a href="" title=""><< /a> </li>
+						<li><a href="" title=""></li>
 						<li><a href="" title="">1</a></li>
 						<li><a href="" title="">2</a></li>
 						<li><a href="" title="">3</a></li>
