@@ -1,0 +1,37 @@
+package com.i8web.Service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.i8web.entity.Admin.Products;
+import com.i8web.model.Admin.ProductsModel;
+
+@Service
+@Transactional
+public class ProductService {
+	@Autowired
+	private ProductsModel productsModel;
+	public List<Products> getListProducts() {
+		return productsModel.GetListProducts();
+	}
+
+	public List<Products> GetProductById(int id) {
+		return productsModel.GetProductById(id);
+	}
+	public void insertProduct(Products product) {
+		
+		productsModel.InsertDataProduct(product);
+		
+	}
+
+	public void deleteProduct(int id) {
+		productsModel.DeleteDataProduct(id);
+	}
+
+	public void updateProduct(Products product) {
+		productsModel.UpdateDataProduct(product);
+	}
+}

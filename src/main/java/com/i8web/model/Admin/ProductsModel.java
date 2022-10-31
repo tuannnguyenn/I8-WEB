@@ -1,6 +1,6 @@
 package com.i8web.model.Admin;
 
-import java.time.LocalDate;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,14 +23,15 @@ public class ProductsModel {
 		return list;
 	}
 
-	public List<Products> GetProductsById(int id) {
+	public List<Products> GetProductById(int id) {
 		List<Products> list = new ArrayList<Products>();
 		String sql = "SELECT * FROM products WHERE id = " + id;
 		list = _jdbcTemplate.query(sql, new MapperProducts());
 		return list;
 	}
 
-	public void InsertDataProducts(Products product) {
+	public void InsertDataProduct(Products product) {
+		
 		String sql = "INSERT INTO products(name,price_old,price_new,description,status,many_image,image,detail,product_id,ghimSale,ghimNew,slug)"
 				+ "VALUES(?,?,?,?,?,?,?,?,?,?,?,?)";
 		_jdbcTemplate.update(sql, product.getName(), product.getPrice_old(), product.getPrice_new(),
@@ -39,14 +40,14 @@ public class ProductsModel {
 				product.getSlug());
 	}
 
-	public void DeleteDataProducts(int id) {
+	public void DeleteDataProduct(int id) {
 		String sql = "DELETE FROM products WHERE id = " + id;
 		_jdbcTemplate.update(sql);
 	}
 
-	public void UpdateDataProducts(Products product) {
-		String sql = "UPDATE posts SET name=?,price_old=?,price_new=?,description=?,"
-				+ "status=?,many_image=?,image=?,detail=?,product_id=?,ghimSale=?,ghimNew=?,slug=?  WHERE id = ?";
+	public void UpdateDataProduct(Products product) {
+		String sql = "UPDATE products SET name = ?,price_old = ?,price_new = ?,description = ?,"
+				+ "status = ?,many_image = ?,image = ?,detail = ?,product_id = ?,ghimSale = ?,ghimNew = ?,slug = ?  WHERE id = ?";
 		_jdbcTemplate.update(sql, product.getName(), product.getPrice_old(), product.getPrice_new(),
 				product.getDescription(), product.getStatus(), product.getMany_image(), product.getImage(),
 				product.getDetail(), product.getProduct_id(), product.getGhimSale(), product.getGhimNew(),

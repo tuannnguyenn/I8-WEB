@@ -19,7 +19,7 @@ public class MapperProducts implements RowMapper<Products> {
 		products.setMany_image(rs.getString("many_image"));
 		products.setImage(rs.getString("image"));
 		products.setDetail(rs.getString("detail"));
-		products.setProduct_id(rs.getString("product_id"));
+		products.setProduct_id(rs.getInt("product_id"));
 		products.setGhimSale(rs.getString("ghimSale"));
 		products.setGhimNew(rs.getString("ghimNew"));
 		products.setSlug(rs.getString("slug"));

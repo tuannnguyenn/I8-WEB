@@ -16,13 +16,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.i8web.Service.AdminService;
+import com.i8web.Service.PostService;
 import com.i8web.entity.Admin.Posts;
 
 @Controller
 public class PostsController {
 	@Autowired
-   AdminService adminService;
+   PostService adminService;
 	@RequestMapping(value = "/admin/post/create", method = RequestMethod.GET)
 	public ModelAndView create() {
 		ModelAndView mav = new ModelAndView("/admin/post/create");
@@ -46,7 +46,6 @@ public class PostsController {
    @RequestMapping(value = "DeletePost/{id}")
    public String delete(@PathVariable int id,HttpServletRequest req) {
    adminService.deletePost(id);
-   JOptionPane.showMessageDialog(null,"Record deleted successfully","Information",JOptionPane.INFORMATION_MESSAGE);
    return "redirect:/admin/post/list";
    } 
    @RequestMapping(value = "/EditPost/{id}", method = RequestMethod.GET)

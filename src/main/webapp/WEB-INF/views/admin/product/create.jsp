@@ -1,49 +1,53 @@
+<%@page import="com.i8web.model.Admin.PostsModel"%>
 <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>  
 <%@include file = "/WEB-INF/views/admin/layout/header.jsp" %>
 <div id="main-content-wp" class="add-cat-page">
     <div class="wrap clearfix">
         <%@include file = "/WEB-INF/views/admin/layout/sidebar.jsp" %>
-        <?php require 'inc/sidebar.php'; ?>
         <div id="content" class="fl-right">
             <div class="section" id="title-page">
                 <div class="clearfix">
-                    <h3 id="index" class="fl-left">Thêm sản phẩm</h3>
+                    <h3 id="index" class="fl-left">Thêm mới sản phẩm</h3>
                 </div>
             </div>
             <div class="section" id="detail-page">
                 <div class="section-detail">
-                    <form method="POST">
-                        <label for="product-name">Tên sản phẩm</label>
-                        <input type="text" name="product_name" id="product-name">
-                        <label for="product-code">Mã sản phẩm</label>
-                        <input type="text" name="product_code" id="product-code">
-                        <label for="price">Giá sản phẩm</label>
-                        <input type="text" name="price" id="price">
-                        <label for="desc">Mô tả ngắn</label>
-                        <textarea name="desc" id="desc"></textarea>
-                        <label for="desc">Chi tiết</label>
-                        <textarea name="desc" id="desc" class="ckeditor"></textarea>
-                        <label>Hình ảnh</label>
+                    <form:form action="" method="POST" modelAttribute="product"> 
+                    	<label for="title">Tên sản phẩm</label>
+                        <form:input type="text" name="title" id="title" path="name" />
+                        <label for="price_old">Giá cũ</label>
+                        <form:input type="text" name="price_old" id="price_old" path="price_old" />
+                        <label for="price_new">Giá mới</label>
+                        <form:input type="text" name="price_new" id="price_new" path="price_new" />
+                        <label for="desc">Mô tả</label>
+                        <form:textarea name="desc" id="desc" class="ckeditor" path = "description"></form:textarea>
+                        <label for="status">Status</label>
+                        <form:input type="text" name="status" id="status" path="status" />
+                      	<label>Hình ảnh</label>
                         <div id="uploadFile">
-                            <input type="file" name="file" id="upload-thumb">
-                            <input type="submit" name="btn-upload-thumb" value="Upload" id="btn-upload-thumb">
-                            <img src="public/images/img-thumb.png">
+                            <form:input type="file" name="file" id="upload-thumb" path="image" />  
                         </div>
-                        <label>Danh mục sản phẩm</label>
-                        <select name="parent_id">
+                        <label for="detail">Chi tiết sản phẩm</label>
+                        <form:input type="text" name="detail" id="detail" path="detail" />
+                        <label for="ghimSale">ghimSale</label>
+                        <form:input type="text" name="ghimSale" id="ghimSale" path="ghimSale" />
+                        <label for="ghimNew">ghimNew</label>
+                        <form:input type="text" name="ghimNew" id="ghimNew" path="ghimNew" />
+                        <label for="title">Slug ( Friendly_url )</label>
+                        <form:input type="text" name="slug" id="slug" path="slug" />       
+                        <label>Danh mục cha</label>
+                        <form:select name="parent-Cat" path="product_id">
                             <option value="">-- Chọn danh mục --</option>
                             <option value="1">Thể thao</option>
                             <option value="2">Xã hội</option>
                             <option value="3">Tài chính</option>
-                        </select>
-                        <label>Trạng thái</label>
-                        <select name="status">
-                            <option value="0">-- Chọn danh mục --</option>
-                            <option value="1">Chờ duyệt</option>
-                            <option value="2">Đã đăng</option>
-                        </select>
-                        <button type="submit" name="btn-submit" id="btn-submit">Thêm mới</button>
-                    </form>
+                        </form:select>
+                        <div>
+                        	<button type="submit" name="btn-submit" id="btn-submit">Thêm mới</button>
+                        </div>    
+                    </form:form>
                 </div>
             </div>
         </div>
