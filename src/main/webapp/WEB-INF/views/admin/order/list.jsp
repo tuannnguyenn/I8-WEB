@@ -1,4 +1,5 @@
 <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@include file = "/WEB-INF/views/admin/layout/header.jsp" %>
 <div id="main-content-wp" class="list-product-page">
     <div class="wrap clearfix">
@@ -50,11 +51,12 @@
                                     <td><span class="thead-text">Chi tiết</span></td>
                                 </tr>
                             </thead>
+                            <c:forEach items="${ orders }" var="order"></c:forEach>
                             <tbody>
                                 <tr>
                                     <td><input type="checkbox" name="checkItem" class="checkItem"></td>
-                                    <td><span class="tbody-text">1</h3></span>
-                                    <td><span class="tbody-text">WEB00001</h3></span>
+                                    <td><span class="tbody-text">${order.id }</span>
+                                    <td><span class="tbody-text">WEB00001</span>
                                     <td>
                                         <div class="tb-title fl-left">
                                             <a href="" title="">Phan Văn Cương</a>
@@ -71,19 +73,6 @@
                                     <td><a href="?page=detail_order" title="" class="tbody-text">Chi tiết</a></td>
                                 </tr>
                             </tbody>
-                            <tfoot>
-                                <tr>
-                                    <td><input type="checkbox" name="checkAll" id="checkAll"></td>
-                                    <td><span class="tfoot-text">STT</span></td>
-                                    <td><span class="tfoot-text">Mã đơn hàng</span></td>
-                                    <td><span class="tfoot-text">Họ và tên</span></td>
-                                    <td><span class="tfoot-text">Số sản phẩm</span></td>
-                                    <td><span class="tfoot-text">Tổng giá</span></td>
-                                    <td><span class="tfoot-text">Trạng thái</span></td>
-                                    <td><span class="tfoot-text">Thời gian</span></td>
-                                    <td><span class="tfoot-text">Chi tiết</span></td>
-                                </tr>
-                            </tfoot>
                         </table>
                     </div>
                 </div>
@@ -93,7 +82,7 @@
                     <p id="desc" class="fl-left">Chọn vào checkbox để lựa chọn tất cả</p>
                     <ul id="list-paging" class="fl-right">
                         <li>
-                            <a href="" title=""><</a>
+                            <a href="" title=""><<	/a>
                         </li>
                         <li>
                             <a href="" title="">1</a>

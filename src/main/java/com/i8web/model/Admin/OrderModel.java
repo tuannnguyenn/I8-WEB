@@ -5,13 +5,13 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Repository; 
 
 import com.i8web.entity.Admin.MapperOrders;
 import com.i8web.entity.Admin.Order;
 
 @Repository
-public class OdersModel {
+public class OrderModel {
 	@Autowired
 	public JdbcTemplate _jdbcTemplate;
 
