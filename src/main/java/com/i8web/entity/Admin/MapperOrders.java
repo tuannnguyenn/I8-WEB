@@ -15,7 +15,7 @@ public class MapperOrders implements RowMapper<Order> {
 		order.setCode(rs.getString("code"));
 		order.setEmail(rs.getString("email"));
 		order.setPhone(rs.getString("phone"));
-		order.setImg(rs.getString("img"));
+		order.setImg(rs.getString("image"));
 		order.setName(rs.getString("name"));
 		order.setNameProduct(rs.getString("nameProduct"));
 		order.setPrice(rs.getString("price"));
