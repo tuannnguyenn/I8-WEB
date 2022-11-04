@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.i8web.Service.AdminService;
-import com.i8web.Service.Admin.PostServiceImpl;
-import com.i8web.model.Admin.PostsModel;
 
 @Controller
 public class PostsController {

@@ -6,7 +6,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.i8web.entity.Admin.Posts;
 import com.i8web.model.Admin.PostsModel;
-
 @Service
 @Transactional
 public class AdminService {

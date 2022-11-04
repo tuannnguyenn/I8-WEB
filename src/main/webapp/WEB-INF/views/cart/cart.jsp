@@ -1,6 +1,7 @@
 <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@include file = "/WEB-INF/views/layout/header.jsp" %>
+
 <div id="main-content-wp" class="cart-page">
     <div class="section" id="breadcrumb-wp">
         <div class="wp-inner">
@@ -27,54 +28,36 @@
                             <td>Tên sản phẩm</td>
                             <td>Giá sản phẩm</td>
                             <td>Số lượng</td>
-                            <td colspan="2">Thành tiền</td>
+                            <td>Thành tiền</td>
+                            <td> Xóa sản phẩm</td>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>HCA00031</td>
-                            <td>
-                                <a href="" title="" class="thumb">
-                                    <img src="resources/assets/images/img-pro-11.png" alt="">
-                                </a>
-                            </td>
-                            <td>
-                                <a href="" title="" class="name-product">Sony Express X6</a>
-                            </td>
-                            <td>500.000đ</td>
-                            <td>
-                                <input type="text" name="num-order" value="1" class="num-order">
-                            </td>
-                            <td>500.000đ</td>
-                            <td>
-                                <a href="" title="" class="del-product"><i class="fa fa-trash-o"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>HCA00032</td>
-                            <td>
-                                <a href="" title="" class="thumb">
-                                    <img src="resources/assets/images/img-pro-23.png" alt="">
-                                </a>
-                            </td>
-                            <td>
-                                <a href="" title="" class="name-product">Laptop Probook HP 4430s</a>
-                            </td>
-                            <td>350.000đ</td>
-                            <td>
-                                <input type="text" name="num-order" value="1" class="num-order">
-                            </td>
-                            <td>350.000đ</td>
-                            <td>
-                                <a href="" title="" class="del-product"><i class="fa fa-trash-o"></i></a>
-                            </td>
-                        </tr>
+	                    <c:forEach var="item" items="${ CART}">
+	                    	<form action="/i8-web/gio-hang/update" method="post">
+	                    	<input type="hidden" name="id" value="${ item.id}"/>
+		                    <tr>
+		                    	<td>${ item.id}</td>
+		                        <td><img src="${item.image }" data-zoom-image=${item.image } width="100" height="150"></td>
+		                        <td>${ item.name}</td>
+		                        <td>${ item.price}</td>
+		                        <td><input name="quantity" value="${ item.quantity}" 
+		           	                	onblur="this.form.submit()" style="width:50px;"></td>
+		                        <td>${ item.amount}</td>
+		                        <td>
+		                            <div class="action clearfix">
+		                                <a href="/i8-web/gio-hang/del/${item.id }" title="Xóa sản phẩm" class="delete-item fl-rigth">Xóa sản phẩm</a>
+		                            </div>
+		                        </td>
+	                        </tr>
+                        	</form>
+	                    </c:forEach>
                     </tbody>
                     <tfoot>
                         <tr>
                             <td colspan="7">
                                 <div class="clearfix">
-                                    <p id="total-price" class="fl-right">Tổng giá: <span>850.000đ</span></p>
+                                    <p id="total-price" class="fl-right">Tổng giá: <span>${TOTAL }</span></p>
                                 </div>
                             </td>
                         </tr>
@@ -82,7 +65,6 @@
                             <td colspan="7">
                                 <div class="clearfix">
                                     <div class="fl-right">
-                                        <a href="" title="" id="update-cart">Cập nhật giỏ hàng</a>
                                         <a href="/i8-web/thanh-toan" title="" id="checkout-cart">Thanh toán</a>
                                     </div>
                                 </div>
@@ -96,7 +78,7 @@
             <div class="section-detail">
                 <p class="title">Click vào <span>“Cập nhật giỏ hàng”</span> để cập nhật số lượng. Nhập vào số lượng <span>0</span> để xóa sản phẩm khỏi giỏ hàng. Nhấn vào thanh toán để hoàn tất mua hàng.</p>
                 <a href="/i8-web/trang-chu" title="" id="buy-more">Mua tiếp</a><br/>
-                <a href="" title="" id="delete-cart">Xóa giỏ hàng</a>
+                <a href="/i8-web/gio-hang/clear" title="" id="delete-cart">Xóa giỏ hàng</a>
             </div>
         </div>
     </div>
