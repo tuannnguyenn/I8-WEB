@@ -1,5 +1,6 @@
 <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@include file = "/WEB-INF/views/layout/header.jsp" %>
+
 <div id="main-content-wp" class="clearfix category-product-page">
     <div class="wp-inner">
         <div class="secion" id="breadcrumb-wp">
@@ -26,24 +27,22 @@
                         <p class="desc">Hiển thị 45 trên 50 sản phẩm</p>
                         <div class="form-filter">
                             <form method="POST" action="">
-                                <select name="select">
-                                    <option value="0">Sắp xếp</option>
-                                    <option value="1">Từ A-Z</option>
-                                    <option value="2">Từ Z-A</option>
-                                    <option value="3">Giá cao xuống thấp</option>
-                                    <option value="3">Giá thấp lên cao</option>
-                                </select>
-                                <button type="submit">Lọc</button>
+                                <select id="common_selector">
+                                     <option value="1" class="filter_order">Từ A-Z</option>
+                                     <option value="2" class="filter_order">Từ Z-A</option>
+                                     <option value="3" class="filter_order">Giá cao xuống thấp</option>
+                                     <option value="4" class="filter_order">Giá thấp lên cao</option>
+                                 </select>
                             </form>
                         </div>
                     </div>
                 </div>
                 <div class="section-detail">
-                    <ul class="list-item clearfix">
+                    <ul class="list-item clearfix list-filter">
                     	<c:forEach var="item" items="${ listProduct }">	
 	                        <li>
 	                            <a href="/i8-web/chi-tiet-san-pham/${item.slug }?id=${item.id }" title="" class="thumb">
-	                                <img src="${item.image }">
+	                                <img src="<c:url value='/resources/assets/images/${item.image }'/>">
 	                            </a>
 	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">${item.name }</a>
 	                            <div class="price">
@@ -80,6 +79,9 @@
                 <div class="section-head">
                     <h3 class="section-title">Danh mục sản phẩm</h3>
                 </div>
+                <c:forEach var="item" items="${ CatId }">	
+                	<input type="hidden" name="" id="category_save" value="${item.id}">
+                </c:forEach>
                 <div class="secion-detail">
                     <ul class="list-item">
                     <c:forEach var="item" items="${ listCat }">	
@@ -103,25 +105,29 @@
                                 </tr>
                             </thead>
                             <tbody>
+                            	<tr>
+                                    <td><input type="radio" class="common_selector price_new" name="price_new" value="Tất cả" checked></td>
+                                    <td>Tất cả</td>
+                                </tr>
                                 <tr>
-                                    <td><input type="radio" name="r-price"></td>
+                                    <td><input type="radio" class="common_selector price_new" name="price_new" value="500000"></td>
                                     <td>Dưới 500.000đ</td>
                                 </tr>
                                 <tr>
-                                    <td><input type="radio" name="r-price"></td>
+                                    <td><input type="radio" class="common_selector price_new" name="price_new" value="500000 AND 1000000"></td>
                                     <td>500.000đ - 1.000.000đ</td>
                                 </tr>
                                 <tr>
-                                    <td><input type="radio" name="r-price"></td>
+                                    <td><input type="radio" class="common_selector price_new" name="price_new" value="1000000 AND 5000000"></td>
                                     <td>1.000.000đ - 5.000.000đ</td>
                                 </tr>
                                 <tr>
-                                    <td><input type="radio" name="r-price"></td>
+                                    <td><input type="radio" class="common_selector price_new" name="price_new" value="5000000 AND 10000000"></td>
                                     <td>5.000.000đ - 10.000.000đ</td>
                                 </tr>
                                 <tr>
-                                    <td><input type="radio" name="r-price"></td>
-                                    <td>Trên 10.000.000đ</td>
+                                    <td><input type="radio" class="common_selector price_new" name="price_new" value="10000000"></td>
+                                    <td>Giá trên 10.000.000đ</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -132,6 +138,10 @@
                                 </tr>
                             </thead>
                             <tbody>
+                            	<tr>
+                                    <td><input type="radio" name="r-brand" checked></td>
+                                    <td>Tất cả</td>
+                                </tr>
                                 <tr>
                                     <td><input type="radio" name="r-brand"></td>
                                     <td>Acer</td>

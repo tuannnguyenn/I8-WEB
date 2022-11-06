@@ -64,90 +64,22 @@
 	                </div>
 	                <div class="section-detail">
 	                    <ul class="list-item">
-	                        <li>
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-	                                <img src="resources/assets/images/img-pro-05.png">
-	                            </a>
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Laptop Lenovo IdeaPad 120S</a>
-	                            <div class="price">
-	                                <span class="new">5.190.000đ</span>
-	                                <span class="old">6.190.000đ</span>
-	                            </div>
-	                            <div class="action clearfix">
-	                                <a href="/i8-web/gio-hang" title="" class="add-cart fl-left">Thêm giỏ hàng</a>
-	                                <a href="/i8-web/thanh-toan" title="" class="buy-now fl-right">Mua ngay</a>
-	                            </div>
-	                        </li>
-	                        <li>
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-	                                <img src="resources/assets/images/img-pro-08.png">
-	                            </a>
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Samsung Galaxy S8 Plus</a>
-	                            <div class="price">
-	                                <span class="new">20.490.000đ</span>
-	                                <span class="old">22.900.000đ</span>
-	                            </div>
-	                            <div class="action clearfix">
-	                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-	                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-	                            </div>
-	                        </li>
-	                        <li>
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-	                                <img src="resources/assets/images/img-pro-07.png">
-	                            </a>
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Laptop Acer Aspire ES1</a>
-	                            <div class="price">
-	                                <span class="new">6.390.000đ</span>
-	                                <span class="old">7.390.000đ</span>
-	                            </div>
-	                            <div class="action clearfix">
-	                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-	                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-	                            </div>
-	                        </li>
-	                        <li>
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-	                                <img src="resources/assets/images/img-pro-10.png">
-	                            </a>
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Sony Xperia XZ Premium</a>
-	                            <div class="price">
-	                                <span class="new">17.990.000</span>
-	                                <span class="old">20.990.000đ</span>
-	                            </div>
-	                            <div class="action clearfix">
-	                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-	                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-	                            </div>
-	                        </li>
-	                        <li>
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-	                                <img src="resources/assets/images/img-pro-06.png">
-	                            </a>
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Laptop Asus E402NA</a>
-	                            <div class="price">
-	                                <span class="new">5.990.000đ</span>
-	                                <span class="old">6.990.000đ</span>
-	                            </div>
-	                            <div class="action clearfix">
-	                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-	                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-	                            </div>
-	                        </li>
-	                        <li>
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-	                                <img src="resources/assets/images/img-pro-09.png">
-	                            </a>
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">IPhone 7 128GB</a>
-	                            <div class="price">
-	                                <span class="new">18.990.000đ</span>
-	                                <span class="old">20.900.000đ</span>
-	                            </div>
-	                            <div class="action clearfix">
-	                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-	                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-	                            </div>
-	                        </li>
+	                    	<c:forEach var="item" items="${ listNew }">
+		                        <li>
+		                            <a href="/i8-web/chi-tiet-san-pham/${item.slug }?id=${item.id }" title="" class="thumb">
+		                                <img src=<c:url value='/resources/assets/images/${item.image }'/>>
+		                            </a>
+		                            <a href="/i8-web/chi-tiet-san-pham/${item.slug }?id=${item.id }" title="" class="product-name">${item.name }</a>
+		                            <div class="price">
+		                                <span class="new">${item.price_new }</span>
+		                                <span class="old">${item.price_old }</span>
+		                            </div>
+		                            <div class="action clearfix">
+		                                <a href="/i8-web/gio-hang" title="" class="add-cart fl-left">Thêm giỏ hàng</a>
+		                                <a href="/i8-web/thanh-toan" title="" class="buy-now fl-right">Mua ngay</a>
+		                            </div>
+		                        </li>
+	                        </c:forEach>
 	                    </ul>
 	                </div>
 	            </div>
@@ -157,118 +89,22 @@
 	                </div>
 	                <div class="section-detail">
 	                    <ul class="list-item clearfix">
-	                        <li>
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-	                                <img src="resources/assets/images/img-pro-16.png">
-	                            </a>
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Motorola Moto G5S Plus</a>
-	                            <div class="price">
-	                                <span class="new">6.990.000đđ</span>
-	                                <span class="old">8.990.000đđ</span>
-	                            </div>
-	                            <div class="action clearfix">
-	                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-	                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-	                            </div>
-	                        </li>
-	                        <li>
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-	                                <img src="resources/assets/images/img-pro-15.png">
-	                            </a>
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Samsung Galaxy A5</a>
-	                            <div class="price">
-	                                <span class="new">7.990.000đ</span>
-	                                <span class="old">9.990.000đ</span>
-	                            </div>
-	                            <div class="action clearfix">
-	                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-	                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-	                            </div>
-	                        </li>
-	                        <li>
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-	                                <img src="resources/assets/images/img-pro-14.png">
-	                            </a>
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Sony Xperia XA Ultra</a>
-	                            <div class="price">
-	                                <span class="new">6.990.000đ</span>
-	                                <span class="old">7.990.000đ</span>
-	                            </div>
-	                            <div class="action clearfix">
-	                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-	                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-	                            </div>
-	                        </li>
-	                        <li>
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-	                                <img src="resources/assets/images/img-pro-13.png">
-	                            </a>
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Huawei Nova 2i</a>
-	                            <div class="price">
-	                                <span class="new">5.990.000đ</span>
-	                                <span class="old">8.990.000đ</span>
-	                            </div>
-	                            <div class="action clearfix">
-	                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-	                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-	                            </div>
-	                        </li>
-	                        <li>
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-	                                <img src="resources/assets/images/img-pro-12.png">
-	                            </a>
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Xiaomi Mi A1</a>
-	                            <div class="price">
-	                                <span class="new">5.990.000đ</span>
-	                                <span class="old">6.990.000đ</span>
-	                            </div>
-	                            <div class="action clearfix">
-	                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-	                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-	                            </div>
-	                        </li>
-	                        <li>
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-	                                <img src="resources/assets/images/img-pro-11.png">
-	                            </a>
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">HTC U Ultra Sapphire</a>
-	                            <div class="price">
-	                                <span class="new">16.490.000đ</span>
-	                                <span class="old">18.490.000đ</span>
-	                            </div>
-	                            <div class="action clearfix">
-	                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-	                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-	                            </div>
-	                        </li>
-	                        <li>
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-	                                <img src="resources/assets/images/img-pro-08.png">
-	                            </a>
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Sony Xperia XZ Dual</a>
-	                            <div class="price">
-	                                <span class="new">9.990.000đ</span>
-	                                <span class="old">10.990.000đ</span>
-	                            </div>
-	                            <div class="action clearfix">
-	                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-	                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-	                            </div>
-	                        </li>
-	                        <li>
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-	                                <img src="resources/assets/images/img-pro-10.png">
-	                            </a>
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Bphone 2017</a>
-	                            <div class="price">
-	                                <span class="new">9.790.000đ</span>
-	                                <span class="old">10.790.000đ</span>
-	                            </div>
-	                            <div class="action clearfix">
-	                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-	                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-	                            </div>
-	                        </li>
+	                       <c:forEach var="item" items="${ listMobile }">
+		                        <li>
+		                            <a href="/i8-web/chi-tiet-san-pham/${item.slug }?id=${item.id }" title="" class="thumb">
+		                                <img src=<c:url value='/resources/assets/images/${item.image }'/>>
+		                            </a>
+		                            <a href="/i8-web/chi-tiet-san-pham/${item.slug }?id=${item.id }" title="" class="product-name">${item.name}</a>
+		                            <div class="price">
+		                                <span class="new">${item.price_new }</span>
+		                                <span class="old">${item.price_old }</span>
+		                            </div>
+		                            <div class="action clearfix">
+		                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
+		                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
+		                            </div>
+		                        </li>
+	                        </c:forEach>
 	                    </ul>
 	                </div>
 	            </div>
@@ -278,118 +114,22 @@
 	                </div>
 	                <div class="section-detail">
 	                    <ul class="list-item clearfix">
-	                        <li>
-	                            <a href="" title="" class="thumb">
-	                                <img src="resources/assets/images/img-pro-17.png">
-	                            </a>
-	                            <a href="" title="" class="product-name">Laptop Asus X441NA</a>
-	                            <div class="price">
-	                                <span class="new">7.690.000đ</span>
-	                                <span class="old">8.690.000đ</span>
-	                            </div>
-	                            <div class="action clearfix">
-	                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-	                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-	                            </div>
-	                        </li>
-	                        <li>
-	                            <a href="" title="" class="thumb">
-	                                <img src="resources/assets/images/img-pro-18.png">
-	                            </a>
-	                            <a href="" title="" class="product-name">Laptop Lenovo IdeaPad 110</a>
-	                            <div class="price">
-	                                <span class="new">9.490.000đ</span>
-	                                <span class="old">10.490.000đ</span>
-	                            </div>
-	                            <div class="action clearfix">
-	                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-	                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-	                            </div>
-	                        </li>
-	                        <li>
-	                            <a href="" title="" class="thumb">
-	                                <img src="resources/assets/images/img-pro-19.png">
-	                            </a>
-	                            <a href="" title="" class="product-name">Laptop Acer ES1 533</a>
-	                            <div class="price">
-	                                <span class="new">7.490.000đ</span>
-	                                <span class="old">9.490.000đ</span>
-	                            </div>
-	                            <div class="action clearfix">
-	                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-	                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-	                            </div>
-	                        </li>
-	                        <li>
-	                            <a href="" title="" class="thumb">
-	                                <img src="resources/assets/images/img-pro-20.png">
-	                            </a>
-	                            <a href="" title="" class="product-name">Laptop Lenovo IdeaPad 110</a>
-	                            <div class="price">
-	                                <span class="new">6.990.000đ</span>
-	                                <span class="old">7.990.000đ</span>
-	                            </div>
-	                            <div class="action clearfix">
-	                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-	                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-	                            </div>
-	                        </li>
-	                        <li>
-	                            <a href="" title="" class="thumb">
-	                                <img src="resources/assets/images/img-pro-21.png">
-	                            </a>
-	                            <a href="" title="" class="product-name">Laptop Asus X441NA</a>
-	                            <div class="price">
-	                                <span class="new">6.490.000đ</span>
-	                                <span class="old">8.490.000đ</span>
-	                            </div>
-	                            <div class="action clearfix">
-	                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-	                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-	                            </div>
-	                        </li>
-	                        <li>
-	                            <a href="" title="" class="thumb">
-	                                <img src="resources/assets/images/img-pro-22.png">
-	                            </a>
-	                            <a href="" title="" class="product-name">Laptop Acer Aspire ES1</a>
-	                            <div class="price">
-	                                <span class="new">6.390.000đ</span>
-	                                <span class="old">7.390.000đ</span>
-	                            </div>
-	                            <div class="action clearfix">
-	                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-	                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-	                            </div>
-	                        </li>
-	                        <li>
-	                            <a href="" title="" class="thumb">
-	                                <img src="resources/assets/images/img-pro-05.png">
-	                            </a>
-	                            <a href="" title="" class="product-name">Laptop Lenovo IdeaPad 120S</a>
-	                            <div class="price">
-	                                <span class="new">5.190.000đ</span>
-	                                <span class="old">7.190.000đ</span>
-	                            </div>
-	                            <div class="action clearfix">
-	                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-	                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-	                            </div>
-	                        </li>
-	                        <li>
-	                            <a href="" title="" class="thumb">
-	                                <img src="resources/assets/images/img-pro-23.png">
-	                            </a>
-	                            <a href="" title="" class="product-name">Laptop Asus A540UP I5</a>
-	                            <div class="price">
-	                                <span class="new">14.490.000đ</span>
-	                                <span class="old">16.490.000đ</span>
-	                            </div>
-	                            <div class="action clearfix">
-	                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
-	                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
-	                            </div>
-	                        </li>
+	                    	<c:forEach var="item" items="${ listLaptop }">
+		                        <li>
+		                            <a href="/i8-web/chi-tiet-san-pham/${item.slug }?id=${item.id }" title="" class="thumb">
+		                                <img src=<c:url value='/resources/assets/images/${item.image }'/>>
+		                            </a>
+		                            <a href="/i8-web/chi-tiet-san-pham/${item.slug }?id=${item.id }" title="" class="product-name">${item.name }</a>
+		                            <div class="price">
+		                                <span class="new">${item.price_new }</span>
+		                                <span class="old">${item.price_old }</span>
+		                            </div>
+		                            <div class="action clearfix">
+		                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
+		                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
+		                            </div>
+		                        </li>
+	                        </c:forEach>
 	                    </ul>
 	                </div>
 	            </div>
@@ -415,110 +155,21 @@
 	                </div>
 	                <div class="section-detail">
 	                    <ul class="list-item">
-	                        <li class="clearfix">
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb fl-left">
-	                                <img src="resources/assets/images/img-pro-13.png" alt="">
-	                            </a>
-	                            <div class="info fl-right">
-	                                <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Laptop Asus A540UP I5</a>
-	                                <div class="price">
-	                                    <span class="new">5.190.000đ</span>
-	                                    <span class="old">7.190.000đ</span>
-	                                </div>
-	                                <a href="" title="" class="buy-now">Mua ngay</a>
-	                            </div>
-	                        </li>
-	                        <li class="clearfix">
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb fl-left">
-	                                <img src="resources/assets/images/img-pro-11.png" alt="">
-	                            </a>
-	                            <div class="info fl-right">
-	                                <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Iphone X Plus</a>
-	                                <div class="price">
-	                                    <span class="new">15.190.000đ</span>
-	                                    <span class="old">17.190.000đ</span>
-	                                </div>
-	                                <a href="" title="" class="buy-now">Mua ngay</a>
-	                            </div>
-	                        </li>
-	                        <li class="clearfix">
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb fl-left">
-	                                <img src="resources/assets/images/img-pro-12.png" alt="">
-	                            </a>
-	                            <div class="info fl-right">
-	                                <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Iphone X Plus</a>
-	                                <div class="price">
-	                                    <span class="new">15.190.000đ</span>
-	                                    <span class="old">17.190.000đ</span>
-	                                </div>
-	                                <a href="" title="" class="buy-now">Mua ngay</a>
-	                            </div>
-	                        </li>
-	                        <li class="clearfix">
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb fl-left">
-	                                <img src="resources/assets/images/img-pro-05.png" alt="">
-	                            </a>
-	                            <div class="info fl-right">
-	                                <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Iphone X Plus</a>
-	                                <div class="price">
-	                                    <span class="new">15.190.000đ</span>
-	                                    <span class="old">17.190.000đ</span>
-	                                </div>
-	                                <a href="" title="" class="buy-now">Mua ngay</a>
-	                            </div>
-	                        </li>
-	                        <li class="clearfix">
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb fl-left">
-	                                <img src="resources/assets/images/img-pro-22.png" alt="">
-	                            </a>
-	                            <div class="info fl-right">
-	                                <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Iphone X Plus</a>
-	                                <div class="price">
-	                                    <span class="new">15.190.000đ</span>
-	                                    <span class="old">17.190.000đ</span>
-	                                </div>
-	                                <a href="" title="" class="buy-now">Mua ngay</a>
-	                            </div>
-	                        </li>
-	                        <li class="clearfix">
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb fl-left">
-	                                <img src="resources/assets/images/img-pro-23.png" alt="">
-	                            </a>
-	                            <div class="info fl-right">
-	                                <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Iphone X Plus</a>
-	                                <div class="price">
-	                                    <span class="new">15.190.000đ</span>
-	                                    <span class="old">17.190.000đ</span>
-	                                </div>
-	                                <a href="" title="" class="buy-now">Mua ngay</a>
-	                            </div>
-	                        </li>
-	                        <li class="clearfix">
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb fl-left">
-	                                <img src="resources/assets/images/img-pro-18.png" alt="">
-	                            </a>
-	                            <div class="info fl-right">
-	                                <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Iphone X Plus</a>
-	                                <div class="price">
-	                                    <span class="new">15.190.000đ</span>
-	                                    <span class="old">17.190.000đ</span>
-	                                </div>
-	                                <a href="" title="" class="buy-now">Mua ngay</a>
-	                            </div>
-	                        </li>
-	                        <li class="clearfix">
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb fl-left">
-	                                <img src="resources/assets/images/img-pro-15.png" alt="">
-	                            </a>
-	                            <div class="info fl-right">
-	                                <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">Iphone X Plus</a>
-	                                <div class="price">
-	                                    <span class="new">15.190.000đ</span>
-	                                    <span class="old">17.190.000đ</span>
-	                                </div>
-	                                <a href="" title="" class="buy-now">Mua ngay</a>
-	                            </div>
-	                        </li>
+	                    	<c:forEach var="item" items="${ listSale }">
+		                        <li class="clearfix">
+		                            <a href="/i8-web/chi-tiet-san-pham/${item.slug }?id=${item.id }" title="" class="thumb fl-left">
+		                                <img src=<c:url value='/resources/assets/images/${item.image }'/> alt="">
+		                            </a>
+		                            <div class="info fl-right">
+		                                <a href="/i8-web/chi-tiet-san-pham/${item.slug }?id=${item.id }" title="" class="product-name">${item.name }</a>
+		                                <div class="price">
+		                                    <span class="new">${item.price_new }</span>
+		                                    <span class="old">${item.price_old }</span>
+		                                </div>
+		                                <a href="" title="" class="buy-now">Mua ngay</a>
+		                            </div>
+		                        </li>
+	                        </c:forEach>
 	                    </ul>
 	                </div>
 	            </div>

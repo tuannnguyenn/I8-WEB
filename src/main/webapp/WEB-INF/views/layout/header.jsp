@@ -32,6 +32,7 @@
         <script src="<c:url value="/resources/assets/js/bootstrap/bootstrap.min.js"/>" type="text/javascript"></script>
         <script src="<c:url value="/resources/assets/js/carousel/owl.carousel.js"/>" type="text/javascript"></script>
         <script src="<c:url value="/resources/assets/js/main.js"/>" type="text/javascript"></script>
+        <script src="<c:url value="/resources/assets/js/app.js"/>" type="text/javascript"></script>
     </head>
 
     <body>

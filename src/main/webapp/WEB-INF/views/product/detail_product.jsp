@@ -20,7 +20,7 @@
 	                <div class="section-detail clearfix">
 	                    <div class="thumb-wp fl-left">
 	                        <a href="" title="" id="main-thumb">
-	                            <img id="zoom" src=${item.image } data-zoom-image=${item.image }/>
+	                            <img id="zoom" src=<c:url value='/resources/assets/images/${item.image }'/> data-zoom-image=${item.image }/>
 	                        </a>
 	                        <div id="list-thumb">
 	                            <a href="" data-image="https://media3.scdn.vn/img2/2017/10_30/sxlpFs_simg_ab1f47_350x350_maxb.jpg" data-zoom-image="https://media3.scdn.vn/img2/2017/10_30/sxlpFs_simg_70aaf2_700x700_maxb.jpg">
