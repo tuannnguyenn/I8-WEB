@@ -18,44 +18,47 @@
 					<c:forEach var="item" items="${ ProductId }">
 						<form:form action="" method="POST" modelAttribute="product">
 							<label for="title">Tên sản phẩm</label>
-							<form:input type="text" value="${item.name }" name="name" id="name"
-								path="name" />
+							<form:input type="text" value="${item.name }" name="name"
+								id="name" path="name" />
 							<label for="price_old">Giá cũ</label>
-							<form:input type="text" value="${item.price_old }" name="price_old"
-								id="price_old" path="price_old" />
+							<form:input type="text" value="${item.price_old }"
+								name="price_old" id="price_old" path="price_old" />
 							<label for="price_new">Giá mới</label>
-							<form:input type="text" value="${item.price_new }" name="price_new"
-								id="price_new" path="price_new" />
+							<form:input type="text" value="${item.price_new }"
+								name="price_new" id="price_new" path="price_new" />
 							<label for="desc">Mô tả</label>
-							<form:textarea value="${item.description }" name="desc" id="desc"
-								class="ckeditor" path="description"></form:textarea>
+							<textarea name="desc" id="desc" class="ckeditor">${item.description}</textarea>
 							<label for="status">Status</label>
-							<form:input type="text" value="${item.status }" name="status" id="status"
-								path="status" />
+							<form:input type="text" value="${item.status }" name="status"
+								id="status" path="status" />
 							<label>Hình ảnh</label>
 							<div id="uploadFile">
 								<form:input type="file" value="${item.image }" name="file"
 									id="upload-thumb" path="image" />
 							</div>
 							<label for="detail">Chi tiết sản phẩm</label>
-							<form:input type="text" value="${item.detail }" name="detail" id="detail"
-								path="detail" />
+							<textarea name="detail" id="desc" class="ckeditor">${item.detail }</textarea>
 							<label for="ghimSale">ghimSale</label>
 							<form:input type="text" value="${item.ghimSale }" name="ghimSale"
 								id="ghimSale" path="ghimSale" />
 							<label for="ghimNew">ghimNew</label>
-							<form:input type="text" value="${item.ghimNew }" name="ghimNew" id="ghimNew"
-								path="ghimNew" />
+							<form:input type="text" value="${item.ghimNew }" name="ghimNew"
+								id="ghimNew" path="ghimNew" />
 							<label for="title">Slug ( Friendly_url )</label>
-							<form:input type="text" value="${item.slug }" name="slug" id="slug"
-								path="slug" />
+							<form:input type="text" value="${item.slug }" name="slug"
+								id="slug" path="slug" />
 							<label>Danh mục cha</label>
-							<form:select name="parent-Cat" value="${item.product_id }"
-								path="product_id">
-								<option value="">-- Chọn danh mục --</option>
-								<option value="1">Thể thao</option>
-								<option value="2">Xã hội</option>
-								<option value="3">Tài chính</option>
+							<form:select name="parent-Cat" path="product_id">
+								<c:forEach var="itemCategory" items="${ categoriesProduct }">
+									<c:choose>
+										<c:when test="${itemCategory.id == item.product_id}">
+											<form:option value=" ${item.product_id }">${itemCategory.name}</form:option>
+										</c:when>
+									</c:choose>
+								</c:forEach>
+								<c:forEach var="item" items="${ categoriesProduct }">
+								<form:option value="${item.id }">${item.name}</form:option>
+							</c:forEach>
 							</form:select>
 							<div>
 								<button type="submit" name="btn-submit" id="btn-submit">Cập

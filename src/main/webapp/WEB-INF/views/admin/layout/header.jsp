@@ -35,17 +35,6 @@
                         <a href="?page=list_post" title="" id="logo" class="fl-left">ADMIN</a>
                         <ul id="main-menu" class="fl-left">
                             <li>
-                                <a href="/i8-web/admin/page/list" title="">Trang</a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="/i8-web/admin/page/create" title="">Thêm mới</a> 
-                                    </li>
-                                    <li>
-                                        <a href="/i8-web/admin/page/list" title="">Danh sách trang</a> 
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
                                 <a href="/i8-web/admin/post/list" title="">Bài viết</a>
                                 <ul class="sub-menu">
                                     <li>
@@ -85,8 +74,17 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="/i8-web/admin/menu/list" title="">Menu</a>
+                                <a href="/i8-web/admin/slider/list" title="">Slider</a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="/i8-web/admin/slider/create" title="">Thêm mới</a> 
+                                    </li>
+                                    <li>
+                                        <a href="/i8-web/admin/slider/list" title="">Danh sách Slider</a> 
+                                    </li>
+                                </ul>
                             </li>
+                            
                         </ul>
                         <div id="dropdown-user" class="dropdown dropdown-extended fl-right">
                             <button class="dropdown-toggle clearfix" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">

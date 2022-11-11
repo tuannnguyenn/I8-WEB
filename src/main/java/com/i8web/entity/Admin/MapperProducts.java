@@ -23,6 +23,7 @@ public class MapperProducts implements RowMapper<Products> {
 		products.setGhimSale(rs.getString("ghimSale"));
 		products.setGhimNew(rs.getString("ghimNew"));
 		products.setSlug(rs.getString("slug"));
+		products.setCreated_at(rs.getString("created_at"));
 		return products;
 	}
 

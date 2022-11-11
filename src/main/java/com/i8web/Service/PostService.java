@@ -15,7 +15,7 @@ import com.i8web.model.Admin.ProductsModel;
 public class PostService {
 	@Autowired
 	private PostsModel postsModel;
-	private ProductsModel productsModel;
+
 
 	public List<Posts> getListPosts() {
 		return postsModel.GetListPosts();
@@ -33,29 +33,10 @@ public class PostService {
 		postsModel.DeleteDataPost(id);
 	}
 
-	public void updatePost(Posts post) {
-		postsModel.UpdateDataPost(post);
+	public void updatePost(Posts post,String description) {
+		postsModel.UpdateDataPost(post,description);
 	}
-	//Product
-	public List<Products> getListProducts() {
-		return productsModel.GetListProducts();
-	}
-
-	public List<Products> GetProductById(int id) {
-		return productsModel.GetProductById(id);
-	}
-	public void insertProduct(Products product) {
-		
-		productsModel.InsertDataProduct(product);
-		
-	}
-
-	public void deleteProduct(int id) {
-		productsModel.DeleteDataProduct(id);
-	}
-
-	public void updateProduct(Products product) {
-		productsModel.UpdateDataProduct(product);
-	}
+	
+	
 
 }

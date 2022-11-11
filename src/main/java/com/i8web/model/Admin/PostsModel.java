@@ -1,10 +1,8 @@
 package com.i8web.model.Admin;
 
 
-import java.sql.Date;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,9 +37,9 @@ public class PostsModel {
 		String sql = "DELETE FROM posts WHERE id = " + id;
 		_jdbcTemplate.update(sql);
 	}
-	public void UpdateDataPost(Posts post) {
+	public void UpdateDataPost(Posts post, String description) {
 		String sql = "UPDATE posts SET image = ?,title = ?, date = ?,description = ?, post_id = ?, slug = ? WHERE id = ?";
-		_jdbcTemplate.update(sql,post.getImage(),post.getTitle(),LocalDate.now().toString(),post.getDescription(),post.getPost_id(),post.getSlug(),post.getId());
+		_jdbcTemplate.update(sql,post.getImage(),post.getTitle(),LocalDate.now().toString(),description,post.getPost_id(),post.getSlug(),post.getId());
 
 	}
 	

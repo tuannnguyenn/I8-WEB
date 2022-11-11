@@ -14,6 +14,7 @@ public class Products {
 	private String ghimSale;
 	private String ghimNew;
 	private String slug;
+	private String created_at;
 
 	public int getId() {
 		return id;
@@ -117,5 +118,14 @@ public class Products {
 
 	public void setSlug(String slug) {
 		this.slug = slug;
+	}
+
+
+	public String getCreated_at() {
+		return created_at;
+	}
+
+	public void setCreated_at(String created_at) {
+		this.created_at = created_at;
 	}
 }

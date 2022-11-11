@@ -28,9 +28,9 @@
                         <label>Danh mục cha</label>
                         <form:select name="parent-Cat" path="post_id">
                             <option value="">-- Chọn danh mục --</option>
-                            <option value="1">Thể thao</option>
-                            <option value="2">Xã hội</option>
-                            <option value="3">Tài chính</option>
+                           <c:forEach var="item" items="${ categoriesPost }">
+								<form:option value="${item.id }">${item.name}</form:option>
+							</c:forEach>
                         </form:select>
                         <div>
                         	<button type="submit" name="btn-submit" id="btn-submit">Thêm mới</button>

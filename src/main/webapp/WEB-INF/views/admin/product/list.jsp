@@ -8,8 +8,8 @@
 		<div id="content" class="fl-right">
 			<div class="section" id="title-page">
 				<div class="clearfix">
-					<h3 id="index" class="fl-left">Danh sách bài viết</h3>
-					<a href="/i8-web/admin/post/create" title="" id="add-new"
+					<h3 id="index" class="fl-left">Danh sách sản phẩm</h3>
+					<a href="/i8-web/admin/product/create" title="" id="add-new"
 						class="fl-left">Thêm mới</a>
 				</div>
 			</div>
@@ -33,6 +33,7 @@
 									<td><span class="thead-text">ghimSale</span></td>
 									<td><span class="thead-text">ghimNew</span></td>
 									<td><span class="thead-text">Slug</span></td>
+									<td><span class="thead-text">Ngày tạo</span></td>
 								</tr>
 							</thead>
 							<tbody>
@@ -59,6 +60,7 @@
 										<td><span class="tbody-text">${item.ghimSale }</span></td>
 										<td><span class="tbody-text">${item.ghimNew }</span></td>
 										<td><span class="tbody-text">${item.slug }</span></td>
+										<td><span class="tbody-text">${item.created_at }</span></td>
 										<td>
 											<span class="tbody-text">
 												<ul class="list-operation fl-right">

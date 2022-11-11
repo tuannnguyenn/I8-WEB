@@ -22,8 +22,7 @@
 							<label for="title">Slug ( Friendly_url )</label>
 							<form:input type="text" name="slug" value= "${item.slug}" id="slug" path="slug" />
 							<label for="desc">Mô tả</label>
-							<form:input type="text" name="desc" value= "${item.description }" id="desc" class="ckeditor"
-								path="description" />
+							<textarea name="desc" id="desc" class="ckeditor">${item.description}</textarea>
 							<label>Hình ảnh</label>
 							<div id="uploadFile">
 								<form:input type="file" name="file" value="" id="upload-thumb"
@@ -31,11 +30,18 @@
 								<img src="resources/assets/images/img-thumb.png">
 							</div>
 							<label>Danh mục cha</label>
-							<form:select name="parent-Cat" value="${item.post_id }" path="post_id">
-								<option value="">-- Chọn danh mục --</option>
-								<option value="1">Thể thao</option>
-								<option value="2">Xã hội</option>
-								<option value="3">Tài chính</option>
+							<form:select name="parent-Cat" path="post_id">
+								<c:forEach var="itemCategory" items="${ categoriesPost }">
+									<c:choose>
+										<c:when test="${itemCategory.id == item.post_id}">
+											<form:option value=" ${item.post_id }">${itemCategory.name}</form:option>
+										</c:when>
+									</c:choose>
+								</c:forEach>
+								<c:forEach var="item" items="${ categoriesPost }">
+								<form:option value="${item.id }">${item.name}</form:option>
+							</c:forEach>
+								
 							</form:select>
 							<div>
 								<button type="submit"  name="btn-submit" id="btn-submit">Cập
