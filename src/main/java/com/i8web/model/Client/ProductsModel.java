@@ -16,14 +16,6 @@ import com.i8web.entity.Client.Products;
 public class ProductsModel {
 	@Autowired
 	public JdbcTemplate _jdbcTemplate;
-//	
-//	private String SqlString() {
-//		StringBuffer  sql = new StringBuffer();
-//		sql.append("SELECT * FROM products");
-//		sql.append("WHERE product_id = 1");
-//		return sql.toString();
-//	}
-//	
 	public List<Category> GetDataCategory() {
 		List<Category> list = new ArrayList<Category>();
 		String sql = "SELECT * FROM categories";
@@ -59,12 +51,24 @@ public class ProductsModel {
 		return list;
 	}
 	
-	public List<Products> GetDataProductsToPrice(int id, String price_new) {
+	public List<Products> GetBrandById(int id) {
 		List<Products> list = new ArrayList<Products>();
-		if(price_new != "") {			
+		String sql = "SELECT * FROM products WHERE product_id ="+id;
+		list = _jdbcTemplate.query(sql, new MapperProducts());
+		return list;
+	}
+	
+	
+	public static final boolean isEmpty(String x) {
+        return (x == null || x.trim().equals(""));
+    }
+	
+	public List<Products> GetDataProductsFilter(int id, String price_new, String sort, String brand) {
+		List<Products> list = new ArrayList<Products>();
+//		System.out.println(price_new);
+		if(!isEmpty(price_new)) {			
 			if(price_new.equals("500000") == true) {
 				String sql = "SELECT * FROM products WHERE product_id = " + id + " AND price_new < " + price_new;
-				System.out.println(sql);
 				list = _jdbcTemplate.query(sql, new MapperProducts());
 			}
 			if(price_new.equals("500000 AND 1000000") == true) {
@@ -83,18 +87,12 @@ public class ProductsModel {
 				String sql = "SELECT * FROM products WHERE product_id = " + id + " AND price_new > " + price_new;
 				list = _jdbcTemplate.query(sql, new MapperProducts());
 			}
-		}else {
-			String sql = "SELECT * FROM products WHERE product_id = " + id;
-			list = _jdbcTemplate.query(sql, new MapperProducts());
 		}
-		return list;
-	}
-	
-	public List<Products> GetDataProductsSort(int id, String sort) {
-		List<Products> list = new ArrayList<Products>();
-		if(sort != "") {			
+		
+		if(!isEmpty(sort)) {			
 			if(sort.equals("1") == true) {
 				String sql = "SELECT * FROM products WHERE product_id = " + id + " ORDER BY name ASC ";
+				System.out.println(sql);
 				list = _jdbcTemplate.query(sql, new MapperProducts());
 			}
 			if(sort.equals("2") == true) {
@@ -109,10 +107,40 @@ public class ProductsModel {
 				String sql = "SELECT * FROM products WHERE product_id = " + id + " ORDER BY price_new ASC ";
 				list = _jdbcTemplate.query(sql, new MapperProducts());
 			}
-		}else {
-			String sql = "SELECT * FROM products WHERE product_id = " + id;
-			list = _jdbcTemplate.query(sql, new MapperProducts());
 		}
+		
+		if(!isEmpty(brand)) {			
+			if(brand.equals("Acer") == true) {
+				String sql = "SELECT * FROM products WHERE product_id = " + id + " AND brand = 'Acer'";
+				list = _jdbcTemplate.query(sql, new MapperProducts());
+			}
+			if(brand.equals("Apple") == true) {
+				String sql = "SELECT * FROM products WHERE product_id = " + id + " AND brand = 'Apple'";
+				list = _jdbcTemplate.query(sql, new MapperProducts());
+			}
+			if(brand.equals("Lenovo") == true) {
+				String sql = "SELECT * FROM products WHERE product_id = " + id + " AND brand = 'Lenovo'";
+				list = _jdbcTemplate.query(sql, new MapperProducts());
+			}
+			if(brand.equals("Samsung") == true) {
+				String sql = "SELECT * FROM products WHERE product_id = " + id + " AND brand = 'Samsung'";
+				list = _jdbcTemplate.query(sql, new MapperProducts());
+			}
+		}
+		
 		return list;
+	}
+	
+	public Products findProductById(int id) {
+		List<Products> list = new ArrayList<Products>();
+		String sql = "SELECT * FROM products";
+		list = _jdbcTemplate.query(sql, new MapperProducts());
+		for(Products pro:list) {
+			if(pro.getId()==id)
+			{
+				return pro;
+			}
+		}
+		return null;
 	}
 }

@@ -64,19 +64,18 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="cart-item">
-                            <td class="product-name">Son môi nữ cá tính<strong class="product-quantity">x 1</strong></td>
-                            <td class="product-total">350.000đ</td>
-                        </tr>
-                        <tr class="cart-item">
-                            <td class="product-name">Đồ tẩy trang nhập khẩu Mỹ<strong class="product-quantity">x 2</strong></td>
-                            <td class="product-total">500.000đ</td>
-                        </tr>
+                    	<c:forEach var="item" items="${ CART}">
+	                        <tr class="cart-item">
+	                            <td class="product-name">${item.name }<strong class="product-quantity">x ${ item.quantity}</strong></td>
+	                            <td class="product-total">${ item.amount}</td>
+	                        </tr>
+	                	</c:forEach>
+                        
                     </tbody>
                     <tfoot>
                         <tr class="order-total">
                             <td>Tổng đơn hàng:</td>
-                            <td><strong class="total-price">800.000đ</strong></td>
+                            <td><strong class="total-price">${TOTAL }</strong></td>
                         </tr>
                     </tfoot>
                 </table>

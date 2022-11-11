@@ -28,4 +28,7 @@ public class HomeServiceImpl implements IHomeService {
 	public List<Home> GetDataProductSale() {
 		return homeModel.GetDataProductSale();
 	}
+	public List<Home> GetSearchData(String key) {
+		return homeModel.GetSearchData(key);
+	}
 }

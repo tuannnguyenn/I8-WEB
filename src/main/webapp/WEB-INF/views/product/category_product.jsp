@@ -28,6 +28,7 @@
                         <div class="form-filter">
                             <form method="POST" action="">
                                 <select id="common_selector">
+                                	 <option>Tất cả</option>
                                      <option value="1" class="filter_order">Từ A-Z</option>
                                      <option value="2" class="filter_order">Từ Z-A</option>
                                      <option value="3" class="filter_order">Giá cao xuống thấp</option>
@@ -50,7 +51,7 @@
 	                                <span class="old">${item.price_old }</span>
 	                            </div>
 	                            <div class="action clearfix">
-	                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
+	                                <a href="/i8-web/gio-hang/add/${item.id }" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
 	                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
 	                            </div>
 	                        </li>
@@ -106,7 +107,7 @@
                             </thead>
                             <tbody>
                             	<tr>
-                                    <td><input type="radio" class="common_selector price_new" name="price_new" value="Tất cả" checked></td>
+                                    <td><input type="radio" class="price_new" name="price_new" checked></td>
                                     <td>Tất cả</td>
                                 </tr>
                                 <tr>
@@ -139,60 +140,28 @@
                             </thead>
                             <tbody>
                             	<tr>
-                                    <td><input type="radio" name="r-brand" checked></td>
+                                    <td><input type="radio" name="brand" checked></td>
                                     <td>Tất cả</td>
                                 </tr>
                                 <tr>
-                                    <td><input type="radio" name="r-brand"></td>
+                                    <td><input type="radio" class="common_selector_brand brand" name="brand" value="Acer"></td>
                                     <td>Acer</td>
                                 </tr>
                                 <tr>
-                                    <td><input type="radio" name="r-brand"></td>
+                                    <td><input type="radio" class="common_selector_brand brand" name="brand" value="Apple"></td>
                                     <td>Apple</td>
                                 </tr>
                                 <tr>
-                                    <td><input type="radio" name="r-brand"></td>
-                                    <td>Hp</td>
-                                </tr>
-                                <tr>
-                                    <td><input type="radio" name="r-brand"></td>
+                                    <td><input type="radio" class="common_selector_brand brand" name="brand" value="Lenovo"></td>
                                     <td>Lenovo</td>
                                 </tr>
                                 <tr>
-                                    <td><input type="radio" name="r-brand"></td>
+                                    <td><input type="radio" class="common_selector_brand brand" name="brand" value="Samsung"></td>
                                     <td>Samsung</td>
-                                </tr>
-                                <tr>
-                                    <td><input type="radio" name="r-brand"></td>
-                                    <td>Toshiba</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <td colspan="2">Loại</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><input type="radio" name="r-price"></td>
-                                    <td>Điện thoại</td>
-                                </tr>
-                                <tr>
-                                    <td><input type="radio" name="r-price"></td>
-                                    <td>Laptop</td>
                                 </tr>
                             </tbody>
                         </table>
                     </form>
-                </div>
-            </div>
-            <div class="section" id="banner-wp">
-                <div class="section-detail">
-                    <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-                        <img src="resources/assets/images/banner.png" alt="">
-                    </a>
                 </div>
             </div>
         </div>

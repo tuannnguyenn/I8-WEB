@@ -22,16 +22,19 @@ public class ProductsServiceImpl implements IProductsService {
 	public List<Products> GetProductsById(int id) {
 		return productsModel.GetProductsById(id);
 	}
-	public List<Products> GetDataProductsToPrice(int id, String price_new) {
-		return productsModel.GetDataProductsToPrice(id, price_new);
+	public List<Products> GetBrandById(int id) {
+		return productsModel.GetBrandById(id);
 	}
-	public List<Products> GetDataProductsSort(int id, String sort){
-		return productsModel.GetDataProductsSort(id, sort);
+	public List<Products> GetDataProductsFilter(int id, String price_new, String sort, String brand) {
+		return productsModel.GetDataProductsFilter(id, price_new, sort, brand);
 	}
 	public List<Category> GetDataCategory(){
 		return productsModel.GetDataCategory();
 	}
 	public List<Category> GetCategoryById(int id){
 		return productsModel.GetCategoryById(id);
+	}
+	public Products findProductById(int id) {
+		return productsModel.findProductById(id);
 	}
 }

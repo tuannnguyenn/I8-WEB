@@ -14,4 +14,5 @@ public interface IHomeService {
 	public List<Home> GetDataLaptop();
 	public List<Home> GetDataProductNew();
 	public List<Home> GetDataProductSale();
+	public List<Home> GetSearchData(String key);
 }

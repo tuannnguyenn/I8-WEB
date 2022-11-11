@@ -5,10 +5,12 @@ $(document).ready(function () {
         var category_id = $("#category_save").val();
         var filter_order_arr = get_filter_select('filter_order');
         let filter_order = filter_order_arr.toString();
+        var brand_arr = get_filter('brand');
+        let brand = brand_arr.toString();
         $.ajax({
             url: '/i8-web/filter_data',
             method: 'POST',
-            data: {price_new: price_new, category_id: category_id, filter_order: filter_order},
+            data: {price_new: price_new, category_id: category_id, filter_order: filter_order, brand: brand},
             dataType: 'text',
             success: function (data) {
                 $(".list-filter").html(data);
@@ -41,5 +43,31 @@ $(document).ready(function () {
     });
     $("#common_selector").click(function(){
         filter_data();
+    });
+    $(".common_selector_brand").click(function(){
+        filter_data();
+    });
+    
+     $(".input_search").keyup(function () { 
+        var action = "search";
+        var search_name = $(".input_search").val();
+        if($(".input_search").val() != ''){
+            $.ajax({
+                url: '/i8-web/search',
+                method: 'POST',
+                data: { action: action, search_name: search_name},
+                dataType: 'text',
+                success: function (data) {
+                    $("ul.list-item-show").html(data);
+                    // console.log(data);
+                },
+                error: function (xhr, ajaxOption, thrownError) {
+                    alert(xhr.status);
+                    alert(thrownError);
+                }
+            });
+        }else{
+            $("ul.list-item-show").html("");
+        }
     });
 });

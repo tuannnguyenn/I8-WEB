@@ -12,8 +12,9 @@ public interface IProductsService {
 	public List<Products> GetDataProducts();
 	public List<Products> GetProductsByCatId(int id);
 	public List<Products> GetProductsById(int id);
-	public List<Products> GetDataProductsToPrice(int id, String price_new);
-	public List<Products> GetDataProductsSort(int id, String sort);
+	public List<Products> GetBrandById(int id);
+	public List<Products> GetDataProductsFilter(int id, String price_new, String sort, String brand);
 	public List<Category> GetDataCategory();
 	public List<Category> GetCategoryById(int id);
+	public Products findProductById(int id);
 }

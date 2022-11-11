@@ -200,7 +200,7 @@
             <div class="section" id="banner-wp">
                 <div class="section-detail">
                     <a href="" title="" class="thumb">
-                        <img src="/i8-web/resources/assets/images/banner.png" alt="">
+                        <img src="/i8-web/resources/assets/images/banner.jpg" alt="">
                     </a>
                 </div>
             </div>
