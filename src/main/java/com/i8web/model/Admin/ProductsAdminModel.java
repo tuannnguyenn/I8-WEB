@@ -13,7 +13,7 @@ import com.i8web.entity.Admin.MapperProducts;
 import com.i8web.entity.Admin.Products;
 
 @Repository
-public class ProductsModel {
+public class ProductsAdminModel {
 	@Autowired
 	public JdbcTemplate _jdbcTemplate;
 

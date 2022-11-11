@@ -7,22 +7,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-<<<<<<< HEAD
-
-import com.i8web.Service.AdminService;
-=======
 import com.i8web.Service.PostService;
 import com.i8web.entity.Admin.Posts;
->>>>>>> tuan
 
 @Controller
 public class PostsController extends BasePostController {
 	@Autowired
-<<<<<<< HEAD
-   AdminService postService;
-   @RequestMapping(value = "/admin/post/create", method = RequestMethod.GET)
-   public ModelAndView create() {
-=======
    PostService postService;
 	@RequestMapping(value = "/admin/post/create", method = RequestMethod.GET)
 	public ModelAndView create() {
@@ -32,7 +22,6 @@ public class PostsController extends BasePostController {
 	}
    @RequestMapping(value = "/admin/post/create", method = RequestMethod.POST)
    public ModelAndView create(@ModelAttribute("post") Posts post) {
->>>>>>> tuan
       ModelAndView mav = new ModelAndView("/admin/post/create");
       postService.insertPost(post);
       return mav;
@@ -41,11 +30,7 @@ public class PostsController extends BasePostController {
    @RequestMapping(value = "/admin/post/list", method = RequestMethod.GET)
    public ModelAndView list() {
       ModelAndView mav = new ModelAndView("/admin/post/list");
-<<<<<<< HEAD
-      mav.addObject("posts", postService.getDataPost());
-=======
       mav.addObject("posts", postService.getListPosts());
->>>>>>> tuan
       return mav;
    }
    

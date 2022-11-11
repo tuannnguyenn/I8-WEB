@@ -9,13 +9,13 @@ import org.springframework.transaction.annotation.Transactional;
 import com.i8web.entity.Admin.CategoriesProduct;
 import com.i8web.entity.Admin.Products;
 import com.i8web.model.Admin.CategoriesProductModel;
-import com.i8web.model.Admin.ProductsModel;
+import com.i8web.model.Admin.ProductsAdminModel;
 
 @Service
 @Transactional
 public class ProductService {
 	@Autowired
-	private ProductsModel productsModel;
+	private ProductsAdminModel productsModel;
 	public List<Products> getListProducts() {
 		return productsModel.GetListProducts();
 	}
