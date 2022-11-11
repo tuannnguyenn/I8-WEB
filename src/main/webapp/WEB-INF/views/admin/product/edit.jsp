@@ -32,6 +32,9 @@
 							<form:input type="text" value="${item.status }" name="status"
 								id="status" path="status" />
 							<label>Hình ảnh</label>
+							<span class="tbody-text">
+												<img  src="<c:url value='/resources/assets/images/${item.image }'/>" alt="" style="width: 60px; height: 60px" />
+											</span>
 							<div id="uploadFile">
 								<form:input type="file" value="${item.image }" name="file"
 									id="upload-thumb" path="image" />

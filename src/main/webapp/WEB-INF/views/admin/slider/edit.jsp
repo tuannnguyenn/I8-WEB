@@ -23,6 +23,7 @@
 								<form:input type="file" value="${item.image }" name="file"
 									id="upload-thumb" path="image" />
 							</div>
+							
 							<div>
 								<button type="submit" name="btn-submit" id="btn-submit">Cập
 									nhật</button>
