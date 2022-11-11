@@ -184,3 +184,45 @@
 #cart-wp #dropdown .action-cart a.checkout{ background: #d9263c; color: #fff;}
 #cart-wp #dropdown .action-cart a.view-cart:hover{ background: #ccc;}
 #cart-wp #dropdown .action-cart a.checkout:hover{ background: #af1427;}
+.show-search{
+    position: absolute;
+    z-index: 2;
+    top: 63px;
+    left: 202px;
+    background: #fff;
+    width: 48.4%;
+    border-radius: 4px;
+    display: block;
+}
+ul.list-item-show li{
+    display: flex;
+    padding: 16px 0px;
+}
+
+ul.list-item-show{
+    margin-bottom: 0px;
+}
+
+ul.list-item-show li{
+    padding: 9px 10px;
+    border-bottom: 1px solid #e3e0e0;
+}
+
+ul.list-item-show li:hover{
+    background: #f7f2f2;
+    cursor: pointer;
+}
+
+ul.list-item-show li a img{
+    width: 52px;
+    padding: 0px;
+}
+
+ul.list-item-show li .d-column{
+    display: flex;
+    flex-direction: column;
+}
+ul.list-item-show li span.price{
+    color: red;
+    font-weight: 450;
+}

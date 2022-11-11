@@ -35,17 +35,6 @@
                         <a href="?page=list_post" title="" id="logo" class="fl-left">ADMIN</a>
                         <ul id="main-menu" class="fl-left">
                             <li>
-                                <a href="/i8-web/admin/page/list" title="">Trang</a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="/i8-web/admin/page/create" title="">Thêm mới</a> 
-                                    </li>
-                                    <li>
-                                        <a href="/i8-web/admin/page/list" title="">Danh sách trang</a> 
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
                                 <a href="/i8-web/admin/post/list" title="">Bài viết</a>
                                 <ul class="sub-menu">
                                     <li>
@@ -85,15 +74,24 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="/i8-web/admin/menu/list" title="">Menu</a>
+                                <a href="/i8-web/admin/slider/list" title="">Slider</a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="/i8-web/admin/slider/create" title="">Thêm mới</a> 
+                                    </li>
+                                    <li>
+                                        <a href="/i8-web/admin/slider/list" title="">Danh sách Slider</a> 
+                                    </li>
+                                </ul>
                             </li>
+                            
                         </ul>
                         <div id="dropdown-user" class="dropdown dropdown-extended fl-right">
                             <button class="dropdown-toggle clearfix" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                 <div id="thumb-circle" class="fl-left">
                                     <img src="http://localhost:8080/i8-web/resources/adminassets/images/img-admin.png">
                                 </div>
-                                <h3 id="account" class="fl-right">Admin</h3>
+                                <h3 id="account" class="fl-right">${ userAccount.get_name() }</h3>
                             </button>
                             <ul class="dropdown-menu">
                                 <li><a href="?page=info_account" title="Thông tin cá nhân">Thông tin tài khoản</a></li>

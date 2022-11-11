@@ -56,7 +56,7 @@
     </div>
     <div id="foot-bot">
         <div class="wp-inner">
-            <p id="copyright">© Bản quyền thuộc về unitop.vn | Php Master</p>
+            <p id="copyright">© Bản quyền thuộc về i8-web</p>
         </div>
     </div>
 </div>

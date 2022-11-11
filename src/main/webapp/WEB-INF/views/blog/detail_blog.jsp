@@ -159,13 +159,6 @@
                     </ul>
                 </div>
             </div>
-            <div class="section" id="banner-wp">
-                <div class="section-detail">
-                    <a href="/i8-web/chi-tiet-san-pham" title="" class="thumb">
-                        <img src="resources/assets/images/banner.png" alt="">
-                    </a>
-                </div>
-            </div>
         </div>
     </div>
 </div>

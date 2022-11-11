@@ -6,6 +6,8 @@ public class Posts {
 	private String title;
 	private String date;
 	private String description;
+	private String slug;
+	private String post_id;
 	public Posts() {
 		super();
 	}
@@ -39,5 +41,19 @@ public class Posts {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-
+	public String getSlug() {
+		return slug;
+	}
+	public void setSlug(String slug) {
+		this.slug = slug;
+	}
+	public String getPost_id() {
+		return post_id;
+	}
+	public void setPost_id(String post_id) {
+		this.post_id = post_id;
+	}
+	
+	
+	
 }

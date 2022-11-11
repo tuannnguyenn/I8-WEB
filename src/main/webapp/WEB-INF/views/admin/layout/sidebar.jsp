@@ -57,10 +57,10 @@
             </a>
             <ul class="sub-menu">
                 <li class="nav-item">
-                    <a href="?page=add_slider" title="" class="nav-link">Thêm mới</a>
+                    <a href="/i8-web/admin/slider/create" title="" class="nav-link">Thêm mới</a>
                 </li>
                 <li class="nav-item">
-                    <a href="?page=list_slider" title="" class="nav-link">Danh sách slider</a>
+                    <a href="/i8-web/admin/slider/list" title="" class="nav-link">Danh sách slider</a>
                 </li>
             </ul>
         </li>
