@@ -12,7 +12,11 @@ public class PostServiceImpl implements IPostService{
 	@Autowired
 	private PostsModel postModel;
 	public List<Posts> GetDataPost(){
+<<<<<<< HEAD
 		return postModel.GetDataPost();
+=======
+		return postModel.GetListPosts();
+>>>>>>> tuan
 	}
 	
 
