@@ -45,7 +45,7 @@
 	                            <a href="/i8-web/chi-tiet-san-pham/${item.slug }?id=${item.id }" title="" class="thumb">
 	                                <img src="<c:url value='/resources/assets/images/${item.image }'/>">
 	                            </a>
-	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">${item.name }</a>
+	                            <a href="/i8-web/chi-tiet-san-pham/${item.slug }?id=${item.id }" title="" class="product-name">${item.name }</a>
 	                            <div class="price">
 	                                <span class="new">${item.price_new }</span>
 	                                <span class="old">${item.price_old }</span>

@@ -66,3 +66,14 @@
     color: #fff;
 }
 #paging-wp .list-item li a:hover{ background: #868686;}
+.product-name{
+	font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 40px;
+    -webkit-line-clamp: 5;
+    display: flow-root;
+}
