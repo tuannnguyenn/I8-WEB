@@ -75,7 +75,7 @@
 		                                <span class="old">${item.price_old }</span>
 		                            </div>
 		                            <div class="action clearfix">
-		                                <a href="/i8-web/gio-hang" title="" class="add-cart fl-left">Thêm giỏ hàng</a>
+		                                <a href="/i8-web/gio-hang/add/${item.id }" title="" class="add-cart fl-left">Thêm giỏ hàng</a>
 		                                <a href="/i8-web/thanh-toan" title="" class="buy-now fl-right">Mua ngay</a>
 		                            </div>
 		                        </li>
@@ -100,7 +100,7 @@
 		                                <span class="old">${item.price_old }</span>
 		                            </div>
 		                            <div class="action clearfix">
-		                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
+		                                <a href="/i8-web/gio-hang/add/${item.id }" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
 		                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
 		                            </div>
 		                        </li>
@@ -125,7 +125,7 @@
 		                                <span class="old">${item.price_old }</span>
 		                            </div>
 		                            <div class="action clearfix">
-		                                <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
+		                                <a href="/i8-web/gio-hang/add/${item.id }" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
 		                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
 		                            </div>
 		                        </li>

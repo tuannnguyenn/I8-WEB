@@ -3,8 +3,8 @@ package com.i8web.controller.Admin;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.i8web.Service.CategoriesPostService;
-import com.i8web.Service.CategoriesProductService;
+import com.i8web.Service.Admin.CategoriesPostService;
+import com.i8web.Service.Admin.CategoriesProductService;
 import com.i8web.entity.Admin.Posts;
 import com.i8web.entity.Admin.Products;
 

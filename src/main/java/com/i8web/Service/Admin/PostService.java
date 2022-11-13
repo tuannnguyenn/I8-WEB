@@ -1,4 +1,4 @@
-package com.i8web.Service;
+package com.i8web.Service.Admin;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;

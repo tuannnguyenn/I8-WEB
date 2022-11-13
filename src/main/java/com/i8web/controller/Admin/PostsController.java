@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-import com.i8web.Service.PostService;
+
+import com.i8web.Service.Admin.PostService;
 import com.i8web.entity.Admin.Posts;
 
 @Controller

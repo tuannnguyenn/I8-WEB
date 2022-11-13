@@ -3,7 +3,8 @@ package com.i8web.controller.Admin;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.i8web.Service.CategoriesPostService;
+import com.i8web.Service.Admin.CategoriesPostService;
+
 import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
