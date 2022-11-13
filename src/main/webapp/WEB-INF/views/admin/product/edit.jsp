@@ -33,11 +33,9 @@
 								id="status" path="status" />
 							<label>Hình ảnh</label>
 							<div id="uploadFile">
-								<input type="file" name="file"
-									id="upload-thumb" />
+								<form:input type="file" value="${item.image }" name="file"
+									id="upload-thumb" path="image" />
 							</div>
-							<input type="hidden" value="${item.image }" name="image"
-								id="image"  />
 							<label for="detail">Chi tiết sản phẩm</label>
 							<textarea name="detail" id="desc" class="ckeditor">${item.detail }</textarea>
 							<label for="ghimSale">ghimSale</label>

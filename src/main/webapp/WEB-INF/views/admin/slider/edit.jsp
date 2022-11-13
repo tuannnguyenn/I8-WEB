@@ -20,11 +20,9 @@
 							
 							<label>Hình ảnh</label>
 							<div id="uploadFile">
-								<input type="file" name="file"
-									id="upload-thumb" />
+								<form:input type="file" value="${item.image }" name="file"
+									id="upload-thumb" path="image" />
 							</div>
-							<input type="hidden" value="${item.image }" name="image"
-								id="image"  />
 							<div>
 								<button type="submit" name="btn-submit" id="btn-submit">Cập
 									nhật</button>

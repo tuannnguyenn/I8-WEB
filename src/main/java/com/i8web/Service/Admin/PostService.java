@@ -6,8 +6,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.i8web.entity.Admin.Posts;
+import com.i8web.entity.Admin.Products;
 import com.i8web.model.Admin.PostsModel;
-
+import com.i8web.model.Admin.ProductsAdminModel;
 
 @Service
 @Transactional
@@ -32,8 +33,8 @@ public class PostService {
 		postsModel.DeleteDataPost(id);
 	}
 
-	public void updatePost(Posts post,String description,String image) {
-		postsModel.UpdateDataPost(post,description,image);
+	public void updatePost(Posts post,String description) {
+		postsModel.UpdateDataPost(post,description);
 	}
 	
 	

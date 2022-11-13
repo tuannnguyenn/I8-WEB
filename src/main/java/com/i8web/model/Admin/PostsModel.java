@@ -37,9 +37,9 @@ public class PostsModel {
 		String sql = "DELETE FROM posts WHERE id = " + id;
 		_jdbcTemplate.update(sql);
 	}
-	public void UpdateDataPost(Posts post, String description,String image) {
+	public void UpdateDataPost(Posts post, String description) {
 		String sql = "UPDATE posts SET image = ?,title = ?, date = ?,description = ?, post_id = ?, slug = ? WHERE id = ?";
-		_jdbcTemplate.update(sql,image,post.getTitle(),LocalDate.now().toString(),description,post.getPost_id(),post.getSlug(),post.getId());
+		_jdbcTemplate.update(sql,post.getImage(),post.getTitle(),LocalDate.now().toString(),description,post.getPost_id(),post.getSlug(),post.getId());
 
 	}
 	
