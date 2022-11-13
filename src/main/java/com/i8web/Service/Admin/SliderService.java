@@ -25,7 +25,7 @@ public class SliderService {
 	public void DeleteDataSlider(int id) {
 		slidersModel.DeleteDataSlider(id);
 	}
-	public void UpdateDataSlider(Sliders slider) {
-		slidersModel.UpdateDataSlider(slider);
+	public void UpdateDataSlider(Sliders slider,String image) {
+		slidersModel.UpdateDataSlider(slider,image);
 	}
 }

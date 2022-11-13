@@ -52,8 +52,19 @@ public class PostsController extends BasePostController {
    @RequestMapping(value = "/EditPost/{id}", method = RequestMethod.POST)
    public String postEdit(@PathVariable int id,@ModelAttribute("post") Posts post,HttpServletRequest req) {
 	  String description = req.getParameter("desc");
-	  postService.updatePost(post,description);
+	  String image = req.getParameter("image");
+	  String fileValue = req.getParameter("file");
+	  postService.updatePost(post,description,getValueImage(fileValue, image));
+	  
       return "redirect:/admin/post/list";
+   }
+   public String getValueImage(String fileValue, String image) {
+	   if(fileValue == "") {
+		   return image;
+	   }
+	   else {
+		   return fileValue;
+	   }
    }
   
 }

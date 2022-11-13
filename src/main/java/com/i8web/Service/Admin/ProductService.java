@@ -32,8 +32,8 @@ public class ProductService {
 		productsModel.DeleteDataProduct(id);
 	}
 
-	public void updateProduct(Products product,String description,String detail) {
-		productsModel.UpdateDataProduct(product,description,detail);
+	public void updateProduct(Products product,String description,String detail,String image) {
+		productsModel.UpdateDataProduct(product,description,detail,image);
 	}
 	private CategoriesProductModel categoriesProductModel;
 	public List<CategoriesProduct> getListCategoriesProduct() {
