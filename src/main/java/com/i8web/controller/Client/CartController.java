@@ -27,7 +27,6 @@ public class CartController {
 	@Autowired
 	IShoppingCartService cartService;
 	
-	
    @RequestMapping(value = "/gio-hang", method = RequestMethod.GET)
    public ModelAndView CartPage(HttpSession session) {
 	  session.setAttribute("CART",cartService.getAllItems());
@@ -42,12 +41,30 @@ public class CartController {
 		Products product = productService.findProductById(id);
 		CartItem item = new CartItem();
 		if (product!=null){
-			int temp = 0;
 			item.setId(product.getId());
 			item.setImage(product.getImage());
 			item.setName(product.getName());
 			item.setPrice(product.getPrice_new());
 			item.setQuantity(1);
+			item.setAmount(item.getPrice(),item.getQuantity());
+			cartService.add(item);
+		}
+		return "redirect:/gio-hang";
+	}
+	
+	@RequestMapping(value = "/gio-hang/additems/{id}", method = RequestMethod.POST)
+	   public String addCarts(@PathVariable("id") Integer id, @RequestParam("num-order") String quantity) {
+		Products product = productService.findProductById(id);
+		CartItem item = new CartItem();
+		if (product!=null){
+			if(quantity == "0" || quantity == "" ){
+				quantity ="1";
+			}
+			item.setId(product.getId());
+			item.setImage(product.getImage());
+			item.setName(product.getName());
+			item.setPrice(product.getPrice_new());
+			item.setQuantity(Integer.parseInt(quantity));
 			item.setAmount(item.getPrice(),item.getQuantity());
 			cartService.add(item);
 		}

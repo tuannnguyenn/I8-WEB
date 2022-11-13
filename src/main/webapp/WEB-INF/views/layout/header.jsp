@@ -80,33 +80,47 @@
                                 </a>
                                 <div id="cart-wp" class="fl-right">
                                     <div id="btn-cart">
+                                    	<a href="/i8-web/gio-hang" style="display: block;color: #fff;">
                                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                         <span id="num">${ ITEMS}</span>
+                                        </a>
                                     </div>
                                     <div id="dropdown">
-                                    <p class="desc">Có <span>${ ITEMS} sản phẩm</span> trong giỏ hàng</p>
-                                    <c:forEach var="item" items="${ CART}">
-                                        <ul class="list-cart">
-                                            <li class="clearfix">
-                                                <a href="" title="" class="thumb fl-left">
-                                                    <img src="${item.image }" alt="">
-                                                </a>
-                                                <div class="info fl-right">
-                                                    <a href="" title="" class="product-name">${ item.name}</a>
-                                                    <p class="price">${ item.price}</p>
-                                                    <p class="qty">Số lượng: <span>${ item.quantity}</span></p>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                   </c:forEach>  
-                                        <div class="total-price clearfix">
-                                            <p class="title fl-left">Tổng:</p>
-                                            <p class="price fl-right">${TOTAL }</p>
-                                        </div>
-                                        <dic class="action-cart clearfix">
-                                            <a href="/i8-web/gio-hang" title="Giỏ hàng" class="view-cart fl-left">Giỏ hàng</a>
-                                            <a href="/i8-web/thanh-toan" title="Thanh toán" class="checkout fl-right">Thanh toán</a>
-                                        </dic>                                    
+                                    <c:choose>
+                                        <c:when test="${ITEMS=='0'}">
+        										<div style="padding: 5px; text-align: center; margin-top: 20px ">
+                                            		<center><img src="resources/assets/images/no_cart.png" alt="">
+                                            		<p style="color: #7e7878; margin-top: 20px; font-size: 20px;">Giỏ hàng trống</p></center>
+                                        		</div>
+        									<br />
+    									</c:when> 
+                                    	<c:otherwise>
+		                                    <p class="desc">Có <span>${ ITEMS} sản phẩm</span> trong giỏ hàng</p>
+		                                    <c:forEach var="item" items="${ CART}">
+		                                        <ul class="list-cart">
+		                                            <li class="clearfix">
+		                                                <a href="" title="" class="thumb fl-left">
+		                                                    <img src="${item.image }" alt="">
+		                                                </a>
+		                                                <div class="info fl-right">
+		                                                    <a href="" title="" class="product-name">${ item.name}</a>
+		                                                    <p class="price">${ item.price}</p>
+		                                                    <p class="qty">Số lượng: <span>${ item.quantity}</span></p>
+		                                                </div>
+		                                            </li>
+		                                        </ul>
+		                                   </c:forEach>  
+		                                        <div class="total-price clearfix">
+		                                            <p class="title fl-left">Tổng:</p>
+		                                            <p class="price fl-right">${TOTAL }</p>
+		                                        </div>
+		                                        <dic class="action-cart clearfix">
+		                                            <a href="/i8-web/gio-hang" title="Giỏ hàng" class="view-cart fl-left">Giỏ hàng</a>
+		                                            <a href="/i8-web/thanh-toan" title="Thanh toán" class="checkout fl-right">Thanh toán</a>
+		                                        </dic>
+                                        	<br />
+    									</c:otherwise>
+                                    </c:choose>                                        
                                     </div>
                                 </div>
                             </div>

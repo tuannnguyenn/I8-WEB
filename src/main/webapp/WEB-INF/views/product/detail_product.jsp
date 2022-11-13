@@ -15,7 +15,8 @@
             </div>
         </div>
         <div class="main-content fl-right">
-        	<c:forEach var="item" items="${ ProductId }">	
+        	<c:forEach var="item" items="${ ProductId }">
+        	<form action="<%=request.getContextPath() %>/gio-hang/additems/${ item.id}" method="post" name="form-cart">	
 	            <div class="section" id="detail-product-wp">
 	                <div class="section-detail clearfix">
 	                    <div class="thumb-wp fl-left">
@@ -58,10 +59,12 @@
 	                        <p class="price">${item.price_new }</p>
 	                        <div id="num-order-wp">
 	                            <a title="" id="minus"><i class="fa fa-minus"></i></a>
-	                            <input type="text" name="num-order" value="1" id="num-order">
+	                            <input type="text" name="num-order" id="num-order" >
 	                            <a title="" id="plus"><i class="fa fa-plus"></i></a>
 	                        </div>
-	                        <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart">Thêm giỏ hàng</a>
+	                        <div class="place-order-wp clearfix">
+  								<input type="submit" id="order-now" value="Thêm giỏ hàng">
+                			</div>
 	                    </div>
 	                </div>
 	            </div>
@@ -73,6 +76,7 @@
 	                    ${item.detail }
 	                </div>
 	            </div>
+	            </form>
             </c:forEach>
             <div class="section" id="same-category-wp">
                 <div class="section-head">

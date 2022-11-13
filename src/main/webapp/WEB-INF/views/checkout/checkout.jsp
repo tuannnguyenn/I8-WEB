@@ -16,40 +16,39 @@
         </div>
     </div>
     <div id="wrapper" class="wp-inner clearfix">
+        <form action="<%=request.getContextPath() %>/thanh-toan/save" method="post" name="form-checkout">
         <div class="section" id="customer-info-wp">
             <div class="section-head">
                 <h1 class="section-title">Thông tin khách hàng</h1>
             </div>
             <div class="section-detail">
-                <form method="POST" action="" name="form-checkout">
                     <div class="form-row clearfix">
                         <div class="form-col fl-left">
-                            <label for="fullname">Họ tên</label>
-                            <input type="text" name="fullname" id="fullname">
+                            <label for="fullname">Họ tên*</label>
+                            <input type="text" name="fullname" id="fullname" >
                         </div>
                         <div class="form-col fl-right">
-                            <label for="email">Email</label>
+                            <label for="email">Email*</label>
                             <input type="email" name="email" id="email">
                         </div>
                     </div>
                     <div class="form-row clearfix">
                         <div class="form-col fl-left">
-                            <label for="address">Địa chỉ</label>
+                            <label for="address">Địa chỉ*</label>
                             <input type="text" name="address" id="address">
                         </div>
                         <div class="form-col fl-right">
-                            <label for="phone">Số điện thoại</label>
-                            <input type="tel" name="phone" id="phone">
+                            <label for="phone">Số điện thoại*</label>
+                            <input type="tel" name="phone" id="phone" pattern="[0-9]{5,20}">
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-col">
-                            <label for="notes">Ghi chú</label>
-                            <textarea name="note"></textarea>
-                        </div>
+                    <div class="form-col">
+                        <label for="notes">Ghi chú</label>
+                        <textarea name="note" placeholder="Ghi chú đơn hàng"></textarea>
                     </div>
-                </form>
-            </div>
+                </div> 			             
+	    	</div>
         </div>
         <div class="section" id="order-review-wp">
             <div class="section-head">
@@ -91,11 +90,13 @@
                         </li>
                     </ul>
                 </div>
-                <div class="place-order-wp clearfix">
-                    <input type="submit" id="order-now" value="Đặt hàng">
+  				<div class="place-order-wp clearfix">
+  				<input type="submit" id="order-now" value="Đặt hàng">
                 </div>
             </div>
         </div>
+        
+        </form>   
     </div>
 </div>
 <%@include file = "/WEB-INF/views/layout/footer.jsp" %>
