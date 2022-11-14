@@ -6,7 +6,6 @@ public class Order{
 	private String name;
 	private String phone;
 	private String email;
-	private String code;
 	private String img;
 	private String nameProduct;
 	private String price;
@@ -36,12 +35,6 @@ public class Order{
 	}
 	public void setEmail(String email) {
 		this.email = email;
-	}
-	public String getCode() {
-		return code;
-	}
-	public void setCode(String code) {
-		this.code = code;
 	}
 	public String getImg() {
 		return img;

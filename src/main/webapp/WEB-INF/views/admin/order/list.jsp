@@ -62,7 +62,7 @@
 										<td><input type="checkbox" name="checkItem"
 											class="checkItem"></td>
 										<td><span class="tbody-text">${ order.id.toString() }</span>
-										<td><span class="tbody-text">${ order.code }</span>
+										<td><span class="tbody-text">${ order.id.toString() }</span>
 										<td>
 											<div class="tb-title fl-left">
 												<a href="" title="">${ order.name }</a>
