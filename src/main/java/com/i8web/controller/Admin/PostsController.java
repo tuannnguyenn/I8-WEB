@@ -8,17 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-<<<<<<< HEAD
 import com.i8web.Service.Admin.PostService;
 import com.i8web.entity.Admin.Posts;
-=======
-import com.i8web.Service.AdminService;
->>>>>>> nghia
 
 @Controller
 public class PostsController extends BasePostController {
 	@Autowired
-<<<<<<< HEAD
    PostService postService;
 	@RequestMapping(value = "/admin/post/create", method = RequestMethod.GET)
 	public ModelAndView create() {
@@ -28,11 +23,6 @@ public class PostsController extends BasePostController {
 	}
    @RequestMapping(value = "/admin/post/create", method = RequestMethod.POST)
    public ModelAndView create(@ModelAttribute("post") Posts post) {
-=======
-   AdminService postService;
-   @RequestMapping(value = "/admin/post/create", method = RequestMethod.GET)
-   public ModelAndView create() {
->>>>>>> nghia
       ModelAndView mav = new ModelAndView("/admin/post/create");
       postService.insertPost(post);
       return mav;
@@ -41,11 +31,7 @@ public class PostsController extends BasePostController {
    @RequestMapping(value = "/admin/post/list", method = RequestMethod.GET)
    public ModelAndView list() {
       ModelAndView mav = new ModelAndView("/admin/post/list");
-<<<<<<< HEAD
       mav.addObject("posts", postService.getListPosts());
-=======
-      mav.addObject("posts", postService.getDataPost());
->>>>>>> nghia
       return mav;
    }
    
@@ -66,8 +52,19 @@ public class PostsController extends BasePostController {
    @RequestMapping(value = "/EditPost/{id}", method = RequestMethod.POST)
    public String postEdit(@PathVariable int id,@ModelAttribute("post") Posts post,HttpServletRequest req) {
 	  String description = req.getParameter("desc");
-	  postService.updatePost(post,description);
+	  String image = req.getParameter("image");
+	  String fileValue = req.getParameter("file");
+	  postService.updatePost(post,description,getValueImage(fileValue, image));
+	  
       return "redirect:/admin/post/list";
+   }
+   public String getValueImage(String fileValue, String image) {
+	   if(fileValue == "") {
+		   return image;
+	   }
+	   else {
+		   return fileValue;
+	   }
    }
   
 }

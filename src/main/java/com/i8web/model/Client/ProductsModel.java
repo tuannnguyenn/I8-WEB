@@ -16,10 +16,7 @@ import com.i8web.entity.Client.Products;
 public class ProductsModel {
 	@Autowired
 	public JdbcTemplate _jdbcTemplate;
-<<<<<<< HEAD
-=======
 	
->>>>>>> nghia
 	public List<Category> GetDataCategory() {
 		List<Category> list = new ArrayList<Category>();
 		String sql = "SELECT * FROM categories";
@@ -55,7 +52,6 @@ public class ProductsModel {
 		return list;
 	}
 	
-<<<<<<< HEAD
 	public List<Products> GetBrandById(int id) {
 		List<Products> list = new ArrayList<Products>();
 		String sql = "SELECT * FROM products WHERE product_id ="+id;
@@ -136,9 +132,6 @@ public class ProductsModel {
 		return list;
 	}
 	
-=======
-
->>>>>>> nghia
 	public Products findProductById(int id) {
 		List<Products> list = new ArrayList<Products>();
 		String sql = "SELECT * FROM products";
@@ -151,8 +144,5 @@ public class ProductsModel {
 		}
 		return null;
 	}
-<<<<<<< HEAD
-=======
 
->>>>>>> nghia
 }

@@ -32,10 +32,7 @@
         <script src="<c:url value="/resources/assets/js/bootstrap/bootstrap.min.js"/>" type="text/javascript"></script>
         <script src="<c:url value="/resources/assets/js/carousel/owl.carousel.js"/>" type="text/javascript"></script>
         <script src="<c:url value="/resources/assets/js/main.js"/>" type="text/javascript"></script>
-<<<<<<< HEAD
         <script src="<c:url value="/resources/assets/js/app.js"/>" type="text/javascript"></script>
-=======
->>>>>>> nghia
     </head>
 
     <body>
@@ -89,7 +86,6 @@
                                     	<a href="/i8-web/gio-hang" style="display: block;color: #fff;">
                                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                         <span id="num">${ ITEMS}</span>
-<<<<<<< HEAD
                                     </div>
                                     <div id="dropdown">
                                     <p class="desc">Có <span>${ ITEMS} sản phẩm</span> trong giỏ hàng</p>
@@ -154,7 +150,6 @@
                                         	<br />
     									</c:otherwise>
                                     </c:choose>                                        
->>>>>>> nghia
                                     </div>
                                 </div>
                             </div>

@@ -51,7 +51,17 @@ public class SlidersController {
 	   }
 	   @RequestMapping(value = "/EditSlider/{id}", method = RequestMethod.POST)
 	   public String postEdit(@PathVariable int id,@ModelAttribute("slider") Sliders slider,HttpServletRequest req) {
-		  sliderService.UpdateDataSlider(slider);
+		   String image = req.getParameter("image");
+		   String fileValue = req.getParameter("file");
+		   sliderService.UpdateDataSlider(slider,getValueImage(fileValue, image));
 	      return "redirect:/admin/slider/list";
+	   }
+	   public String getValueImage(String fileValue, String image) {
+		   if(fileValue == "") {
+			   return image;
+		   }
+		   else {
+			   return fileValue;
+		   }
 	   }
 }

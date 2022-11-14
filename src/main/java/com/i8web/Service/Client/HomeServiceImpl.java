@@ -5,10 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-<<<<<<< HEAD
 import com.i8web.entity.Client.Category;
-=======
->>>>>>> nghia
 import com.i8web.entity.Client.Home;
 import com.i8web.model.Client.HomeModel;
 
@@ -16,7 +13,6 @@ import com.i8web.model.Client.HomeModel;
 public class HomeServiceImpl implements IHomeService {
 	@Autowired
 	private HomeModel homeModel;
-<<<<<<< HEAD
 	public List<Category> GetDataCategory(){
 		return homeModel.GetDataCategory();
 	}
@@ -35,10 +31,8 @@ public class HomeServiceImpl implements IHomeService {
 	public List<Home> GetSearchData(String key) {
 		return homeModel.GetSearchData(key);
 	}
-=======
 	public List<Home> GetDataHome(){
 		return homeModel.GetDataHome();
 	}
 	
->>>>>>> nghia
 }

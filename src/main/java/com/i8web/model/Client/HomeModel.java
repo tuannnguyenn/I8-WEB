@@ -8,21 +8,17 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.i8web.entity.Client.MapperHome;
-<<<<<<< HEAD
 import com.i8web.entity.Client.MapperProducts;
 import com.i8web.entity.Client.Category;
 import com.i8web.entity.Client.Home;
 import com.i8web.entity.Client.MapperCategory;
-=======
 import com.i8web.entity.Client.Home;
->>>>>>> nghia
 
 @Repository
 public class HomeModel {
 	@Autowired
 	public JdbcTemplate _jdbcTemplate;
 	
-<<<<<<< HEAD
 	public List<Category> GetDataCategory() {
 		List<Category> list = new ArrayList<Category>();
 		String sql = "SELECT * FROM categories";
@@ -62,11 +58,11 @@ public class HomeModel {
 		List<Home> list = new ArrayList<Home>();
 		String sql = "SELECT * FROM products WHERE name LIKE " + "'%'" + key + "'%'";
 		System.out.println(sql);
-=======
+		return list;
+	}
 	public List<Home> GetDataHome() {
 		List<Home> list = new ArrayList<Home>();
 		String sql = "SELECT * FROM categories";
->>>>>>> nghia
 		list = _jdbcTemplate.query(sql, new MapperHome());
 		return list;
 	}

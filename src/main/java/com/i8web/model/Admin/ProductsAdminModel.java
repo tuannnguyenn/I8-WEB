@@ -46,11 +46,11 @@ public class ProductsAdminModel {
 		_jdbcTemplate.update(sql);
 	}
 
-	public void UpdateDataProduct(Products product, String description, String detail) {
+	public void UpdateDataProduct(Products product, String description, String detail,String image) {
 		String sql = "UPDATE products SET name = ?,price_old = ?,price_new = ?,description = ?,"
 				+ "status = ?,many_image = ?,image = ?,detail = ?,product_id = ?,ghimSale = ?,ghimNew = ?,slug = ?,created_at = ?  WHERE id = ?";
 		_jdbcTemplate.update(sql, product.getName(), product.getPrice_old(), product.getPrice_new(),
-				description, product.getStatus(), product.getMany_image(), product.getImage(),
+				description, product.getStatus(), product.getMany_image(), image,
 				detail, product.getProduct_id(), product.getGhimSale(), product.getGhimNew(),
 				product.getSlug(),LocalDate.now().toString(), product.getId());
 

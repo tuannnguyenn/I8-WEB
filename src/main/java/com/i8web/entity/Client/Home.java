@@ -4,7 +4,6 @@ public class Home {
 	private int id;
 	private String name;
 	private String slug;
-<<<<<<< HEAD
 	private String price_old;
 	private String price_new;
 	private String description;
@@ -15,9 +14,7 @@ public class Home {
 	private int product_id;
 	private String ghimSale;
 	private String ghimNew;
-=======
 	private String cat_id;
->>>>>>> nghia
 	private String created_at;
 	public Home() {
 		super();
@@ -40,7 +37,6 @@ public class Home {
 	public void setSlug(String slug) {
 		this.slug = slug;
 	}
-<<<<<<< HEAD
 	public String getPrice_old() {
 		return price_old;
 	}
@@ -100,13 +96,12 @@ public class Home {
 	}
 	public void setGhimNew(String ghimNew) {
 		this.ghimNew = ghimNew;
-=======
+	}
 	public String getCat_id() {
 		return cat_id;
 	}
 	public void setCat_id(String cat_id) {
 		this.cat_id = cat_id;
->>>>>>> nghia
 	}
 	public String getCreated_at() {
 		return created_at;
@@ -114,9 +109,5 @@ public class Home {
 	public void setCreated_at(String created_at) {
 		this.created_at = created_at;
 	}
-<<<<<<< HEAD
-
-=======
->>>>>>> nghia
 	
 }

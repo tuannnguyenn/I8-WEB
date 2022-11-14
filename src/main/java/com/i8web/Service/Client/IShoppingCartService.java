@@ -12,8 +12,5 @@ public interface IShoppingCartService {
 	public Collection<CartItem> getAllItems();
 	public int getCount();
 	public String getTotal();
-<<<<<<< HEAD
-=======
 	public String GetDetail();
->>>>>>> nghia
 }

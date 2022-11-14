@@ -12,7 +12,6 @@ public class MapperHome implements RowMapper<Home> {
 		Home home = new Home();
 		home.setId(rs.getInt("id"));
 		home.setName(rs.getString("name"));
-<<<<<<< HEAD
 		home.setPrice_old(rs.getString("price_old"));
 		home.setPrice_new(rs.getString("price_new"));
 		home.setDescription(rs.getString("description"));
@@ -27,7 +26,7 @@ public class MapperHome implements RowMapper<Home> {
 		home.setCreated_at(rs.getString("created_at"));
 		return home;
 	}
-	
+
 	public Category mapRow1(ResultSet rs, int rowNum) throws SQLException {
 		Category category = new Category();
 		category.setId(rs.getInt("id"));
@@ -38,12 +37,3 @@ public class MapperHome implements RowMapper<Home> {
 		return category;
 	}
 }
-=======
-		home.setSlug(rs.getString("slug"));
-		home.setCat_id(rs.getString("cat_id"));
-		home.setCreated_at(rs.getString("created_at"));
-		return home;
-	}
-}
-
->>>>>>> nghia

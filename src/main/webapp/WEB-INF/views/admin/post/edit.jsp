@@ -25,9 +25,9 @@
 							<textarea name="desc" id="desc" class="ckeditor">${item.description}</textarea>
 							<label>Hình ảnh</label>
 							<div id="uploadFile">
-								<form:input type="file" name="file" value="" id="upload-thumb"
-									path="image" />
-								<img src="resources/assets/images/img-thumb.png">
+								<input type="file" name="file" id="upload-thumb"
+									 />
+								<input type="hidden" value="${item.image}" name="image" id="image">
 							</div>
 							<label>Danh mục cha</label>
 							<form:select name="parent-Cat" path="post_id">

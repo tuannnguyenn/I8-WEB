@@ -33,8 +33,8 @@ public class PostService {
 		postsModel.DeleteDataPost(id);
 	}
 
-	public void updatePost(Posts post,String description) {
-		postsModel.UpdateDataPost(post,description);
+	public void updatePost(Posts post,String description,String image) {
+		postsModel.UpdateDataPost(post,description,image);
 	}
 	
 	

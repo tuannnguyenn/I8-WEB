@@ -27,10 +27,7 @@ public class CartController {
 	@Autowired
 	IShoppingCartService cartService;
 	
-<<<<<<< HEAD
 	
-=======
->>>>>>> nghia
    @RequestMapping(value = "/gio-hang", method = RequestMethod.GET)
    public ModelAndView CartPage(HttpSession session) {
 	  session.setAttribute("CART",cartService.getAllItems());
@@ -45,10 +42,7 @@ public class CartController {
 		Products product = productService.findProductById(id);
 		CartItem item = new CartItem();
 		if (product!=null){
-<<<<<<< HEAD
 			int temp = 0;
-=======
->>>>>>> nghia
 			item.setId(product.getId());
 			item.setImage(product.getImage());
 			item.setName(product.getName());
@@ -60,8 +54,6 @@ public class CartController {
 		return "redirect:/gio-hang";
 	}
 	
-<<<<<<< HEAD
-=======
 	@RequestMapping(value = "/gio-hang/additems/{id}", method = RequestMethod.POST)
 	   public String addCarts(@PathVariable("id") Integer id, @RequestParam("num-order") String quantity) {
 		Products product = productService.findProductById(id);
@@ -81,7 +73,6 @@ public class CartController {
 		return "redirect:/gio-hang";
 	}
 	
->>>>>>> nghia
 	@GetMapping("/gio-hang/del/{id}")
 	public String delete(@PathVariable("id") Integer id) {
 		cartService.remove(id);

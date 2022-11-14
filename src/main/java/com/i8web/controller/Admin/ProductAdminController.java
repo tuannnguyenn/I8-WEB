@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+
+import com.i8web.Service.Admin.CategoriesPostService;
 import com.i8web.Service.Admin.CategoriesProductService;
 import com.i8web.Service.Admin.ProductService;
 import com.i8web.entity.Admin.Products;
@@ -58,8 +60,19 @@ public class ProductAdminController extends BaseProductController{
 	   public String postEdit(@PathVariable int id,@ModelAttribute("product") Products product,HttpServletRequest req) {
 		   String description = req.getParameter("desc");
 		   String detail = req.getParameter("detail");
-		   productService.updateProduct(product,description,detail);
+		   String image = req.getParameter("image");
+		   String fileValue = req.getParameter("file");
+		   
+		   productService.updateProduct(product,description,detail,getValueImage(fileValue, image));
 	      return "redirect:/admin/product/list";
+	   }
+	   public String getValueImage(String fileValue, String image) {
+		   if(fileValue == "") {
+			   return image;
+}
+		   else {
+			   return fileValue;
+		   }
 	   }
 	   
 		

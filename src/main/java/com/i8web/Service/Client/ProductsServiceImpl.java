@@ -13,40 +13,37 @@ import com.i8web.model.Client.ProductsModel;
 public class ProductsServiceImpl implements IProductsService {
 	@Autowired
 	private ProductsModel productsModel;
-	public List<Products> GetDataProducts(){
+
+	public List<Products> GetDataProducts() {
 		return productsModel.GetDataProducts();
 	}
+
 	public List<Products> GetProductsByCatId(int id) {
 		return productsModel.GetProductsByCatId(id);
 	}
+
 	public List<Products> GetProductsById(int id) {
 		return productsModel.GetProductsById(id);
 	}
-<<<<<<< HEAD
+
 	public List<Products> GetBrandById(int id) {
 		return productsModel.GetBrandById(id);
 	}
+
 	public List<Products> GetDataProductsFilter(int id, String price_new, String sort, String brand) {
 		return productsModel.GetDataProductsFilter(id, price_new, sort, brand);
 	}
-=======
->>>>>>> nghia
-	public List<Category> GetDataCategory(){
+
+	public List<Category> GetDataCategory() {
 		return productsModel.GetDataCategory();
 	}
-	public List<Category> GetCategoryById(int id){
+
+	public List<Category> GetCategoryById(int id) {
 		return productsModel.GetCategoryById(id);
 	}
-<<<<<<< HEAD
-	public Products findProductById(int id) {
-		return productsModel.findProductById(id);
-	}
-=======
-	
-	
+
 	public Products findProductById(int id) {
 		return productsModel.findProductById(id);
 	}
 
->>>>>>> nghia
 }
