@@ -1,5 +1,6 @@
 package com.i8web.controller.Client;
 
+<<<<<<< HEAD
 import java.io.IOException;
 import java.io.PrintWriter;
 //import java.text.DecimalFormat;
@@ -8,6 +9,9 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+=======
+import javax.servlet.http.HttpServletRequest;
+>>>>>>> nghia
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,25 +19,40 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+<<<<<<< HEAD
 
 import com.i8web.Service.Client.ProductsServiceImpl;
 import com.i8web.entity.Client.Products;
+=======
+import com.i8web.Service.Client.ProductsServiceImpl;
+>>>>>>> nghia
 
 
 @Controller
 public class ProductsController {
 	@Autowired
 	ProductsServiceImpl productsServiceImpl;
+<<<<<<< HEAD
 	@RequestMapping(value = "/{slug}", method = RequestMethod.GET)
 	public ModelAndView CategoryProductsPage(HttpServletRequest req) {	  
 		  //Lấy id		
 		  String id = req.getParameter("id");
 //		  DecimalFormat formatter = new DecimalFormat("###,###,###.##");
+=======
+//	CategoryServiceImpl categoryServiceImpl;
+	@RequestMapping(value = "/{slug}", method = RequestMethod.GET)
+	public ModelAndView CategoryProductsPage(HttpServletRequest req) {
+		  //Lấy id		
+		  String id = req.getParameter("id");
+>>>>>>> nghia
 		  // Đẩy dữ liệu qua view		  
 	      ModelAndView mav = new ModelAndView("product/category_product");
 	      mav.addObject("listCat", productsServiceImpl.GetDataCategory());
 	      mav.addObject("listProduct", productsServiceImpl.GetProductsByCatId(Integer.parseInt(id)));
+<<<<<<< HEAD
 	      mav.addObject("listBrand", productsServiceImpl.GetBrandById(Integer.parseInt(id)));
+=======
+>>>>>>> nghia
 	      mav.addObject("CatId", productsServiceImpl.GetCategoryById(Integer.parseInt(id)));
 	      return mav;
 	}
@@ -47,6 +66,7 @@ public class ProductsController {
 	      mav.addObject("ProductId", productsServiceImpl.GetProductsById(Integer.parseInt(id)));
 	      return mav;
 	}
+<<<<<<< HEAD
 	// Lọc sản phẩm theo giá
 	@RequestMapping(value = "/filter_data", method = RequestMethod.POST)
 	protected void filterData(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -75,4 +95,6 @@ public class ProductsController {
 				  + "                            </li>");
 	  }
 	}
+=======
+>>>>>>> nghia
 }

@@ -15,13 +15,43 @@
             </div>
         </div>
         <div class="main-content fl-right">
+<<<<<<< HEAD
         	<c:forEach var="item" items="${ ProductId }">	
+=======
+        	<c:forEach var="item" items="${ ProductId }">
+        	<form action="<%=request.getContextPath() %>/gio-hang/additems/${ item.id}" method="post" name="form-cart">	
+>>>>>>> nghia
 	            <div class="section" id="detail-product-wp">
 	                <div class="section-detail clearfix">
 	                    <div class="thumb-wp fl-left">
 	                        <a href="" title="" id="main-thumb">
+<<<<<<< HEAD
 	                            <img id="zoom" src=<c:url value='/resources/assets/images/${item.image }'/> data-zoom-image=${item.image }/>
 	                        </a>
+=======
+	                            <img id="zoom" src=${item.image } data-zoom-image=${item.image }/>
+	                        </a>
+	                        <div id="list-thumb">
+	                            <a href="" data-image="https://media3.scdn.vn/img2/2017/10_30/sxlpFs_simg_ab1f47_350x350_maxb.jpg" data-zoom-image="https://media3.scdn.vn/img2/2017/10_30/sxlpFs_simg_70aaf2_700x700_maxb.jpg">
+	                                <img id="zoom" src="https://media3.scdn.vn/img2/2017/10_30/sxlpFs_simg_02d57e_50x50_maxb.jpg" />
+	                            </a>
+	                            <a href="" data-image="https://media3.scdn.vn/img2/2017/10_30/BlccRg_simg_ab1f47_350x350_maxb.jpg" data-zoom-image="https://media3.scdn.vn/img2/2017/10_30/BlccRg_simg_70aaf2_700x700_maxb.jpg">
+	                                <img id="zoom" src="https://media3.scdn.vn/img2/2017/10_30/BlccRg_simg_02d57e_50x50_maxb.jpg" />
+	                            </a>
+	                            <a href="" data-image="https://media3.scdn.vn/img2/2017/10_30/sxlpFs_simg_ab1f47_350x350_maxb.jpg" data-zoom-image="https://media3.scdn.vn/img2/2017/10_30/sxlpFs_simg_70aaf2_700x700_maxb.jpg">
+	                                <img id="zoom" src="https://media3.scdn.vn/img2/2017/10_30/sxlpFs_simg_02d57e_50x50_maxb.jpg" />
+	                            </a>
+	                            <a href="" data-image="https://media3.scdn.vn/img2/2017/10_30/BlccRg_simg_ab1f47_350x350_maxb.jpg" data-zoom-image="https://media3.scdn.vn/img2/2017/10_30/BlccRg_simg_70aaf2_700x700_maxb.jpg">
+	                                <img id="zoom" src="https://media3.scdn.vn/img2/2017/10_30/BlccRg_simg_02d57e_50x50_maxb.jpg" />
+	                            </a>
+	                            <a href="" data-image="https://media3.scdn.vn/img2/2017/10_30/sxlpFs_simg_ab1f47_350x350_maxb.jpg" data-zoom-image="https://media3.scdn.vn/img2/2017/10_30/sxlpFs_simg_70aaf2_700x700_maxb.jpg">
+	                                <img id="zoom" src="https://media3.scdn.vn/img2/2017/10_30/sxlpFs_simg_02d57e_50x50_maxb.jpg" />
+	                            </a>
+	                            <a href="" data-image="https://media3.scdn.vn/img2/2017/10_30/BlccRg_simg_ab1f47_350x350_maxb.jpg" data-zoom-image="https://media3.scdn.vn/img2/2017/10_30/BlccRg_simg_70aaf2_700x700_maxb.jpg">
+	                                <img id="zoom" src="https://media3.scdn.vn/img2/2017/10_30/BlccRg_simg_02d57e_50x50_maxb.jpg" />
+	                            </a>
+	                        </div>
+>>>>>>> nghia
 	                    </div>
 	                    <div class="thumb-respon-wp fl-left">
 	                        <img src=${item.image } alt="">
@@ -38,10 +68,19 @@
 	                        <p class="price">${item.price_new }</p>
 	                        <div id="num-order-wp">
 	                            <a title="" id="minus"><i class="fa fa-minus"></i></a>
+<<<<<<< HEAD
 	                            <input type="text" name="num-order" value="1" id="num-order">
 	                            <a title="" id="plus"><i class="fa fa-plus"></i></a>
 	                        </div>
 	                        <a href="/i8-web/gio-hang" title="Thêm giỏ hàng" class="add-cart">Thêm giỏ hàng</a>
+=======
+	                            <input type="text" name="num-order" id="num-order" >
+	                            <a title="" id="plus"><i class="fa fa-plus"></i></a>
+	                        </div>
+	                        <div class="place-order-wp clearfix">
+  								<input type="submit" id="order-now" value="Thêm giỏ hàng">
+                			</div>
+>>>>>>> nghia
 	                    </div>
 	                </div>
 	            </div>
@@ -53,6 +92,10 @@
 	                    ${item.detail }
 	                </div>
 	            </div>
+<<<<<<< HEAD
+=======
+	            </form>
+>>>>>>> nghia
             </c:forEach>
             <div class="section" id="same-category-wp">
                 <div class="section-head">
@@ -180,7 +223,11 @@
             <div class="section" id="banner-wp">
                 <div class="section-detail">
                     <a href="" title="" class="thumb">
+<<<<<<< HEAD
                         <img src="/i8-web/resources/assets/images/banner.jpg" alt="">
+=======
+                        <img src="/i8-web/resources/assets/images/banner.png" alt="">
+>>>>>>> nghia
                     </a>
                 </div>
             </div>

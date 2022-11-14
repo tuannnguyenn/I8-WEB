@@ -39,6 +39,7 @@
                     </div>
                 </div>
                 <div class="section-detail">
+<<<<<<< HEAD
                     <ul class="list-item clearfix list-filter">
                     	<c:forEach var="item" items="${ listProduct }">	
 	                        <li>
@@ -46,13 +47,26 @@
 	                                <img src="<c:url value='/resources/assets/images/${item.image }'/>">
 	                            </a>
 	                            <a href="/i8-web/chi-tiet-san-pham/${item.slug }?id=${item.id }" title="" class="product-name">${item.name }</a>
+=======
+                    <ul class="list-item clearfix">
+                    	<c:forEach var="item" items="${ listProduct }">	
+	                        <li>
+	                            <a href="/i8-web/chi-tiet-san-pham/${item.slug }?id=${item.id }" title="" class="thumb">
+	                                <img src="${item.image }">
+	                            </a>
+	                            <a href="/i8-web/chi-tiet-san-pham" title="" class="product-name">${item.name }</a>
+>>>>>>> nghia
 	                            <div class="price">
 	                                <span class="new">${item.price_new }</span>
 	                                <span class="old">${item.price_old }</span>
 	                            </div>
 	                            <div class="action clearfix">
 	                                <a href="/i8-web/gio-hang/add/${item.id }" title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ hàng</a>
+<<<<<<< HEAD
 	                                <a href="/i8-web/thanh-toan" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
+=======
+	                                <a href="/i8-web/thanh-toan/add/${item.id }" title="Mua ngay" class="buy-now fl-right">Mua ngay</a>
+>>>>>>> nghia
 	                            </div>
 	                        </li>
                         </c:forEach>

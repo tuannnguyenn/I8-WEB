@@ -1,11 +1,22 @@
 package com.i8web.Service.Client;
 
 import java.text.NumberFormat;
+<<<<<<< HEAD
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 
+=======
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
+
+import org.json.simple.JSONValue;
+>>>>>>> nghia
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.SessionScope;
 
@@ -23,8 +34,11 @@ public class ShoppingCartServiceImpl implements IShoppingCartService {
 		}else {
 			cartItem.setAmount(cartItem.getPrice(),cartItem.getQuantity()+1);
 			cartItem.setQuantity(cartItem.getQuantity()+1);
+<<<<<<< HEAD
 			
 
+=======
+>>>>>>> nghia
 		}
 	}
 	public void remove(int id) {
@@ -73,4 +87,18 @@ public class ShoppingCartServiceImpl implements IShoppingCartService {
 		sum= currencyVN.format(total);
 		return sum+ "Đ";
 	}
+<<<<<<< HEAD
+=======
+	
+	public String GetDetail()
+	{
+		List arr = new ArrayList();
+		for(CartItem item : maps.values())
+		{
+			arr.add(item.getName() + "x" + item.getQuantity());
+		}
+		String jsonText = JSONValue.toJSONString(arr);
+		return jsonText;
+	}
+>>>>>>> nghia
 }
