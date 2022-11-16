@@ -37,7 +37,7 @@
 
 		<!-- Icon -->
 		<div class="fadeIn first">
-			<img src="./resources/assets/images/logo.png">
+			<img src="/i8-web/resources/assets/images/logo.png">
 		</div>
 
 		<!-- Login Form -->

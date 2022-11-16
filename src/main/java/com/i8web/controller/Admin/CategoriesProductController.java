@@ -1,7 +1,7 @@
 package com.i8web.controller.Admin;
 
 import javax.servlet.http.HttpServletRequest;
-
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,7 +19,12 @@ public class CategoriesProductController {
 	@Autowired
 	CategoriesProductService categoriesProductService;
 	@RequestMapping(value = "/admin/product/category/create", method = RequestMethod.GET)
-	public ModelAndView create() {
+	public ModelAndView create(HttpSession session) {
+		if (session.getAttribute("adminAccount") == null) {
+			ModelAndView mav = new ModelAndView("admin/register/login");
+			mav.addObject("isError", false);
+			return mav;
+		}
 		ModelAndView mav = new ModelAndView("/admin/product/category/create");
 		mav.addObject("categoryProduct", new CategoriesProduct());
 		return mav;
@@ -32,7 +37,12 @@ public class CategoriesProductController {
    }
    
    @RequestMapping(value = "/admin/product/category/list", method = RequestMethod.GET)
-   public ModelAndView list() {
+   public ModelAndView list(HttpSession session) {
+	   if (session.getAttribute("adminAccount") == null) {
+			ModelAndView mav = new ModelAndView("admin/register/login");
+			mav.addObject("isError", false);
+			return mav;
+		}
       ModelAndView mav = new ModelAndView("/admin/product/category/list");
       mav.addObject("categoriesProduct", categoriesProductService.getListCategoriesProduct());
       return mav;
@@ -44,7 +54,12 @@ public class CategoriesProductController {
    return "redirect:/admin/product/category/list";
    } 
    @RequestMapping(value = "/EditCategoryProduct/{id}", method = RequestMethod.GET)
-   public ModelAndView getEdit(@PathVariable int id,@ModelAttribute("categoryProduct") CategoriesProduct categoryProduct) {
+   public ModelAndView getEdit(@PathVariable int id,@ModelAttribute("categoryProduct") CategoriesProduct categoryProduct, HttpSession session) {
+	   if (session.getAttribute("adminAccount") == null) {
+			ModelAndView mav = new ModelAndView("admin/register/login");
+			mav.addObject("isError", false);
+			return mav;
+		}
 	 
       ModelAndView mav = new ModelAndView("/admin/product/category/edit");
       mav.addObject("categoriesProduct", categoriesProductService.getListCategoriesProduct());

@@ -4,6 +4,7 @@ package com.i8web.controller.Admin;
 
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,7 +27,12 @@ public class ProductAdminController extends BaseProductController{
 	ProductService productService;
 	CategoriesProductService categoriesProductService;
 	@RequestMapping(value = "/admin/product/create", method = RequestMethod.GET)
-	   public ModelAndView create() {
+	   public ModelAndView create(HttpSession session) {
+		if (session.getAttribute("adminAccount") == null) {
+			ModelAndView mav = new ModelAndView("admin/register/login");
+			mav.addObject("isError", false);
+			return mav;
+		}
 	      _mav.addObject("product", new Products());
 	      _mav.setViewName("admin/product/create");
 	      return _mav;
@@ -39,7 +45,12 @@ public class ProductAdminController extends BaseProductController{
 	      return mav;
 	   }
 	   @RequestMapping(value = "/admin/product/list", method = RequestMethod.GET)
-	   public ModelAndView list() {
+	   public ModelAndView list(HttpSession session) {
+		   if (session.getAttribute("adminAccount") == null) {
+				ModelAndView mav = new ModelAndView("admin/register/login");
+				mav.addObject("isError", false);
+				return mav;
+			}
 	      ModelAndView mav = new ModelAndView("/admin/product/list");
 	      mav.addObject("products", productService.getListProducts());
 	      return mav;
@@ -50,7 +61,12 @@ public class ProductAdminController extends BaseProductController{
 	   return "redirect:/admin/product/list";
 	   } 
 	   @RequestMapping(value = "/EditProduct/{id}", method = RequestMethod.GET)
-	   public ModelAndView getEdit(@PathVariable int id,@ModelAttribute("product") Products product) {
+	   public ModelAndView getEdit(@PathVariable int id,@ModelAttribute("product") Products product, HttpSession session) {
+		   if (session.getAttribute("adminAccount") == null) {
+				ModelAndView mav = new ModelAndView("admin/register/login");
+				mav.addObject("isError", false);
+				return mav;
+			}
 	      _mav.addObject("products", productService.getListProducts());
 	      _mav.addObject("ProductId", productService.GetProductById(id));
 	      _mav.setViewName("/admin/product/edit");

@@ -1,6 +1,7 @@
 package com.i8web.controller.Admin;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.i8web.Service.Admin.SliderService;
-import com.i8web.entity.Admin.CategoriesProduct;
 import com.i8web.entity.Admin.Sliders;
 
 @Controller
@@ -20,7 +20,12 @@ public class SlidersController {
 	SliderService sliderService;
 	@RequestMapping(value = "/admin/slider/create", method = RequestMethod.GET)
 	   
-	public ModelAndView create() {
+	public ModelAndView create(HttpSession session) {
+		if (session.getAttribute("adminAccount") == null) {
+			ModelAndView mav = new ModelAndView("admin/register/login");
+			mav.addObject("isError", false);
+			return mav;
+		}
 		ModelAndView mav = new ModelAndView("admin/slider/create");
 		mav.addObject("slider", new Sliders());
 	      return mav;
@@ -32,7 +37,12 @@ public class SlidersController {
 	      return mav;
 	   }
 	   @RequestMapping(value = "/admin/slider/list", method = RequestMethod.GET)
-	   public ModelAndView list() {
+	   public ModelAndView list(HttpSession session) {
+		   if (session.getAttribute("adminAccount") == null) {
+				ModelAndView mav = new ModelAndView("admin/register/login");
+				mav.addObject("isError", false);
+				return mav;
+			}
 	      ModelAndView mav = new ModelAndView("/admin/slider/list");
 	      mav.addObject("sliders", sliderService.GetListSliders());
 	      return mav;
@@ -43,7 +53,12 @@ public class SlidersController {
 	   return "redirect:/admin/slider/list";
 	   } 
 	   @RequestMapping(value = "/EditSlider/{id}", method = RequestMethod.GET)
-	   public ModelAndView getEdit(@PathVariable int id,@ModelAttribute("slider") Sliders slider) {
+	   public ModelAndView getEdit(@PathVariable int id,@ModelAttribute("slider") Sliders slider, HttpSession session) {
+		   if (session.getAttribute("adminAccount") == null) {
+				ModelAndView mav = new ModelAndView("admin/register/login");
+				mav.addObject("isError", false);
+				return mav;
+			}
 		   ModelAndView mav = new ModelAndView("/admin/slider/edit");
 	      mav.addObject("sliders", sliderService.GetListSliders());
 	      mav.addObject("SliderId", sliderService.GetSliderById(id));

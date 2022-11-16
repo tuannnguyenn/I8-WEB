@@ -91,7 +91,7 @@
                                 <div id="thumb-circle" class="fl-left">
                                     <img src="http://localhost:8080/i8-web/resources/adminassets/images/img-admin.png">
                                 </div>
-                                <h3 id="account" class="fl-right">${ userAccount.get_name() }</h3>
+                                <h3 id="account" class="fl-right">Admin</h3>
                             </button>
                             <ul class="dropdown-menu">
                                 <li><a href="?page=info_account" title="Thông tin cá nhân">Thông tin tài khoản</a></li>
