@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
+import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.SessionScope;
@@ -78,9 +79,15 @@ public class ShoppingCartServiceImpl implements IShoppingCartService {
 	public String GetDetail()
 	{
 		List arr = new ArrayList();
+		JSONObject obj = new JSONObject();
 		for(CartItem item : maps.values())
-		{
-			arr.add(item.getName() + "x" + item.getQuantity());
+		{        
+	        obj.put("id", item.getId());
+	        obj.put("name", item.getName());
+	        obj.put("image",item.getImage());
+	        obj.put("price", item.getPrice());
+	        obj.put("quantity:", item.getQuantity());
+	        arr.add(obj.toJSONString());
 		}
 		String jsonText = JSONValue.toJSONString(arr);
 		return jsonText;

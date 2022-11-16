@@ -81,12 +81,12 @@
                 <div id="payment-checkout-wp">
                     <ul id="payment_methods">
                         <li>
-                            <input type="radio" id="direct-payment" name="payment-method" value="direct-payment">
-                            <label for="direct-payment">Thanh toán tại cửa hàng</label>
+                            <input type="radio" id="direct-payment" name="payment-method" value="thanh_toan_tai_cua_hang" checked>
+                            <label for="thanh_toan_tai_cua_hang" value >Thanh toán tại cửa hàng</label>
                         </li>
                         <li>
-                            <input type="radio" id="payment-home" name="payment-method" value="payment-home">
-                            <label for="payment-home">Thanh toán tại nhà</label>
+                            <input type="radio" id="payment-home" name="payment-method" value="thanh_toan_tai_nha">
+                            <label for="thanh_toan_tai_nha">Thanh toán tại nhà</label>
                         </li>
                     </ul>
                 </div>

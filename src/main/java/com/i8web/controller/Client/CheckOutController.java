@@ -2,6 +2,8 @@ package com.i8web.controller.Client;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -64,6 +66,7 @@ public class CheckOutController {
 	public String saveCart(@RequestParam("fullname") String name,@RequestParam("email") String email,
 			@RequestParam("address") String address, @RequestParam("phone") String phone, 
 			@RequestParam("note") String note, @RequestParam("payment-method") String method) {
+		if(checkService.checkvalid(name,email,address,phone,note,method)) {
 			try {
 				user.setName(name);
 				user.setEmail(email);
@@ -82,6 +85,10 @@ public class CheckOutController {
 			{
 				System.out.print(e);
 			}
+		}else {
+			JFrame frame = new JFrame("JOptionPane showMessageDialog example");
+			JOptionPane.showMessageDialog(frame, "Vui lòng nhập đầy đủ thông tin!!","Error!!",JOptionPane.ERROR_MESSAGE);
+		}		
 		return "redirect:/thanh-toan";
 	}
 	
