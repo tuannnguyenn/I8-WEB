@@ -79,15 +79,13 @@ public class ShoppingCartServiceImpl implements IShoppingCartService {
 	public String GetDetail()
 	{
 		List arr = new ArrayList();
-		JSONObject obj = new JSONObject();
 		for(CartItem item : maps.values())
 		{        
-	        obj.put("id", item.getId());
-	        obj.put("name", item.getName());
-	        obj.put("image",item.getImage());
-	        obj.put("price", item.getPrice());
-	        obj.put("quantity:", item.getQuantity());
-	        arr.add(obj.toJSONString());
+			arr.add("id:"+item.getId()+
+					",name:"+item.getName() +
+					",image:"+item.getImage()+
+					",price:"+item.getPrice()+
+					",quantity:" + item.getQuantity());
 		}
 		String jsonText = JSONValue.toJSONString(arr);
 		return jsonText;

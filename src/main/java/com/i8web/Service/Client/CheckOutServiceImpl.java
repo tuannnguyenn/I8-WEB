@@ -39,9 +39,9 @@ public class CheckOutServiceImpl implements ICheckOutService{
 		}
 	}
 	
-	public Boolean checkvalid(String name,String email,String address,String phone,String note,String method)
+	public Boolean checkvalid(String name,String email,String address,String phone,String note)
 	{
-		if(name =="" || email=="" || note == "" || phone == ""|| address=="" || method =="")
+		if(name =="" || email=="" || note == "" || phone == ""|| address=="")
 		{
 			return false;
 		}

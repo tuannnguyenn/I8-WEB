@@ -66,7 +66,7 @@ public class CheckOutController {
 	public String saveCart(@RequestParam("fullname") String name,@RequestParam("email") String email,
 			@RequestParam("address") String address, @RequestParam("phone") String phone, 
 			@RequestParam("note") String note, @RequestParam("payment-method") String method) {
-		if(checkService.checkvalid(name,email,address,phone,note,method)) {
+		if(checkService.checkvalid(name,email,address,phone,note)) {
 			try {
 				user.setName(name);
 				user.setEmail(email);
