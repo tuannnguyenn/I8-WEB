@@ -38,6 +38,11 @@ public class CheckOutController {
 	
 	@RequestMapping(value="/thanh-toan", method = RequestMethod.GET)
 	public ModelAndView checkoutpage(HttpSession session) {
+		if (session.getAttribute("userAccount") == null) {
+			ModelAndView mav = new ModelAndView("register/login");
+			mav.addObject("isError", false);
+			return mav;
+		}
 		session.setAttribute("CART",cartService.getAllItems());
 		session.setAttribute("ITEMS",cartService.getCount());
 		session.setAttribute("TOTAL",cartService.getTotal());
