@@ -5,7 +5,6 @@
 <div id="main-content-wp" class="list-product-page">
 	<div class="wrap clearfix">
 		<%@include file="/WEB-INF/views/admin/layout/sidebar.jsp"%>
-		<?php require 'inc/sidebar.php'; ?>
 		<div id="content" class="fl-right">
 			<div class="section" id="title-page">
 				<div class="clearfix">
@@ -45,13 +44,10 @@
 						<table class="table list-table-wp">
 							<thead>
 								<tr>
-									<td><input type="checkbox" name="checkAll" id="checkAll"></td>
-									<td><span class="thead-text">STT</span></td>
 									<td><span class="thead-text">Mã đơn hàng</span></td>
 									<td><span class="thead-text">Họ và tên</span></td>
-									<td><span class="thead-text">Số sản phẩm</span></td>
-									<td><span class="thead-text">Tổng giá</span></td>
-									<td><span class="thead-text">Trạng thái</span></td>
+									<td><span class="thead-text">Địa chỉ</span></td>
+									<td><span class="thead-text">Số điện thoại</span></td>
 									<td><span class="thead-text">Thời gian</span></td>
 									<td><span class="thead-text">Chi tiết</span></td>
 								</tr>
@@ -59,26 +55,12 @@
 							<tbody>
 								<c:forEach items="${ orders }" var="order">
 									<tr>
-										<td><input type="checkbox" name="checkItem"
-											class="checkItem"></td>
 										<td><span class="tbody-text">${ order.id.toString() }</span>
-										<td><span class="tbody-text">${ order.id.toString() }</span>
-										<td>
-											<div class="tb-title fl-left">
-												<a href="" title="">${ order.name }</a>
-											</div>
-											<ul class="list-operation fl-right">
-												<li><a href="" title="Sửa" class="edit"><i
-														class="fa fa-pencil" aria-hidden="true"></i></a></li>
-												<li><a href="" title="Xóa" class="delete"><i
-														class="fa fa-trash" aria-hidden="true"></i></a></li>
-											</ul>
-										</td>
-										<td><span class="tbody-text">${ order.number }</span></td>
-										<td><span class="tbody-text">${ order.totalPrice } VNĐ</span></td>
-										<td><span class="tbody-text">Hoạt động</span></td>
+										<td><span class="tbody-text">${ order.fullname }</span></td>
+										<td><span class="tbody-text">${ order.address }</span></td>
+										<td><span class="tbody-text">${ order.phone }</span></td>
 										<td><span class="tbody-text">${ order.created_at }</span></td>
-										<td><a href="?page=detail_order" title=""
+										<td><a href="/i8-web/admin/order/detail?id=${order.id }" title=""
 											class="tbody-text">Chi tiết</a></td>
 									</tr>
 								</c:forEach>

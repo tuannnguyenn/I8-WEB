@@ -19,4 +19,11 @@ public class OrderAdminController {
 		mav.addObject("orders", orderModel.getData());
 		return mav;
 	}
+	
+	@RequestMapping(value = "/admin/order/detail", method = RequestMethod.GET)
+	public ModelAndView detail() {
+		ModelAndView mav = new ModelAndView("/admin/order/detail");
+		mav.addObject("orders", orderModel.getData());
+		return mav;
+	}
 }

@@ -3,26 +3,31 @@ package com.i8web.entity.Admin;
 
 public class Order{
 	private int id;
-	private String name;
+	private String fullname;
+	private String address;
 	private String phone;
-	private String email;
-	private String img;
-	private String nameProduct;
-	private String price;
-	private String number;
-	private String totalPrice;
+	private String note;
+	private String pay;
 	private String created_at;
+	private String bill_num;
+	private String bill_detail;
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getName() {
-		return name;
+	public String getFullname() {
+		return fullname;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setFullname(String fullname) {
+		this.fullname = fullname;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
 	}
 	public String getPhone() {
 		return phone;
@@ -30,46 +35,51 @@ public class Order{
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	public String getEmail() {
-		return email;
+	public String getNote() {
+		return note;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+	public void setNote(String note) {
+		this.note = note;
 	}
-	public String getImg() {
-		return img;
+	public String getPay() {
+		return pay;
 	}
-	public void setImg(String img) {
-		this.img = img;
-	}
-	public String getNameProduct() {
-		return nameProduct;
-	}
-	public void setNameProduct(String nameProduct) {
-		this.nameProduct = nameProduct;
-	}
-	public String getPrice() {
-		return price;
-	}
-	public void setPrice(String price) {
-		this.price = price;
-	}
-	public String getNumber() {
-		return number;
-	}
-	public void setNumber(String number) {
-		this.number = number;
-	}
-	public String getTotalPrice() {
-		return totalPrice;
-	}
-	public void setTotalPrice(String totalPrice) {
-		this.totalPrice = totalPrice;
+	public void setPay(String pay) {
+		this.pay = pay;
 	}
 	public String getCreated_at() {
 		return created_at;
 	}
 	public void setCreated_at(String created_at) {
 		this.created_at = created_at;
+	}
+	public String getBill_num() {
+		return bill_num;
+	}
+	public void setBill_num(String bill_num) {
+		this.bill_num = bill_num;
+	}
+	public String getBill_detail() {
+		return bill_detail;
+	}
+	public void setBill_detail(String bill_detail) {
+		this.bill_detail = bill_detail;
+	}
+	public String getBill_total() {
+		return bill_total;
+	}
+	public void setBill_total(String bill_total) {
+		this.bill_total = bill_total;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	private String bill_total;
+	private String status;
+	public Order() {
+		super();
 	}
 }
