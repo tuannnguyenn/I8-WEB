@@ -5,6 +5,8 @@ import com.i8web.entity.Admin.UserAccount;
 import com.i8web.model.Admin.LoginModel;
 import com.i8web.model.Admin.SignupModel;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,22 +21,17 @@ public class RegisterController {
 	@Autowired
 	SignupModel signupModel;
 	@Autowired
-	SessionService session;
-	public static class LoginState {
-		public static boolean isLogin = false;
-		public static UserAccount account;
-	}
+	SessionService sessionService;
 
 	@RequestMapping(value = "/admin", method = RequestMethod.GET)
-	public ModelAndView loginPage() {
-		if(session.get("userAccount") != null) {
-			LoginState.isLogin = true;
-			ModelAndView mav = new ModelAndView("admin/order/list");
-			mav.addObject("userAccount", session.get("userAccount"));
+	public ModelAndView loginPage(HttpSession session) {
+		if(session.getAttribute("adminAccount") == null) {
+			ModelAndView mav = new ModelAndView("admin/register/login");
+			mav.addObject("isError", false);
 			return mav;
 		}
-		ModelAndView mav = new ModelAndView("admin/register/login");
-		mav.addObject("isError", false);
+		ModelAndView mav = new ModelAndView("admin/order/list");
+		mav.addObject("userAccount", session.getAttribute("adminAccount"));
 		return mav;
 	}
 
@@ -42,8 +39,7 @@ public class RegisterController {
 	public ModelAndView checkLogin(@RequestParam("username") String username,
 			@RequestParam("password") String password) {
 		if (loginModel.checkDataLogin(username, password)) {
-			LoginState.isLogin = true;
-			session.set("userAccount", LoginState.account);
+			sessionService.set("adminAccount", username);
 			ModelAndView mav = new ModelAndView("admin/order/list");
 			return mav;
 		} else {

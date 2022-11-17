@@ -1,5 +1,7 @@
 package com.i8web.controller.Admin;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -16,7 +18,12 @@ public class PostsController extends BasePostController {
 	@Autowired
    PostService postService;
 	@RequestMapping(value = "/admin/post/create", method = RequestMethod.GET)
-	public ModelAndView create() {
+	public ModelAndView create(HttpSession session) {
+		if (session.getAttribute("adminAccount") == null) {
+			ModelAndView mav = new ModelAndView("admin/register/login");
+			mav.addObject("isError", false);
+			return mav;
+		}
 		_mav.addObject("post", new Posts());
 		_mav.setViewName("admin/post/create");
 		return _mav;
@@ -29,7 +36,12 @@ public class PostsController extends BasePostController {
    }
    
    @RequestMapping(value = "/admin/post/list", method = RequestMethod.GET)
-   public ModelAndView list() {
+   public ModelAndView list(HttpSession session) {
+	   if (session.getAttribute("adminAccount") == null) {
+			ModelAndView mav = new ModelAndView("admin/register/login");
+			mav.addObject("isError", false);
+			return mav;
+		}
       ModelAndView mav = new ModelAndView("/admin/post/list");
       mav.addObject("posts", postService.getListPosts());
       return mav;
@@ -41,8 +53,12 @@ public class PostsController extends BasePostController {
    return "redirect:/admin/post/list";
    } 
    @RequestMapping(value = "/EditPost/{id}", method = RequestMethod.GET)
-   public ModelAndView getEdit(@PathVariable int id,@ModelAttribute("post") Posts post) {
-	 
+   public ModelAndView getEdit(@PathVariable int id,@ModelAttribute("post") Posts post, HttpSession session) {
+	   if (session.getAttribute("adminAccount") == null) {
+			ModelAndView mav = new ModelAndView("admin/register/login");
+			mav.addObject("isError", false);
+			return mav;
+		}
 	  _mav.addObject("categoriesPost", categoriesPostService.getListCategoriesPost());
       _mav.addObject("posts", postService.getListPosts());
       _mav.addObject("PostId", postService.GetPostById(id));

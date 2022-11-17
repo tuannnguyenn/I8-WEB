@@ -41,7 +41,7 @@
 		</div>
 
 		<!-- Login Form -->
-		<form action="../admin/login" method="post">
+		<form action="/i8-web/login" method="post">
 			<input type="text" id="login" class="fadeIn second" name="name" placeholder="Tên Người Dùng"> 
 			<input type="text" id="login" class="fadeIn second" name="email" placeholder="Email"> 
 			<input type="text" id="login" class="fadeIn second" name="username" placeholder="Tên Tài Khoản"> 
@@ -53,7 +53,7 @@
 		</c:if>
 		<!-- Remind Passowrd -->
 		<div id="formFooter">
-			<a class="underlineHover" href="/i8-web/admin">Đã có tài khoản</a>
+			<a class="underlineHover" href="/i8-web/login">Đã có tài khoản</a>
 		</div>
 
 	</div>

@@ -21,75 +21,78 @@ import com.i8web.entity.Client.Products;
 
 @Controller
 public class CartController {
-  
+
 	@Autowired
 	IProductsService productService;
 	@Autowired
 	IShoppingCartService cartService;
-	
-	
-   @RequestMapping(value = "/gio-hang", method = RequestMethod.GET)
-   public ModelAndView CartPage(HttpSession session) {
-	  session.setAttribute("CART",cartService.getAllItems());
-	  session.setAttribute("ITEMS",cartService.getCount());
-	  session.setAttribute("TOTAL",cartService.getTotal());
-      ModelAndView mav = new ModelAndView("cart/cart");
-      return mav;
-   }
-   
+
+	@RequestMapping(value = "/gio-hang", method = RequestMethod.GET)
+	public ModelAndView CartPage(HttpSession session) {
+		if (session.getAttribute("userAccount") == null) {
+			ModelAndView mav = new ModelAndView("register/login");
+			mav.addObject("isError", false);
+			return mav;
+		}
+		session.setAttribute("CART", cartService.getAllItems());
+		session.setAttribute("ITEMS", cartService.getCount());
+		session.setAttribute("TOTAL", cartService.getTotal());
+		ModelAndView mav = new ModelAndView("cart/cart");
+		return mav;
+	}
+
 	@GetMapping("/gio-hang/add/{id}")
-	   public String addCart(@PathVariable("id") Integer id) {
+	public String addCart(@PathVariable("id") Integer id) {
 		Products product = productService.findProductById(id);
 		CartItem item = new CartItem();
-		if (product!=null){
+		if (product != null) {
 			int temp = 0;
 			item.setId(product.getId());
 			item.setImage(product.getImage());
 			item.setName(product.getName());
 			item.setPrice(product.getPrice_new());
 			item.setQuantity(1);
-			item.setAmount(item.getPrice(),item.getQuantity());
+			item.setAmount(item.getPrice(), item.getQuantity());
 			cartService.add(item);
 		}
 		return "redirect:/gio-hang";
 	}
-	
+
 	@RequestMapping(value = "/gio-hang/additems/{id}", method = RequestMethod.POST)
-	   public String addCarts(@PathVariable("id") Integer id, @RequestParam("num-order") String quantity) {
+	public String addCarts(@PathVariable("id") Integer id, @RequestParam("num-order") String quantity) {
 		Products product = productService.findProductById(id);
 		CartItem item = new CartItem();
-		if (product!=null){
-			if(quantity == "0" || quantity == "" ){
-				quantity ="1";
+		if (product != null) {
+			if (quantity == "0" || quantity == "") {
+				quantity = "1";
 			}
 			item.setId(product.getId());
 			item.setImage(product.getImage());
 			item.setName(product.getName());
 			item.setPrice(product.getPrice_new());
 			item.setQuantity(Integer.parseInt(quantity));
-			item.setAmount(item.getPrice(),item.getQuantity());
+			item.setAmount(item.getPrice(), item.getQuantity());
 			cartService.add(item);
 		}
 		return "redirect:/gio-hang";
 	}
-	
+
 	@GetMapping("/gio-hang/del/{id}")
 	public String delete(@PathVariable("id") Integer id) {
 		cartService.remove(id);
 		return "redirect:/gio-hang";
 	}
-	
+
 	@PostMapping("/gio-hang/update")
-	public String update(@RequestParam("id") Integer id,@RequestParam("quantity") Integer quantity){
+	public String update(@RequestParam("id") Integer id, @RequestParam("quantity") Integer quantity) {
 		cartService.update(id, quantity);
 		return "redirect:/gio-hang";
 	}
-	
+
 	@GetMapping("/gio-hang/clear")
-	public String clear(){
+	public String clear() {
 		cartService.clear();
 		return "redirect:/gio-hang";
 	}
-	
-	
+
 }
