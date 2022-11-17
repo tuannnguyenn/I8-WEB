@@ -9,6 +9,8 @@ import org.springframework.stereotype.Repository;
 
 import com.i8web.entity.Admin.MapperOrders;
 import com.i8web.entity.Admin.Order;
+import com.i8web.entity.Client.Category;
+import com.i8web.entity.Client.MapperCategory;
 
 @Repository
 public class OrderModel {
@@ -18,6 +20,13 @@ public class OrderModel {
 	public List<Order> getData() {
 		List<Order> list = new ArrayList<Order>();
 		String sql = "SELECT * FROM orders";
+		list = _jdbcTemplate.query(sql, new MapperOrders());
+		return list;
+	}
+	
+	public List<Order> GetOrderById(int id) {
+		List<Order> list = new ArrayList<Order>();
+		String sql = "SELECT * FROM orders WHERE id = "+id;
 		list = _jdbcTemplate.query(sql, new MapperOrders());
 		return list;
 	}

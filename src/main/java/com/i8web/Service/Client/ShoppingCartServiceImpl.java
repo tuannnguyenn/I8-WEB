@@ -82,10 +82,16 @@ public class ShoppingCartServiceImpl implements IShoppingCartService {
 		return sum + "Đ";
 	}
 
-	public String GetDetail() {
+	public String GetDetail()
+	{
 		List arr = new ArrayList();
-		for (CartItem item : maps.values()) {
-			arr.add(item.getName() + "x" + item.getQuantity());
+		for(CartItem item : maps.values())
+		{        
+			arr.add("id:"+item.getId()+
+					",name:"+item.getName() +
+					",image:"+item.getImage()+
+					",price:"+item.getPrice()+
+					",quantity:" + item.getQuantity());
 		}
 		String jsonText = JSONValue.toJSONString(arr);
 		return jsonText;

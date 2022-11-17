@@ -9,4 +9,5 @@ import com.i8web.entity.Admin.Order;
 public interface IOrderService {
 	@Autowired
 	public List<Order> getData();
+	public List<Order> GetOrderById(int id);
 }

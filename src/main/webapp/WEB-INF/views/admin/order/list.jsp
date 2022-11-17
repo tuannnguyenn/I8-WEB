@@ -44,7 +44,6 @@
 						<table class="table list-table-wp">
 							<thead>
 								<tr>
-									<td><span class="thead-text">Mã đơn hàng</span></td>
 									<td><span class="thead-text">Họ và tên</span></td>
 									<td><span class="thead-text">Địa chỉ</span></td>
 									<td><span class="thead-text">Số điện thoại</span></td>
@@ -55,7 +54,6 @@
 							<tbody>
 								<c:forEach items="${ orders }" var="order">
 									<tr>
-										<td><span class="tbody-text">${ order.id.toString() }</span>
 										<td><span class="tbody-text">${ order.fullname }</span></td>
 										<td><span class="tbody-text">${ order.address }</span></td>
 										<td><span class="tbody-text">${ order.phone }</span></td>
