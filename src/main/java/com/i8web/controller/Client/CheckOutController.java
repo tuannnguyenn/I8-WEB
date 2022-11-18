@@ -82,6 +82,7 @@ public class CheckOutController {
 				checkout.setStatus(method);
 				checkout.setBill_detail(cartService.GetDetail());
 				checkService.save(checkout);
+				checkService.save_billdetail(cartService.getAllItems());
 				cartService.clear();
 			} catch(Exception e)
 			{

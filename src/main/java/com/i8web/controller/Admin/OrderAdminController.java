@@ -31,6 +31,7 @@ public class OrderAdminController {
 		System.out.println(id);
 		mav.addObject("listOrder", orderModel.GetOrderById(Integer.parseInt(id)));
 		mav.addObject("orders", orderModel.getData());
+		mav.addObject("productDetails", orderModel.getProductByOrderID(Integer.parseInt(id)));
 		return mav;
 	}
 }

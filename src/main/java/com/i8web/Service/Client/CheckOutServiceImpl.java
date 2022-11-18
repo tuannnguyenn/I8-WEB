@@ -12,6 +12,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.annotation.SessionScope;
 
+import com.i8web.entity.Client.CartItem;
 import com.i8web.entity.Client.CheckOut;
 
 
@@ -35,6 +36,23 @@ public class CheckOutServiceImpl implements ICheckOutService{
 					Cart.getUser().getNote(),Cart.getStatus(),Cart.getDay(),Cart.getBill_num(),Cart.getBill_detail(),
 					Cart.getBill_total());
 		} catch (Exception e) {
+			System.out.print(e);
+		}
+	}
+	@Override
+	public void save_billdetail(Collection<CartItem> bill) {
+		try {
+			String result = jdbcTemplate.queryForObject(
+				    "SELECT id FROM orders ORDER BY id DESC limit 1", String.class);
+			
+			for(CartItem item : bill){
+				
+				jdbcTemplate.update("INSERT INTO product_order(id_order, id_product, quantity)" 
+			+ "VALUES (?,?,?)",result,item.getId(),item.getQuantity());
+				
+			}
+			
+		}catch (Exception e) {
 			System.out.print(e);
 		}
 	}
