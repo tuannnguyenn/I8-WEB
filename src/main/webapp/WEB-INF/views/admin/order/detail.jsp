@@ -59,9 +59,9 @@
 											</div>
 										</td>
 										<td class="thead-text">${ item.name }</td>
-										<td class="thead-text">${ item.price_old } VNĐ</td>
-										<td class="thead-text">5</td>
-										<td class="thead-text">725,000 VNĐ</td>
+										<td class="thead-text">${ item.price_new } VNĐ</td>
+										<td class="thead-text">${ item.quantity.toString() }</td>
+										<td class="thead-text">${ item.total_price } VNĐ</td>
 									</tr>
 								</c:forEach>
 

@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -34,4 +35,10 @@ public class OrderAdminController {
 		mav.addObject("productDetails", orderModel.getProductByOrderID(Integer.parseInt(id)));
 		return mav;
 	}
+	
+	@RequestMapping(value = "DeleteOrder/{id}")
+	   public String delete(@PathVariable int id,HttpServletRequest req) {
+	   orderModel.DeleteDataOrder(id);
+	   return "redirect:/admin/order/list";
+	 }
 }

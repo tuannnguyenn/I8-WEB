@@ -35,12 +35,14 @@ public class OrderModel {
 
 	public List<Products> getProductByOrderID(int id) {
 		List<Products> list = new ArrayList<Products>();
-		String sql = "SELECT products.id, products.name, products.price_old, products.price_new, products.description, products.status, products.many_image, products.image, products.detail, products.product_id,\r\n"
-				+ "products.ghimSale, products.ghimNew, products.slug, products.created_at \r\n"
-				+ "FROM product_order \r\n" + "INNER JOIN products ON products.id  = product_order.id_product\r\n"
-				+ "WHERE product_order.id_order = " + id;
+		String sql = "SELECT * FROM product_order  INNER JOIN products ON products.id  = product_order.id_product WHERE product_order.id_order = " + id;
 		list = _jdbcTemplate.query(sql, new MapperProducts());
 		System.out.println(list.size());
 		return list;
+	}
+	
+	public void DeleteDataOrder(int id) {
+		String sql = "DELETE FROM orders WHERE id = " + id;
+		_jdbcTemplate.update(sql);
 	}
 }

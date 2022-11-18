@@ -15,8 +15,16 @@
             </div>
         </div>
     </div>
+   
+
+
+ <script type="text/javascript">
+    	function display(){
+			document.getElementById("success").style.display ="block";
+ }
+ </script> 
     <div id="wrapper" class="wp-inner clearfix">
-        <form action="<%=request.getContextPath() %>/thanh-toan/save" method="post" name="form-checkout">
+        <form action="<%=request.getContextPath() %>/thanh-toan/save" method="post" name="form-checkout" >
         <div class="section" id="customer-info-wp">
             <div class="section-head">
                 <h1 class="section-title">Thông tin khách hàng</h1>
@@ -91,8 +99,17 @@
                     </ul>
                 </div>
   				<div class="place-order-wp clearfix">
-  				<input type="submit" id="order-now" value="Đặt hàng">
+  				<input type="submit" id="order-now" onclick ="display()" value="Đặt hàng">
                 </div>
+                <div class="popup" id="success">
+									<div class="popup-content">
+										<div class="imgbox">
+											<img src=<c:url value='/resources/assets/images/checked.png'/> alt="" class="img-popup">
+										</div>
+										<div class="popup-title">
+											<h3>Đã thanh toán thành công!</h3>
+										</div>
+									</div>
             </div>
         </div>
         

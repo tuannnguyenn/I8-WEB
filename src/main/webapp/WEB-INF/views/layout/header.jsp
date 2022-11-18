@@ -24,7 +24,7 @@
         <link href="<c:url value="/resources/assets/css/import/detail_blog.css"/>" rel="stylesheet">
         <link href="<c:url value="/resources/assets/css/import/cart.css"/>" rel="stylesheet">
         <link href="<c:url value="/resources/assets/css/import/checkout.css"/>" rel="stylesheet">
-        
+        <link href="<c:url value="/resources/assets/css/import/popup.css"/>" rel="stylesheet">
         
         
         <script src="<c:url value="/resources/assets/js/jquery-2.2.4.min.js"/>" type="text/javascript"></script>

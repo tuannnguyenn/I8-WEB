@@ -14,6 +14,8 @@ public class Products {
 	private String ghimSale;
 	private String ghimNew;
 	private String slug;
+	private int quantity;
+	private int total_price;
 	private String created_at;
 
 	public int getId() {
@@ -127,5 +129,21 @@ public class Products {
 
 	public void setCreated_at(String created_at) {
 		this.created_at = created_at;
+	}
+
+	public int getTotal_price() {
+		return total_price;
+	}
+
+	public void setTotal_price(int total_price) {
+		this.total_price = total_price;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
 	}
 }
