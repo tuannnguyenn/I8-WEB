@@ -1,5 +1,6 @@
 package com.i8web.model.Admin;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Repository;
 import com.i8web.entity.Admin.MapperOrders;
 import com.i8web.entity.Admin.MapperProducts;
 import com.i8web.entity.Admin.Order;
+import com.i8web.entity.Admin.Posts;
 import com.i8web.entity.Admin.Products;
 import com.i8web.entity.Client.Category;
 import com.i8web.entity.Client.MapperCategory;
@@ -25,6 +27,7 @@ public class OrderModel {
 		list = _jdbcTemplate.query(sql, new MapperOrders());
 		return list;
 	}
+	
 
 	public List<Order> GetOrderById(int id) {
 		List<Order> list = new ArrayList<Order>();
@@ -40,7 +43,11 @@ public class OrderModel {
 		System.out.println(list.size());
 		return list;
 	}
-	
+	public void UpdateDataOrder(Order order) {
+		String sql = "UPDATE orders SET status=? WHERE id = ?";
+		_jdbcTemplate.update(sql,order.getStatus(),order.getId());
+
+	}
 	public void DeleteDataOrder(int id) {
 		String sql = "DELETE FROM orders WHERE id = " + id;
 		_jdbcTemplate.update(sql);

@@ -38,7 +38,7 @@
 										<td><span class="tbody-text">${ order.address }</span></td>
 										<td><span class="tbody-text">${ order.phone }</span></td>
 										<td><span class="tbody-text">${ order.created_at }</span></td>
-										<td><a href="/i8-web/admin/order/detail?id=${order.id }" title=""
+										<td><a href="/i8-web/admin/order/detail/${order.id }" title=""
 											class="tbody-text">Chi tiết</a></td>
 										<td>
 											<span class="tbody-text">

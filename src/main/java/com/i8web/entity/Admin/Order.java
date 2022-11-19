@@ -11,6 +11,8 @@ public class Order{
 	private String created_at;
 	private String bill_num;
 	private String bill_detail;
+	private String bill_total;
+	private String status;
 	public int getId() {
 		return id;
 	}
@@ -77,8 +79,7 @@ public class Order{
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	private String bill_total;
-	private String status;
+	
 	public Order() {
 		super();
 	}

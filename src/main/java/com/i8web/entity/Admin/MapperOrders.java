@@ -20,6 +20,7 @@ public class MapperOrders implements RowMapper<Order> {
 		order.setNote(rs.getString("note"));
 		order.setPay(rs.getString("pay"));
 		order.setPhone(rs.getString("phone"));
+		order.setStatus(rs.getString("status"));
 		return order;
 	}
 

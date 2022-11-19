@@ -78,7 +78,6 @@ public class ProductAdminController extends BaseProductController{
 		   String detail = req.getParameter("detail");
 		   String image = req.getParameter("image");
 		   String fileValue = req.getParameter("file");
-		   
 		   productService.updateProduct(product,description,detail,getValueImage(fileValue, image));
 	      return "redirect:/admin/product/list";
 	   }

@@ -1,6 +1,7 @@
 <%@page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>  
 <%@include file="/WEB-INF/views/admin/layout/header.jsp"%>
 <div id="main-content-wp" class="list-product-page">
 	<div class="wrap clearfix">
@@ -19,17 +20,17 @@
 						<li>
 							<h3 class="title">Thông tin vận chuyển</h3> <span class="detail">${order.pay }</span>
 						</li>
-						<form method="POST" action="">
-							<li>
-								<h3 class="title">Tình trạng đơn hàng</h3> <select name="status">
-									<option selected='selected' value='0'>Chờ xác nhận</option>
-									<option value='1'>Chờ lấy hàng</option>
-									<option value='2'>Đang giao</option>
-									<option value='3'>Đã giao</option>
-									<option value='4'>Đã hủy</option>
-							</select> <input type="submit" name="sm_status" value="Cập nhật đơn hàng">
-							</li>
-						</form>
+						<form:form method="POST" action="" modelAttribute="order">
+								<h3 class="title">Tình trạng đơn hàng</h3> 
+								<form:select name="status" path="status" >
+									<option selected='selected' value="${order.status}">${order.status}</option>
+									<option value='Chờ lấy hàng'>Chờ lấy hàng</option>
+									<option value='Đang giao'>Đang giao</option>
+									<option value='Đã giao'>Đã giao</option>
+									<option value='Đã hủy'>Đã hủy</option>
+							</form:select> 
+							<input type="submit" name="sm_status" onclick="display()" value="Cập nhật đơn hàng">
+						</form:form>
 					</ul>
 
 				</div>
@@ -83,6 +84,30 @@
 			</div>
 		</c:forEach>
 	</div>
+    <%
+session.setMaxInactiveInterval(2);
+%>
+
+ <script type="text/javascript">
+var Msg ='<%=session.getAttribute("getAlert")%>';
+    if (Msg != "null") {
+    	function display(){
+			document.getElementById("success").style.display ="block";
+
+		}
+ }
+ </script> 
+
+                <div class="popup" id="success">
+									<div class="popup-content">
+										<div class="imgbox">
+											<img src=<c:url value='/resources/assets/images/checked.png'/> alt="" class="img-popup">
+										</div>
+										<div class="popup-title">
+											<h3>Đã cập nhật thành công!</h3>
+										</div>
+									</div>
 </div>
 </div>
+<script type="text/javascript"> window.onload = display(); </script>
 <%@include file="/WEB-INF/views/admin/layout/footer.jsp"%>

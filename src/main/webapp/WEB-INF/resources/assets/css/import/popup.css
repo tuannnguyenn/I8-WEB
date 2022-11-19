@@ -1,6 +1,6 @@
 
 #success{
-	animation: hide 10s linear 10s 1 forwards;
+	animation: hide 1s linear 1s 1 forwards;
     display: none;
     position: fixed;
     top:20%;

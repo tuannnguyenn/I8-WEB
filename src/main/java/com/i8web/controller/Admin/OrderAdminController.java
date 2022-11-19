@@ -1,15 +1,19 @@
 package com.i8web.controller.Admin;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.i8web.Service.Admin.OrderServiceImpl;
+import com.i8web.entity.Admin.Order;
+import com.i8web.entity.Admin.Products;
 import com.i8web.model.Admin.OrderModel;
 
 @Controller
@@ -25,14 +29,13 @@ public class OrderAdminController {
 		return mav;
 	}
 	
-	@RequestMapping(value = "/admin/order/detail", method = RequestMethod.GET)
-	public ModelAndView detail(HttpServletRequest req) {
+	@RequestMapping(value = "/admin/order/detail/{id}", method = RequestMethod.GET)
+	public ModelAndView getDetail(@PathVariable int id,@ModelAttribute("order") Order order,HttpServletRequest req) {
 		ModelAndView mav = new ModelAndView("/admin/order/detail");
-		String id = req.getParameter("id");
 		System.out.println(id);
-		mav.addObject("listOrder", orderModel.GetOrderById(Integer.parseInt(id)));
+		mav.addObject("listOrder", orderModel.GetOrderById(id));
 		mav.addObject("orders", orderModel.getData());
-		mav.addObject("productDetails", orderModel.getProductByOrderID(Integer.parseInt(id)));
+		mav.addObject("productDetails", orderModel.getProductByOrderID(id));
 		return mav;
 	}
 	
@@ -41,4 +44,10 @@ public class OrderAdminController {
 	   orderModel.DeleteDataOrder(id);
 	   return "redirect:/admin/order/list";
 	 }
+	@RequestMapping(value = "/admin/order/detail/{id}", method = RequestMethod.POST)
+	public String postDetail(@PathVariable int id,@ModelAttribute("order") Order order,HttpServletRequest req,HttpSession session) {
+		session.setAttribute("getAlert", "Yes");
+		orderModel.UpdateDataOrder(order);
+		return "redirect:/admin/order/detail/{id}";
+	}
 }
