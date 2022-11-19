@@ -1,5 +1,9 @@
 package com.i8web.controller.Client;
 
+import java.text.DecimalFormatSymbols;
+import java.text.NumberFormat;
+import java.util.Locale;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -68,7 +72,7 @@ public class CheckOutController {
 	@RequestMapping(value = "/thanh-toan/save", method = RequestMethod.POST)
 	public String saveCart(@RequestParam("fullname") String name,@RequestParam("email") String email,
 			@RequestParam("address") String address, @RequestParam("phone") String phone, 
-			@RequestParam("note") String note, @RequestParam("payment-method") String method) {
+			@RequestParam("note") String note, @RequestParam(name="payment-method",required = false) String method) {
 			try {
 				user.setName(name);
 				user.setEmail(email);
@@ -90,5 +94,4 @@ public class CheckOutController {
 			}
 		return "redirect:/thanh-toan";
 	}
-	
 }

@@ -69,9 +69,7 @@
                                     <li>
                                         <a href="/i8-web/admin/order/list" title="">Danh sách đơn hàng</a> 
                                     </li>
-                                    <li>
-                                        <a href="/i8-web/admin/order/list" title="">Danh sách khách hàng</a> 
-                                    </li>
+                                   
                                 </ul>
                             </li>
                             <li>

@@ -45,9 +45,7 @@
                 <li class="nav-item">
                     <a href="/i8-web/admin/order/list" title="" class="nav-link">Danh sách đơn hàng</a>
                 </li>
-                <li class="nav-item">
-                    <a href="/i8-web/admin/order/list" title="" class="nav-link">Danh sách khách hàng</a>
-                </li>
+            
             </ul>
         </li>
         <li class="nav-item">

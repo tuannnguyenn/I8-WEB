@@ -15,7 +15,9 @@
 				<div class="section-detail">
 					<div class="filter-wp clearfix">
 						<ul class="post-status fl-left">
-							<li class="all"><a href="">Tất cả <span class="count">(69)</span></a></li>
+						
+							<li class="all"><a href="">Tất cả <span class="count">(${orders.size()})</span></a></li>
+							
 						</ul>
 					</div>
 					<div class="table-responsive">
@@ -27,6 +29,7 @@
 									<td><span class="thead-text">Địa chỉ</span></td>
 									<td><span class="thead-text">Số điện thoại</span></td>
 									<td><span class="thead-text">Thời gian</span></td>
+									<td><span class="thead-text">Trạng thái đơn hàng</span></td>
 									<td><span class="thead-text">Chi tiết</span></td>
 								</tr>
 							</thead>
@@ -38,6 +41,7 @@
 										<td><span class="tbody-text">${ order.address }</span></td>
 										<td><span class="tbody-text">${ order.phone }</span></td>
 										<td><span class="tbody-text">${ order.created_at }</span></td>
+										<td><span class="tbody-text">${ order.status }</span></td>
 										<td><a href="/i8-web/admin/order/detail/${order.id }" title=""
 											class="tbody-text">Chi tiết</a></td>
 										<td>
