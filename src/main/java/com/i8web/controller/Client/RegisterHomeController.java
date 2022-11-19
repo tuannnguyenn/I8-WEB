@@ -11,22 +11,21 @@ import com.i8web.Service.Admin.SessionService;
 import com.i8web.Service.Client.HomeServiceImpl;
 import com.i8web.model.Admin.LoginModel;
 import com.i8web.model.Admin.SignupModel;
+import com.i8web.model.Client.RegisterModel;
 
 @Controller
 public class RegisterHomeController {
 	@Autowired
-	LoginModel loginModel;
+	RegisterModel registerModel;
 	@Autowired
 	SessionService sessionService;
-	@Autowired
-	SignupModel signupModel;
 	@Autowired
 	HomeServiceImpl homeServiceImpl;
 
 	@RequestMapping(value = "/trang-chu", method = RequestMethod.POST)
 	public ModelAndView homePageLogined(@RequestParam("username") String username,
 			@RequestParam("password") String password) {
-		if (loginModel.checkDataLogin(username, password)) {
+		if (registerModel.checkLogin(username, password)) {
 			sessionService.set("userAccount", username);
 			ModelAndView mav = new ModelAndView("home/home");
 			mav.addObject("listCat", homeServiceImpl.GetDataCategory());
@@ -58,12 +57,12 @@ public class RegisterHomeController {
 	public ModelAndView checkSignupHome(@RequestParam("username") String username,
 			@RequestParam("password") String password, @RequestParam("email") String email,
 			@RequestParam("name") String name) {
-		if (signupModel.signupAccount(username, password, email, name)) {
+		if (registerModel.signupAccount(username, password, email, name)) {
 			ModelAndView mav = new ModelAndView("register/login");
 			return mav;
 		} else {
 			ModelAndView mav = new ModelAndView("admin/register/signup");
-			mav.addObject("isError", signupModel.errorMessageString);
+			mav.addObject("isError", registerModel.errorMessageString);
 			return mav;
 		}
 	}
