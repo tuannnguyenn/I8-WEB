@@ -53,7 +53,7 @@
 								<div class="action clearfix">
 									<a href="/i8-web/gio-hang/add/${item.id }"
 										title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ
-										hàng</a> <a href="/i8-web/thanh-toan" title="Mua ngay"
+										hàng</a> <a href="/i8-web/thanh-toan/add/${item.id }" title="Mua ngay"
 										class="buy-now fl-right">Mua ngay</a>
 								</div></li>
 						</c:forEach>

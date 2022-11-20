@@ -84,7 +84,7 @@
 									<div class="action clearfix">
 										<a href="/i8-web/gio-hang/add/${item.id }" onclick="display()"
 											title="" class="add-cart fl-left">Thêm giỏ hàng</a> <a
-											href="/i8-web/thanh-toan" title="" class="buy-now fl-right">Mua
+											href="/i8-web/thanh-toan/add/${item.id }" title="" class="buy-now fl-right">Mua
 											ngay</a>
 									</div></li>
 							</c:forEach>
@@ -111,7 +111,7 @@
 									<div class="action clearfix">
 										<a href="/i8-web/gio-hang/add/${item.id }" onclick="display()"
 											title="Thêm giỏ hàng" class="add-cart fl-left">Thêm giỏ
-											hàng</a> <a href="/i8-web/thanh-toan" title="Mua ngay"
+											hàng</a> <a href="/i8-web/thanh-toan/add/${item.id }" title="Mua ngay"
 											class="buy-now fl-right">Mua ngay</a>
 									</div></li>
 							</c:forEach>
@@ -139,7 +139,7 @@
 										<a href="/i8-web/gio-hang/add/${item.id }"
 											title="Thêm giỏ hàng" class="add-cart fl-left"
 											onclick="display()">Thêm giỏ hàng</a> <a
-											href="/i8-web/thanh-toan" title="Mua ngay"
+											href="/i8-web/thanh-toan/add/${item.id }" title="Mua ngay"
 											class="buy-now fl-right">Mua ngay</a>
 									</div></li>
 							</c:forEach>
@@ -181,7 +181,7 @@
 										<div class="price">
 											<span class="new">${item.price_new }</span> <span class="old">${item.price_old }</span>
 										</div>
-										<a href="" title="" class="buy-now">Mua ngay</a>
+										<a href="/i8-web/thanh-toan/add/${item.id }" title="" class="buy-now">Mua ngay</a>
 									</div></li>
 								<c:if test="${ sessionScope.userAccount != null }">
 									<div class="popup" id="success">

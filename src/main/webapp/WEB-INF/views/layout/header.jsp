@@ -114,7 +114,6 @@
                                             <a href="/i8-web/gio-hang" title="Giỏ hàng" class="view-cart fl-left">Giỏ hàng</a>
                                             <a href="/i8-web/thanh-toan" title="Thanh toán" class="checkout fl-right">Thanh toán</a>
                                         </dic>
-=======
                                         </a>
                                     </div>
                                     <div id="dropdown">
@@ -132,7 +131,7 @@
 		                                        <ul class="list-cart">
 		                                            <li class="clearfix">
 		                                                <a href="" title="" class="thumb fl-left">
-		                                                    <img src="${item.image }" alt="">
+		                                                    <img src="/i8-web/resources/assets/images/${item.image }" alt="">
 		                                                </a>
 		                                                <div class="info fl-right">
 		                                                    <a href="" title="" class="product-name">${ item.name}</a>
