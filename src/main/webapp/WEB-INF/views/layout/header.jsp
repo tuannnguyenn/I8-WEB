@@ -53,6 +53,9 @@
                                     <li>
                                         <a href="/i8-web/chi-tiet-blog" title="">Giới thiệu</a>
                                     </li>
+                                    <li>
+                                        <a href="/i8-web/chi-tiet-blog" title="">Đăng nhập</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
