@@ -194,7 +194,6 @@
 											<div class="popup-title">
 												<h3>Đã thêm thành công!</h3>
 											</div>
-
 										</div>
 									</div>
 								</c:if>

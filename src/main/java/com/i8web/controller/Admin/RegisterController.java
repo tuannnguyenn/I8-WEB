@@ -36,16 +36,13 @@ public class RegisterController {
 	}
 
 	@RequestMapping(value = "/useradmin/login", method = RequestMethod.POST)
-	public ModelAndView checkLogin(@RequestParam("username") String username,
+	public String checkLogin(@RequestParam("username") String username,
 			@RequestParam("password") String password) {
 		if (loginModel.checkDataLogin(username, password)) {
 			sessionService.set("adminAccount", username);
-			ModelAndView mav = new ModelAndView("admin/order/list");
-			return mav;
+			return "redirect:/admin/order/list";
 		} else {
-			ModelAndView mav = new ModelAndView("admin/register/login");
-			mav.addObject("isError", true);
-			return mav;
+			return "redirect:/admin/login";
 		}
 	}
 
