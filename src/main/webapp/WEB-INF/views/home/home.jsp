@@ -75,19 +75,17 @@
 									title="" class="product-name">${item.name }</a>
 									<div class="price">
 										<span class="new">${item.price_new }</span> <span class="old">${item.price_old }</span>
-									</div> 
-									<script type="text/javascript">
-									
-									function display(){
-										document.getElementById("success").style.display ="block";
+									</div> <script type="text/javascript">
+										function display() {
+											document.getElementById("success").style.display = "block";
 
-									}
+										}
 									</script>
 									<div class="action clearfix">
-										<a href="/i8-web/gio-hang/add/${item.id }"
-											onclick="display()" title="" class="add-cart fl-left">Thêm
-											giỏ hàng</a> <a href="/i8-web/thanh-toan" title=""
-											class="buy-now fl-right">Mua ngay</a>
+										<a href="/i8-web/gio-hang/add/${item.id }" onclick="display()"
+											title="" class="add-cart fl-left">Thêm giỏ hàng</a> <a
+											href="/i8-web/thanh-toan" title="" class="buy-now fl-right">Mua
+											ngay</a>
 									</div></li>
 							</c:forEach>
 						</ul>
@@ -139,8 +137,9 @@
 									</div>
 									<div class="action clearfix">
 										<a href="/i8-web/gio-hang/add/${item.id }"
-											title="Thêm giỏ hàng" class="add-cart fl-left" onclick="display()">Thêm giỏ
-											hàng</a> <a href="/i8-web/thanh-toan" title="Mua ngay"
+											title="Thêm giỏ hàng" class="add-cart fl-left"
+											onclick="display()">Thêm giỏ hàng</a> <a
+											href="/i8-web/thanh-toan" title="Mua ngay"
 											class="buy-now fl-right">Mua ngay</a>
 									</div></li>
 							</c:forEach>
@@ -184,16 +183,21 @@
 										</div>
 										<a href="" title="" class="buy-now">Mua ngay</a>
 									</div></li>
+								<c:if test="${ sessionScope.userAccount != null }">
 									<div class="popup" id="success">
-									<div class="popup-content">
-										<div class="imgbox">
-											<img src=<c:url value='/resources/assets/images/checked.png'/> alt="" class="img-popup">
-										</div>
-										<div class="popup-title">
-											<h3>Đã thêm thành công!</h3>
+										<div class="popup-content">
+											<div class="imgbox">
+												<img
+													src=<c:url value='/resources/assets/images/checked.png'/>
+													alt="" class="img-popup">
+											</div>
+											<div class="popup-title">
+												<h3>Đã thêm thành công!</h3>
+											</div>
+
 										</div>
 									</div>
-								</div> 
+								</c:if>
 							</c:forEach>
 						</ul>
 					</div>
@@ -201,6 +205,6 @@
 			</div>
 		</div>
 	</div>
-	
+
 </body>
 <%@include file="/WEB-INF/views/layout/footer.jsp"%>

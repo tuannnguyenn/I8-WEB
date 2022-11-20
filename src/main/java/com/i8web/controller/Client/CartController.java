@@ -42,7 +42,10 @@ public class CartController {
 	}
 
 	@GetMapping("/gio-hang/add/{id}")
-	public String addCart(@PathVariable("id") Integer id) {
+	public String addCart(@PathVariable("id") Integer id, HttpSession session) {
+		if (session.getAttribute("userAccount") == null) {
+			return "redirect:/login";
+		}
 		Products product = productService.findProductById(id);
 		CartItem item = new CartItem();
 		if (product != null) {
