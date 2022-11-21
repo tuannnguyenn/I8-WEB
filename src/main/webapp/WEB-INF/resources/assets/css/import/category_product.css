@@ -77,3 +77,7 @@
     -webkit-line-clamp: 5;
     display: flow-root;
 }
+
+.address{
+    width: 223px;
+}

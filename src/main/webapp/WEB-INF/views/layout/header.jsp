@@ -25,8 +25,6 @@
 	rel="stylesheet" type="text/css" />
 <link href="<c:url value="/resources/assets/style.css"/>"
 	type="text/css" />
-<link href="<c:url value="/resources/assets/responsive.css" />"
-	rel="stylesheet" type="text/css" />
 <link href="<c:url value="/resources/assets/css/import/header.css"/>"
 	rel="stylesheet">
 <link href="<c:url value="/resources/assets/css/import/fonts.css"/>"
@@ -54,6 +52,8 @@
 	rel="stylesheet">
 <link href="<c:url value="/resources/assets/css/import/popup.css"/>"
 	rel="stylesheet">
+<link href="<c:url value="/resources/assets/responsive.css" />"
+	rel="stylesheet" type="text/css" />
 
 
 <script src="<c:url value="/resources/assets/js/jquery-2.2.4.min.js"/>"
@@ -116,7 +116,7 @@
 							</form>
 							<div class="show-search">
 								<ul class="list-item-show">
-
+										
 								</ul>
 							</div>
 						</div>

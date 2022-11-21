@@ -40,7 +40,6 @@ public class OrderModel {
 		List<Products> list = new ArrayList<Products>();
 		String sql = "SELECT * FROM product_order  INNER JOIN products ON products.id  = product_order.id_product WHERE product_order.id_order = " + id;
 		list = _jdbcTemplate.query(sql, new MapperProducts());
-		System.out.println(list.size());
 		return list;
 	}
 	public void UpdateDataOrder(Order order) {

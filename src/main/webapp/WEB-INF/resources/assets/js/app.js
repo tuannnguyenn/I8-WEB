@@ -52,20 +52,21 @@ $(document).ready(function () {
         var action = "search";
         var search_name = $(".input_search").val();
         if($(".input_search").val() != ''){
-            $.ajax({
-                url: '/i8-web/search',
-                method: 'POST',
-                data: { action: action, search_name: search_name},
-                dataType: 'text',
-                success: function (data) {
-                    $("ul.list-item-show").html(data);
-                    // console.log(data);
-                },
-                error: function (xhr, ajaxOption, thrownError) {
-                    alert(xhr.status);
-                    alert(thrownError);
-                }
-            });
+             $.ajax({
+	            url: '/i8-web/search',
+	            method: 'POST',
+	            data: {action: action, search_name: search_name},
+	            dataType: 'text',
+	            success: function (data) {
+	                $(".list-item-show").html(data);
+	                //$("ul.list-category-responsive").html(data);
+	                console.log(data);
+	            },
+	            error: function (xhr, ajaxOption, thrownError) {
+	                alert(xhr.status);
+	                alert(thrownError);
+	            }
+        	});
         }else{
             $("ul.list-item-show").html("");
         }

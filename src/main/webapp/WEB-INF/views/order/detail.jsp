@@ -52,16 +52,6 @@
                    
                 </table>
             </div>
-        	<c:choose>
-        		<c:when test="${ITEMS=='0'}">
-        				<div>
-		                <center><img src="resources/assets/images/empty-cart.png" alt="" align="middle"></center>
-		                <p style="text-align: center;font-size: x-large">Không có sản phẩm nào trong giỏ hàng</p>
-		                </div>
-        			<br />
-    			</c:when> 
-        		
-         </c:choose>   
         </div>
        
     </div>

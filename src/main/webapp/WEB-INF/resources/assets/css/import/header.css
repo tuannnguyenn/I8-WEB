@@ -187,12 +187,13 @@
 .show-search{
     position: absolute;
     z-index: 2;
-    top: 63px;
-    left: 202px;
+    top: 99px;
+    left: 521px;
     background: #fff;
-    width: 48.4%;
+    width: 26.4%;
     border-radius: 4px;
     display: block;
+    overflow: auto;
 }
 ul.list-item-show li{
     display: flex;

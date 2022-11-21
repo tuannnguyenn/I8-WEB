@@ -38,7 +38,7 @@
 	                    	<input type="hidden" name="id" value="${ item.id}"/>
 		                    <tr>
 		                    	<td>${ item.fullname}</td>
-		                        <td>${ item.address}</td>
+		                        <td class="address">${ item.address}</td>
 		                        <td>${ item.phone}</td>
 		                        <td>${ item.created_at}</td>
 		                        <td>${ item.bill_total}</td>

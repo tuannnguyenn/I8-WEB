@@ -56,8 +56,8 @@ public class HomeModel {
 	
 	public List<Home> GetSearchData(String key) {
 		List<Home> list = new ArrayList<Home>();
-		String sql = "SELECT * FROM products WHERE name LIKE " + "'%'" + key + "'%'";
-		System.out.println(sql);
+		String sql = "SELECT * FROM products WHERE name LIKE '%" + key + "%'";
+		list = _jdbcTemplate.query(sql, new MapperHome());
 		return list;
 	}
 	public List<Home> GetDataHome() {

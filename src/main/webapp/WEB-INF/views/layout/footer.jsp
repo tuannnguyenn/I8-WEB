@@ -108,7 +108,7 @@
         </ul>
     </div>
 </div>
-<div id="btn-top"><img src="public/images/icon-to-top.png" alt=""/></div>
+<div id="btn-top"><img src="/i8-web/resources/assets/images/icon-to-top.png" alt=""/></div>
 <div id="fb-root"></div>
 <script>(function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
