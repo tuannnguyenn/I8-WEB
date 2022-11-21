@@ -23,7 +23,7 @@ public class OrderModel {
 
 	public List<Order> getData() {
 		List<Order> list = new ArrayList<Order>();
-		String sql = "SELECT * FROM orders";
+		String sql = "SELECT * FROM orders ORDER BY id DESC";
 		list = _jdbcTemplate.query(sql, new MapperOrders());
 		return list;
 	}

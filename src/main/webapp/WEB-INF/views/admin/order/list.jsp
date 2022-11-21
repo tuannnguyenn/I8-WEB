@@ -34,7 +34,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								<c:forEach items="${ orders }" var="order">
+								<c:forEach items="${ orders }" var="order" >								
 									<tr>
 										<td><span class="tbody-text">${ order.id.toString() }</span>
 										<td><span class="tbody-text">${ order.fullname }</span></td>
