@@ -44,10 +44,5 @@ public class OrderAdminController {
 	   orderModel.DeleteDataOrder(id);
 	   return "redirect:/admin/order/list";
 	 }
-	@RequestMapping(value = "/admin/order/detail/{id}", method = RequestMethod.POST)
-	public String postDetail(@PathVariable int id,@ModelAttribute("order") Order order,HttpServletRequest req,HttpSession session) {
-		session.setAttribute("getAlert", "Yes");
-		orderModel.UpdateDataOrder(order);
-		return "redirect:/admin/order/detail/{id}";
-	}
+	
 }

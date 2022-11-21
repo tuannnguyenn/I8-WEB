@@ -2,12 +2,11 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@include file="/WEB-INF/views/admin/layout/header.jsp"%>
+<%@include file="/WEB-INF/views/admin/layout/no_header.jsp"%>
 <div id="main-content-wp" class="list-product-page">
 	<div class="wrap clearfix">
-		<%@include file="/WEB-INF/views/admin/layout/sidebar.jsp"%>
 		<c:forEach items="${ listOrder }" var="order">
-			<div id="content" class="detail-exhibition fl-right">
+			<div id="content" class="detail-exhibition fl-right" style="width: 100%; border: none;">
 				<div class="section" id="info">
 					<div class="section-head">
 						<h3 class="section-title">Thông tin đơn hàng</h3>
@@ -21,9 +20,16 @@
 							<h3 class="title">Thông tin vận chuyển</h3> <span class="detail">${order.pay }</span>
 						</li>
 						<form:form method="POST" action="" modelAttribute="order">
-							<h3 class="title">Tình trạng đơn hàng:</h3>${order.status}
-							
-							
+							<h3 class="title">Tình trạng đơn hàng</h3>
+							<form:select name="status" path="status">
+								<option selected='selected' value="${order.status}">${order.status}</option>
+								<option value='Chờ lấy hàng'>Chờ lấy hàng</option>
+								<option value='Đang giao'>Đang giao</option>
+								<option value='Đã giao'>Đã giao</option>
+								<option value='Đã hủy'>Đã hủy</option>
+							</form:select>
+							<input type="submit" name="sm_status" onclick="display()"
+								value="Cập nhật đơn hàng">
 						</form:form>
 					</ul>
 
@@ -88,7 +94,6 @@ var Msg ='<%=session.getAttribute("getAlert")%>
 		if (Msg != "null") {
 			function display() {
 				document.getElementById("success").style.display = "block";
-
 			}
 		}
 	</script>
@@ -108,4 +113,3 @@ var Msg ='<%=session.getAttribute("getAlert")%>
 <script type="text/javascript">
 	window.onload = display();
 </script>
-<%@include file="/WEB-INF/views/admin/layout/footer.jsp"%>

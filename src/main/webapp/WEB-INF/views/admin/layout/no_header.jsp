@@ -33,68 +33,17 @@
             <div id="container">
                 <div id="header-wp">
                     <div class="wp-inner clearfix">
-                        <a href="?page=list_post" title="" id="logo" class="fl-left">ADMIN</a>
-                        <ul id="main-menu" class="fl-left">
-                            <li>
-                                <a href="/i8-web/admin/post/list" title="">Bài viết</a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="/i8-web/admin/post/create" title="">Thêm mới</a> 
-                                    </li>
-                                    <li>
-                                        <a href="/i8-web/admin/post/list" title="">Danh sách bài viết</a> 
-                                    </li>
-                                    <li>
-                                        <a href="/i8-web/admin/post/category/list" title="">Danh mục bài viết</a> 
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="/i8-web/admin/product/list" title="">Sản phẩm</a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="/i8-web/admin/product/create" title="">Thêm mới</a> 
-                                    </li>
-                                    <li>
-                                        <a href="/i8-web/admin/product/list" title="">Danh sách sản phẩm</a> 
-                                    </li>
-                                    <li>
-                                        <a href="/i8-web/admin/product/category/list" title="">Danh mục sản phẩm</a> 
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="/i8-web/admin/order/list" title="">Bán hàng</a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="/i8-web/admin/order/list" title="">Danh sách đơn hàng</a> 
-                                    </li>
-                                   
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="/i8-web/admin/slider/list" title="">Slider</a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="/i8-web/admin/slider/create" title="">Thêm mới</a> 
-                                    </li>
-                                    <li>
-                                        <a href="/i8-web/admin/slider/list" title="">Danh sách Slider</a> 
-                                    </li>
-                                </ul>
-                            </li>
-                            
-                        </ul>
+                        <a href="?page=list_post" title="" id="logo" class="fl-left">SHIPPER</a>
                         <div id="dropdown-user" class="dropdown dropdown-extended fl-right">
                             <button class="dropdown-toggle clearfix" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                 <div id="thumb-circle" class="fl-left">
                                     <img src="http://localhost:8080/i8-web/resources/adminassets/images/img-admin.png">
                                 </div>
-                                <h3 id="account" class="fl-right">Admin</h3>
+                                <h3 id="account" class="fl-right">Shipper</h3>
                             </button>
                             <ul class="dropdown-menu">
                                 <li><a href="?page=info_account" title="Thông tin cá nhân">Thông tin tài khoản</a></li>
-                                <li><a href="/i8-web/logout" title="Thoát">Thoát</a></li>
+                                <li><a href="/i8-web/shipper/logout" title="Thoát">Thoát</a></li>
                             </ul>
                         </div>
                     </div>

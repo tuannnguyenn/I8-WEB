@@ -1,11 +1,10 @@
 <%@page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@include file="/WEB-INF/views/admin/layout/header.jsp"%>
+<%@include file="/WEB-INF/views/admin/layout/no_header.jsp"%>
 <div id="main-content-wp" class="list-product-page">
 	<div class="wrap clearfix">
-		<%@include file="/WEB-INF/views/admin/layout/sidebar.jsp"%>
-		<div id="content" class="fl-right">
+		<div id="content" class="fl-right" style="width: 100%; border: none;">
 			<div class="section" id="title-page">
 				<div class="clearfix">
 					<h3 id="index" class="fl-left">Danh sách đơn hàng</h3>
@@ -42,14 +41,8 @@
 										<td><span class="tbody-text">${ order.phone }</span></td>
 										<td><span class="tbody-text">${ order.created_at }</span></td>
 										<td><span class="tbody-text">${ order.status }</span></td>
-										<td><a href="/i8-web/admin/order/detail/${order.id }" title=""
+										<td><a href="/i8-web/shipper/order/detail/${order.id}" title=""
 											class="tbody-text">Chi tiết</a></td>
-										<td>
-											<span class="tbody-text">
-													<a href="<c:url value="/DeleteOrder/${order.id}"/>"  title="Xóa" class="delete"><i
-															class="fa fa-trash" aria-hidden="true"></i></a>
-											</span>
-										</td>
 									</tr>
 								</c:forEach>
 							</tbody>
@@ -58,19 +51,18 @@
 				</div>
 			</div>
 			<div class="section" id="paging-wp">
-				<!-- <div class="section-detail clearfix">
-					<p id="desc" class="fl-left">Chọn vào checkbox để lựa chọn tất
-						cả</p>
-					<ul id="list-paging" class="fl-right">
+				<div class="section-detail clearfix">
+					<!-- <p id="desc" class="fl-left">Chọn vào checkbox để lựa chọn tất
+						cả</p> -->
+					<!-- <ul id="list-paging" class="fl-right">
 						<li><a href="" title=""></li>
 						<li><a href="" title="">1</a></li>
 						<li><a href="" title="">2</a></li>
 						<li><a href="" title="">3</a></li>
 						<li><a href="" title="">></a></li>
-					</ul>
-				</div> -->
+					</ul> -->
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
-<%@include file="/WEB-INF/views/admin/layout/footer.jsp"%>
