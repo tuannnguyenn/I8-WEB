@@ -89,7 +89,10 @@
 								</li>
 								<c:choose>
 									<c:when test="${sessionScope.userAccount != null}">
+										<li><a href="/i8-web/thong-tin-don-hang" title="">Thông
+												tin đơn hàng</a>
 										<li><a href="#" title="">${sessionScope.userAccount }</a></li>
+
 									</c:when>
 									<c:otherwise>
 										<li><a href="/i8-web/login" title="">Đăng nhập</a></li>

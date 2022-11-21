@@ -52,4 +52,10 @@ public class OrderModel {
 		String sql = "DELETE FROM orders WHERE id = " + id;
 		_jdbcTemplate.update(sql);
 	}
-}
+	
+	public List<Order> getOrderByUsername(String username) {
+		List<Order> list = new ArrayList<Order>();
+		String sql = "SELECT * FROM orders WHERE username = '" + username + "'";
+		list = _jdbcTemplate.query(sql, new MapperOrders());
+		return list;
+	}}

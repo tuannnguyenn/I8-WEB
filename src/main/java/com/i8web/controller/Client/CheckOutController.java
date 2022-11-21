@@ -75,7 +75,7 @@ public class CheckOutController {
 	@RequestMapping(value = "/thanh-toan/save", method = RequestMethod.POST)
 	public String saveCart(@RequestParam("fullname") String name,@RequestParam("email") String email,
 			@RequestParam("address") String address, @RequestParam("phone") String phone, 
-			@RequestParam("note") String note, @RequestParam(name="payment-method",required = false) String method) {
+			@RequestParam("note") String note, @RequestParam(name="payment-method",required = false) String method, HttpSession session) {
 			try {
 				user.setName(name);
 				user.setEmail(email);
@@ -88,7 +88,7 @@ public class CheckOutController {
 				checkout.setDay(java.time.LocalDate.now());
 				checkout.setStatus(method);
 				checkout.setBill_detail(cartService.GetDetail());
-				checkService.save(checkout);
+				checkService.save(checkout, session.getAttribute("userAccount").toString());
 				checkService.save_billdetail(cartService.getAllItems());
 				cartService.clear();
 			} catch(Exception e)

@@ -27,14 +27,14 @@ public class CheckOutServiceImpl implements ICheckOutService{
 	@Autowired
     private JdbcTemplate jdbcTemplate;
 	
-	public void save(CheckOut Cart) {
+	public void save(CheckOut Cart, String username) {
 		try {
 			jdbcTemplate.update("INSERT INTO `orders`"
-					+ "(`fullname`, `address`, `phone`, `note`, `pay`, `created_at`, `bill_num`, `bill_detail`, `bill_total`)" 
-					+ "VALUES (?,?,?,?,?,?,?,?,?)"
+					+ "(`fullname`, `address`, `phone`, `note`, `pay`, `created_at`, `bill_num`, `bill_detail`, `bill_total`, `username`)" 
+					+ "VALUES (?,?,?,?,?,?,?,?,?,?)"
 					,Cart.getUser().getName(),Cart.getUser().getAddress(),Cart.getUser().getPhone(),
 					Cart.getUser().getNote(),Cart.getStatus(),Cart.getDay(),Cart.getBill_num(),Cart.getBill_detail(),
-					Cart.getBill_total());
+					Cart.getBill_total(), username);
 		} catch (Exception e) {
 			System.out.print(e);
 		}

@@ -21,6 +21,7 @@ public class MapperOrders implements RowMapper<Order> {
 		order.setPay(rs.getString("pay"));
 		order.setPhone(rs.getString("phone"));
 		order.setStatus(rs.getString("status"));
+		order.setUsername(rs.getString("username"));
 		return order;
 	}
 

@@ -11,7 +11,7 @@
                         <a href="/i8-web/trang-chu" title="">Trang chủ</a>
                     </li>
                     <li>
-                        <a href="" title="">Thông tin đơn hàng</a>
+                        <a href="" title="">Chi tiết đơn hàng</a>
                     </li>
                 </ul>
             </div>
@@ -23,36 +23,37 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <td>Họ và tên</td>
-                            <td>Địa chỉ</td>
-                            <td>Số điện thoại</td>
-                            <td>Thời gian đặt hàng</td>
+                            <td >STT</td>
+                            <td>Ảnh sản phẩm</td>
+                            <td>Tên sản phẩm</td>
+                            <td>Giá sản phẩm</td>
+                            <td>Số lượng</td>
                             <td>Thành tiền</td>
-                            <td> Trạng thái đơn hàng</td>
-                            <td> Chi tiết </td>
                         </tr>
                     </thead>
                     <tbody>
-	                    <c:forEach var="item" items="${ listOrder}">
-	                    	<form action="/i8-web/gio-hang/update" method="post">
-	                    	<input type="hidden" name="id" value="${ item.id}"/>
-		                    <tr>
-		                    	<td>${ item.fullname}</td>
-		                        <td>${ item.address}</td>
-		                        <td>${ item.phone}</td>
-		                        <td>${ item.created_at}</td>
-		                        <td>${ item.bill_total}</td>
-		                        <td>${ item.status}</td>
-		                        <td><a href="/i8-web/chi-tiet-don-hang/${item.id}">Chi tiết</a></td>
-	                        </tr>
-                        	</form>
-	                    </c:forEach>
+	                    <c:forEach var="item" items="${ productDetails }">
+									<tr>
+										<td class="thead-text">${n = n + 1 }</td>
+										<td class="thead-text">
+											<div class="thumb">
+												<img src="/i8-web/resources/assets/images/${ item.image }"
+													alt="">
+											</div>
+										</td>
+										<td class="thead-text">${ item.name }</td>
+										<td class="thead-text">${ item.price_new }VNĐ</td>
+										<td class="thead-text">${ item.quantity.toString() }</td>
+										<td class="thead-text">${ item.total_price }VNĐ</td>
+									</tr>
+								</c:forEach>
+	                    
                     </tbody>
                    
                 </table>
             </div>
         	<c:choose>
-        		<c:when test="${listOrder == null}">
+        		<c:when test="${ITEMS=='0'}">
         				<div>
 		                <center><img src="resources/assets/images/empty-cart.png" alt="" align="middle"></center>
 		                <p style="text-align: center;font-size: x-large">Không có sản phẩm nào trong giỏ hàng</p>
@@ -62,7 +63,7 @@
         		
          </c:choose>   
         </div>
-      
+       
     </div>
 </div>
 <%@include file = "/WEB-INF/views/layout/footer.jsp" %>
