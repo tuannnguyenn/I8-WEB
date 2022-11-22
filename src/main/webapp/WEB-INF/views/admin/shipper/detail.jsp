@@ -84,18 +84,12 @@
 			</div>
 		</c:forEach>
 	</div>
-	<%
-	session.setMaxInactiveInterval(2);
-	%>
 
 	<script type="text/javascript">
-var Msg ='<%=session.getAttribute("getAlert")%>
-		';
-		if (Msg != "null") {
 			function display() {
 				document.getElementById("success").style.display = "block";
 			}
-		}
+		
 	</script>
 
 	<div class="popup" id="success">
