@@ -33,6 +33,7 @@ public class RegisterHomeController {
 			mav.addObject("listLaptop", homeServiceImpl.GetDataLaptop());
 			mav.addObject("listNew", homeServiceImpl.GetDataProductNew());
 			mav.addObject("listSale", homeServiceImpl.GetDataProductSale());
+			
 			return mav;
 		} else {
 			ModelAndView mav = new ModelAndView("register/login");

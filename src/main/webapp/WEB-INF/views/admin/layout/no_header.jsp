@@ -33,7 +33,7 @@
             <div id="container">
                 <div id="header-wp">
                     <div class="wp-inner clearfix">
-                        <a href="?page=list_post" title="" id="logo" class="fl-left">SHIPPER</a>
+                        <a href="/i8-web/shipper/order/list" title="" id="logo" class="fl-left">SHIPPER</a>
                         <div id="dropdown-user" class="dropdown dropdown-extended fl-right">
                             <button class="dropdown-toggle clearfix" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                 <div id="thumb-circle" class="fl-left">

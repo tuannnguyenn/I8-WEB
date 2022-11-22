@@ -38,13 +38,13 @@ $(document).ready(function () {
         });
         return filter;
     }
-     $(".common_selector").click(function () {
+     $(".common_selector").change(function () {
         filter_data();
     });
-    $("#common_selector").click(function(){
+    $("#common_selector").change(function(){
         filter_data();
     });
-    $(".common_selector_brand").click(function(){
+    $(".common_selector_brand").change(function(){
         filter_data();
     });
     
