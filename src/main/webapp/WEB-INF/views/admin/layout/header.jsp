@@ -1,5 +1,6 @@
 <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -21,6 +22,7 @@
         <link href="http://localhost:8080/i8-web/resources/adminassets/css/import/sidebar.css" rel="stylesheet">
         <link href="http://localhost:8080/i8-web/resources/adminassets/css/import/menu.css" rel="stylesheet">
         <link href="http://localhost:8080/i8-web/resources/adminassets/css/import/detail_order.css" rel="stylesheet">
+         <link href="http://localhost:8080/i8-web/resources/assets/css/import/popup.css" rel="stylesheet">
 
         <script src="http://localhost:8080/i8-web/resources/adminassets/js/jquery-2.2.4.min.js" type="text/javascript"></script>
         <script src="http://localhost:8080/i8-web/resources/adminassets/js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
@@ -34,17 +36,6 @@
                     <div class="wp-inner clearfix">
                         <a href="?page=list_post" title="" id="logo" class="fl-left">ADMIN</a>
                         <ul id="main-menu" class="fl-left">
-                            <li>
-                                <a href="/i8-web/admin/page/list" title="">Trang</a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="/i8-web/admin/page/create" title="">Thêm mới</a> 
-                                    </li>
-                                    <li>
-                                        <a href="/i8-web/admin/page/list" title="">Danh sách trang</a> 
-                                    </li>
-                                </ul>
-                            </li>
                             <li>
                                 <a href="/i8-web/admin/post/list" title="">Bài viết</a>
                                 <ul class="sub-menu">
@@ -79,14 +70,21 @@
                                     <li>
                                         <a href="/i8-web/admin/order/list" title="">Danh sách đơn hàng</a> 
                                     </li>
-                                    <li>
-                                        <a href="/i8-web/admin/order/list" title="">Danh sách khách hàng</a> 
-                                    </li>
+                                   
                                 </ul>
                             </li>
                             <li>
-                                <a href="/i8-web/admin/menu/list" title="">Menu</a>
+                                <a href="/i8-web/admin/slider/list" title="">Slider</a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="/i8-web/admin/slider/create" title="">Thêm mới</a> 
+                                    </li>
+                                    <li>
+                                        <a href="/i8-web/admin/slider/list" title="">Danh sách Slider</a> 
+                                    </li>
+                                </ul>
                             </li>
+                            
                         </ul>
                         <div id="dropdown-user" class="dropdown dropdown-extended fl-right">
                             <button class="dropdown-toggle clearfix" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -97,7 +95,7 @@
                             </button>
                             <ul class="dropdown-menu">
                                 <li><a href="?page=info_account" title="Thông tin cá nhân">Thông tin tài khoản</a></li>
-                                <li><a href="#" title="Thoát">Thoát</a></li>
+                                <li><a href="/i8-web/logout" title="Thoát">Thoát</a></li>
                             </ul>
                         </div>
                     </div>
