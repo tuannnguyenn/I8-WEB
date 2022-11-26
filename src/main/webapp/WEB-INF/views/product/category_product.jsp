@@ -131,31 +131,16 @@
 							</thead>
 							<tbody>
 								<tr>
-									<td><input class="common_selector_brand brand" type="radio" value="all" name="brand" checked></td>
+									<td><input type="radio" name="brand" checked></td>
 									<td>Tất cả</td>
 								</tr>
+								<c:forEach var="item" items="${ listBrand }">
 								<tr>
 									<td><input type="radio"
-										class="common_selector_brand brand" name="brand" value="Acer"></td>
-									<td>Acer</td>
+										class="common_selector_brand brand" name="brand" value="${ item }"></td>
+									<td>${ item }</td>
 								</tr>
-								<tr>
-									<td><input type="radio"
-										class="common_selector_brand brand" name="brand" value="Apple"></td>
-									<td>Apple</td>
-								</tr>
-								<tr>
-									<td><input type="radio"
-										class="common_selector_brand brand" name="brand"
-										value="Lenovo"></td>
-									<td>Lenovo</td>
-								</tr>
-								<tr>
-									<td><input type="radio"
-										class="common_selector_brand brand" name="brand"
-										value="Samsung"></td>
-									<td>Samsung</td>
-								</tr>
+								</c:forEach>
 							</tbody>
 						</table>
 					</form>

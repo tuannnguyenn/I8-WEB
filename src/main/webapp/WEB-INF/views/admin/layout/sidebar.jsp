@@ -62,5 +62,22 @@
                 </li>
             </ul>
         </li>
+        <li class="nav-item">
+            <a href="" title="" class="nav-link nav-toggle">
+                <span class="fa fa-cubes icon"></span>
+                <span class="title">Thống kê</span>
+            </a>
+            <ul class="sub-menu">
+                <li class="nav-item">
+                    <a href="/i8-web/admin/report/category" title="" class="nav-link">Thống kê sản phẩm theo danh mục</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/i8-web/admin/report/product" title="" class="nav-link">Thống kê doanh thu theo sản phẩm</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/i8-web/admin/report/month" title="" class="nav-link">Thống kê doanh thu theo tháng</a>
+                </li>
+            </ul>
+        </li>
     </ul>
 </div>

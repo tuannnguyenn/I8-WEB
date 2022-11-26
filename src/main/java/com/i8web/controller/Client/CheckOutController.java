@@ -66,6 +66,7 @@ public class CheckOutController {
 			item.setName(product.getName());
 			item.setPrice(product.getPrice_new());
 			item.setQuantity(1);
+			item.setCreated_at(java.time.LocalDate.now().toString());
 			item.setAmount(item.getPrice(),item.getQuantity());
 			cartService.add(item);
 		}

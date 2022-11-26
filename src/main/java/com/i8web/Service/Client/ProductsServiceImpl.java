@@ -26,7 +26,7 @@ public class ProductsServiceImpl implements IProductsService {
 		return productsModel.GetProductsById(id);
 	}
 
-	public List<Products> GetBrandById(int id) {
+	public List<String> GetBrandById(int id) {
 		return productsModel.GetBrandById(id);
 	}
 

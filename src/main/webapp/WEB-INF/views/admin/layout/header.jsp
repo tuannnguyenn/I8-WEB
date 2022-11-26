@@ -1,6 +1,5 @@
 <%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -23,11 +22,15 @@
         <link href="http://localhost:8080/i8-web/resources/adminassets/css/import/menu.css" rel="stylesheet">
         <link href="http://localhost:8080/i8-web/resources/adminassets/css/import/detail_order.css" rel="stylesheet">
          <link href="http://localhost:8080/i8-web/resources/assets/css/import/popup.css" rel="stylesheet">
+         
+         
 
         <script src="http://localhost:8080/i8-web/resources/adminassets/js/jquery-2.2.4.min.js" type="text/javascript"></script>
         <script src="http://localhost:8080/i8-web/resources/adminassets/js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
         <script src="http://localhost:8080/i8-web/resources/adminassets/js/plugins/ckeditor/ckeditor.js" type="text/javascript"></script>
         <script src="http://localhost:8080/i8-web/resources/adminassets/js/main.js" type="text/javascript"></script>
+        <script src="http://localhost:8080/i8-web/resources/adminassets/js/stats.js" type="text/javascript"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
     <body>
         <div id="site">
@@ -81,6 +84,20 @@
                                     </li>
                                     <li>
                                         <a href="/i8-web/admin/slider/list" title="">Danh sách Slider</a> 
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/i8-web/admin/report/product" title="">Thống kê</a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="/i8-web/admin/report/category" title="">Thống kê sản phẩm theo danh mục</a> 
+                                    </li>
+                                    <li>
+                                        <a href="/i8-web/admin/report/product" title="">Thống kê doanh thu theo sản phẩm</a> 
+                                    </li>
+                                    <li>
+                                        <a href="/i8-web/admin/report/month" title="">Thống kê doanh thu theo tháng</a> 
                                     </li>
                                 </ul>
                             </li>

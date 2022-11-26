@@ -52,10 +52,10 @@ public class ProductsModel {
 		return list;
 	}
 	
-	public List<Products> GetBrandById(int id) {
-		List<Products> list = new ArrayList<Products>();
-		String sql = "SELECT * FROM products";
-		list = _jdbcTemplate.query(sql, new MapperProducts());
+	public List<String> GetBrandById(int id) {
+		List<String> list = new ArrayList<String>();
+		String sql = "SELECT DISTINCT(`brand`) FROM `products` WHERE `product_id` =" + id;
+		list = _jdbcTemplate.queryForList(sql, String.class);
 		return list;
 	}
 	
