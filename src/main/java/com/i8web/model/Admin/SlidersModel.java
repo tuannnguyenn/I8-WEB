@@ -39,4 +39,5 @@ public class SlidersModel {
         String sql = "UPDATE sliders SET image = ?,created_at =? WHERE id = ?";
         _jdbcTemplate.update(sql,image,LocalDate.now().toString(),slider.getId());
     }
+    
 }

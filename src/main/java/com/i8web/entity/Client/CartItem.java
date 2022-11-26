@@ -9,6 +9,7 @@ public class CartItem {
 	private String name;
 	private String price;
 	private int quantity = 0;
+	private String created_at;
 	private String amount;
 	
 	public Integer getId() {
@@ -44,6 +45,12 @@ public class CartItem {
 	public String getAmount() {
 		return amount;
 	}
+	public String getCreated_at() {
+		return created_at;
+	}
+	public void setCreated_at(String created_at) {
+		this.created_at = created_at;
+	}
 	public void setAmount(String price, int quantity) {
 		Locale localeVN = new Locale("vi", "VN");
 	    NumberFormat currencyVN = NumberFormat.getInstance(localeVN);
@@ -55,5 +62,6 @@ public class CartItem {
 		String str= currencyVN.format(total);
 		this.amount = str + "Đ";
 	}
+
 
 }
