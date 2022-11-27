@@ -50,6 +50,7 @@ public class CheckOutServiceImpl implements ICheckOutService{
 				jdbcTemplate.update("INSERT INTO product_order(id_order, id_product, quantity,created_at,price)" 
 			+ "VALUES (?,?,?,?,?)",result,item.getId(),item.getQuantity(),item.getCreated_at(),Integer.parseInt(item.getPrice()) *item.getQuantity());
 				jdbcTemplate.update("update product_order set created_at = (select orders.created_at from orders where orders.id = ?)",result);
+				
 			}
 			
 		}catch (Exception e) {

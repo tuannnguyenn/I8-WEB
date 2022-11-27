@@ -54,6 +54,9 @@ public class Products {
 		NumberFormat currencyVN = NumberFormat.getInstance(localeVN);;
 		return currencyVN.format(test) + "Đ";
 	}
+	public String getPriceNewCheckout() {
+		return this.price_new;
+	}
 	public void setPrice_new(String price_new) {
 		this.price_new = price_new;
 	}

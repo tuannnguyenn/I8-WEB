@@ -53,7 +53,7 @@ public class CartController {
 			item.setId(product.getId());
 			item.setImage(product.getImage());
 			item.setName(product.getName());
-			item.setPrice(product.getPrice_new());
+			item.setPrice(product.getPriceNewCheckout());
 			item.setQuantity(1);
 			item.setAmount(item.getPrice(), item.getQuantity());
 			cartService.add(item);
@@ -72,7 +72,7 @@ public class CartController {
 			item.setId(product.getId());
 			item.setImage(product.getImage());
 			item.setName(product.getName());
-			item.setPrice(product.getPrice_new());
+			item.setPrice(product.getPriceNewCheckout());
 			item.setQuantity(Integer.parseInt(quantity));
 			item.setAmount(item.getPrice(), item.getQuantity());
 			cartService.add(item);
