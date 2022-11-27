@@ -1,5 +1,7 @@
 package com.i8web.controller.Client;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -62,9 +64,15 @@ public class RegisterHomeController {
 			ModelAndView mav = new ModelAndView("register/login");
 			return mav;
 		} else {
-			ModelAndView mav = new ModelAndView("admin/register/signup");
-			mav.addObject("isError", registerModel.errorMessageString);
+			ModelAndView mav = new ModelAndView("/register/signup");
+			mav.addObject("isError", "Tài khoản đã tồn tại!");
 			return mav;
 		}
+	}
+	
+	@RequestMapping(value = "/user/logout", method = RequestMethod.GET)
+	public String checkLogoutHome(HttpSession session) {
+		session.removeAttribute("userAccount");
+		return "redirect:/trang-chu";
 	}
 }

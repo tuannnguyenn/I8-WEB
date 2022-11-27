@@ -4,23 +4,6 @@
     <ul id="sidebar-menu">
         <li class="nav-item">
             <a href="" title="" class="nav-link nav-toggle">
-                <span class="fa fa-pencil-square-o icon"></span>
-                <span class="title">Bài viết</span>
-            </a>
-            <ul class="sub-menu">
-                <li class="nav-item">
-                    <a href="/i8-web/admin/post/create" title="" class="nav-link">Thêm mới</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/i8-web/admin/post/list" title="" class="nav-link">Danh sách bài viết</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/i8-web/admin/post/category/list" title="" class="nav-link">Danh mục bài viết</a>
-                </li>
-            </ul>
-        </li>
-        <li class="nav-item">
-            <a href="" title="" class="nav-link nav-toggle">
                 <span class="fa fa-product-hunt icon"></span>
                 <span class="title">Sản phẩm</span>
             </a>

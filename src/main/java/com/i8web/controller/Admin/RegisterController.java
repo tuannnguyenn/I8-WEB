@@ -111,7 +111,7 @@ public class RegisterController {
 			return mav;
 		} else {
 			ModelAndView mav = new ModelAndView("admin/register_shipper/signup");
-			mav.addObject("isError", signupModel.errorMessageString);
+			mav.addObject("isError", "Tài khoản đã tồn tại!");
 			return mav;
 		}
 	}

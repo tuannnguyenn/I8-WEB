@@ -40,20 +40,6 @@
                         <a href="?page=list_post" title="" id="logo" class="fl-left">ADMIN</a>
                         <ul id="main-menu" class="fl-left">
                             <li>
-                                <a href="/i8-web/admin/post/list" title="">Bài viết</a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="/i8-web/admin/post/create" title="">Thêm mới</a> 
-                                    </li>
-                                    <li>
-                                        <a href="/i8-web/admin/post/list" title="">Danh sách bài viết</a> 
-                                    </li>
-                                    <li>
-                                        <a href="/i8-web/admin/post/category/list" title="">Danh mục bài viết</a> 
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
                                 <a href="/i8-web/admin/product/list" title="">Sản phẩm</a>
                                 <ul class="sub-menu">
                                     <li>

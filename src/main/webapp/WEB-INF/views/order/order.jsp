@@ -45,7 +45,7 @@
 		                        <td>${ item.bill_total}</td>
 		                        <td>${ item.status}</td>
 		                        <td><a href="/i8-web/chi-tiet-don-hang/${item.id}">Chi tiết</a></td>
-		                        <td style="cursor: pointer;">Hủy</td>
+		                        <td style="cursor: pointer;"><a href="/i8-web/DeleteOrderClient/${item.id}" >Hủy</a></td>
 	                        </tr>
                         	</form>
 	                    </c:forEach>

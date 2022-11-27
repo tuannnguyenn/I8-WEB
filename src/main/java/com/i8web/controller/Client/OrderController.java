@@ -32,4 +32,9 @@ public class OrderController {
 		mav.addObject("productDetails", orderModel.getProductByOrderID(id));
       return mav;
    }
+   @RequestMapping(value = "DeleteOrderClient/{id}")
+   public String delete(@PathVariable int id,HttpServletRequest req) {
+	   orderModel.DeleteDataOrder(id);
+	   return "redirect:/thong-tin-don-hang";
+   }
 }

@@ -42,10 +42,10 @@
 
 		<!-- Login Form -->
 		<form action="/i8-web/login" method="post">
-			<input type="text" id="login" class="fadeIn second" name="name" placeholder="Tên Người Dùng"> 
-			<input type="text" id="login" class="fadeIn second" name="email" placeholder="Email"> 
-			<input type="text" id="login" class="fadeIn second" name="username" placeholder="Tên Tài Khoản"> 
-			<input type="password" id="password" class="fadeIn third" name="password" placeholder="Mật Khẩu">
+			<input type="text" id="login" class="fadeIn second" name="name" placeholder="Tên Người Dùng" required> 
+			<input type="email" id="login" class="fadeIn second" name="email" placeholder="Email"> 
+			<input type="text" id="login" class="fadeIn second" name="username" pattern="[a-z, 1-9]{6,12}" required title="Tên tài khoản phải có ít nhất 6-12 ký tự" placeholder="Tên Tài Khoản"> 
+			<input type="password" id="password" class="fadeIn third" name="password" pattern="[a-z, 1-9]{8,20}" required title="Mật khẩu phải có ít nhất 8-20 ký tự, bao gồm cả số" placeholder="Mật Khẩu">
 			<input type="submit" class="fadeIn fourth" value="Sign In">
 		</form>
 		<c:if test="${ isError != ''}">
