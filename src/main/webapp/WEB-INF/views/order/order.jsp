@@ -45,7 +45,21 @@
 		                        <td>${ item.bill_total}</td>
 		                        <td>${ item.status}</td>
 		                        <td><a href="/i8-web/chi-tiet-don-hang/${item.id}">Chi tiết</a></td>
-		                        <td style="cursor: pointer;"><a href="/i8-web/DeleteOrderClient/${item.id}" >Hủy</a></td>
+		                        <c:choose>	
+		                        		<c:when test="${item.status == 'Đã hủy'}">
+											 <td style="cursor: pointer;">Đơn hàng đã được hủy</td>
+										</c:when>
+										<c:when test="${item.status == 'Đã giao'}">
+											 <td style="cursor: pointer;">Không thể hủy</td>
+										</c:when>
+										<c:when test="${item.status != 'Đã giao'}">
+											 <td style="cursor: pointer;"><a href="/i8-web/ChangeStatusOrder/${item.id}" >Hủy</a></td>
+										</c:when>
+										
+									
+										
+									</c:choose>
+		                       
 	                        </tr>
                         	</form>
 	                    </c:forEach>

@@ -57,4 +57,10 @@ public class OrderModel {
 		String sql = "SELECT * FROM orders WHERE username = '" + username + "'";
 		list = _jdbcTemplate.query(sql, new MapperOrders());
 		return list;
-	}}
+	}
+	public void ChangeStatusOrderById(int id) {
+		String sql = "UPDATE orders SET status= " + "'Đã hủy'"+" WHERE id = ?";
+		_jdbcTemplate.update(sql,id);
+	}
+}
+	
