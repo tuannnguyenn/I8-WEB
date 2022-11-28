@@ -93,6 +93,7 @@
 									</c:when>
 									<c:otherwise>
 										<li><a href="/i8-web/login" title="">Đăng nhập</a></li>
+										<li><a href="/i8-web/signup" title="">Đăng ký</a></li>
 									</c:otherwise>
 								</c:choose>
 							</ul>

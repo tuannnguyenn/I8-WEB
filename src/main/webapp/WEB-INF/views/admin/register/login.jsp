@@ -51,10 +51,5 @@
 			<h1 class="error-message-login">Đăng nhập thất bại!</h1>
 		</c:if>
 
-		<!-- Remind Passowrd -->
-		<div id="formFooter">
-			<a class="underlineHover" href="/i8-web/admin/signup">Chưa có tài khoản</a>
-		</div>
-
 	</div>
 </div>
