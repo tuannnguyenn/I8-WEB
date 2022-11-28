@@ -44,8 +44,8 @@
 		<form action="/i8-web/shipper/sign" method="post">
 			<input type="text" id="login" class="fadeIn second" name="name" placeholder="Tên Người Dùng"> 
 			<input type="email" id="login" class="fadeIn second" name="email" required placeholder="Email"> 
-			<input type="text" id="login" class="fadeIn second" name="username" pattern="{6,1000}" required title="Tên tài khoản phải có ít nhất 6 ký tự" placeholder="Tên Tài Khoản"> 
-			<input type="password" id="password" class="fadeIn third" name="password" pattern="{8,1000}" required title="Mật khẩu phải có ít nhất 8 ký tự" placeholder="Mật Khẩu">
+			<input type="text" id="login" class="fadeIn second" name="username" pattern=".{6,}" required title="Tên tài khoản phải có ít nhất 6 ký tự" placeholder="Tên Tài Khoản"> 
+			<input type="password" id="password" class="fadeIn third" name="password" pattern=".{8,}" required title="Mật khẩu phải có ít nhất 8 ký tự" placeholder="Mật Khẩu">
 			<input type="submit" class="fadeIn fourth" value="Sign In">
 		</form>
 		<c:if test="${ isError != ''}">
