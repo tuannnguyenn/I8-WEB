@@ -37,7 +37,7 @@
 
 		<!-- Icon -->
 		<div class="fadeIn first">
-			<img src="/i8-web/resources/assets/images/logo.png">
+			<img src="/i8-web/resources/assets/images/shipperlogo.png">
 		</div>
 
 		<!-- Login Form -->
