@@ -50,11 +50,12 @@ public class OrderModel {
 	public void DeleteDataOrder(int id) {
 		String sql = "DELETE FROM orders WHERE id = " + id;
 		_jdbcTemplate.update(sql);
+		_jdbcTemplate.update("DELETE FROM product_order Where id_order = " + id);
 	}
 	
 	public List<Order> getOrderByUsername(String username) {
 		List<Order> list = new ArrayList<Order>();
-		String sql = "SELECT * FROM orders WHERE username = '" + username + "'";
+		String sql = "SELECT * FROM orders WHERE username = '" + username + "'" + " ORDER BY id DESC";
 		list = _jdbcTemplate.query(sql, new MapperOrders());
 		return list;
 	}
