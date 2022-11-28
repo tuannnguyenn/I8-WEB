@@ -39,7 +39,7 @@
 	                        <p class="price">${item.price_new }</p>
 	                        <div id="num-order-wp">
 	                            <a title="" id="minus"><i class="fa fa-minus"></i></a>
-	                            <input type="text" disabled name="num-order" value="1" id="num-order" >
+	                            <input type="text" name="num-order" value="1" id="num-order" >
 	                            <a title="" id="plus"><i class="fa fa-plus"></i></a>
 	                        </div>
 	                        <div class="place-order-wp clearfix" style="display: flex;">

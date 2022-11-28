@@ -22,7 +22,6 @@
 						<form:form method="POST" action="" modelAttribute="order">
 							<form:select name="status" path="status">
 								<option value="Chờ lấy hàng">Chờ lấy hàng</option>
-								<option value='Chờ lấy hàng'>Chờ lấy hàng</option>
 								<option value='Đang giao'>Đang giao</option>
 								<option value='Đã giao'>Đã giao</option>
 								<option value='Đã hủy'>Đã hủy</option>
@@ -84,32 +83,3 @@
 			</div>
 		</c:forEach>
 	</div>
-	<%
-	session.setMaxInactiveInterval(2);
-	%>
-
-	<script type="text/javascript">
-var Msg ='<%=session.getAttribute("getAlert")%>
-		';
-		if (Msg != "null") {
-			function display() {
-				document.getElementById("success").style.display = "block";
-			}
-		}
-	</script>
-
-	<div class="popup" id="success">
-		<div class="popup-content">
-			<div class="imgbox">
-				<img src=<c:url value='/resources/assets/images/checked.png'/>
-					alt="" class="img-popup">
-			</div>
-			<div class="popup-title">
-				<h3>Đã cập nhật thành công!</h3>
-			</div>
-		</div>
-	</div>
-</div>
-<script type="text/javascript">
-	window.onload = display();
-</script>

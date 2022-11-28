@@ -87,10 +87,10 @@ public class RegisterController {
 	}
 	
 	@RequestMapping(value = "/shipper/login", method = RequestMethod.POST)
-	public String checkLoginShipper(@RequestParam("username") String username,
+	public String checkLoginShipper(@RequestParam("username") String username, HttpSession session,
 			@RequestParam("password") String password) {
 		if (shipperModel.checkDataLogin(username, password)) {
-			sessionService.set("shipperAccount", username);
+			session.setAttribute("shipperAccount", username);
 			return "redirect:/shipper/order/list";
 		} else {
 			return "redirect:/shipper";
@@ -140,7 +140,6 @@ public class RegisterController {
 	
 	@RequestMapping(value = "/shipper/order/detail/{id}", method = RequestMethod.POST)
 	public String postDetail(@PathVariable int id,@ModelAttribute("order") Order order,HttpServletRequest req,HttpSession session) {
-		session.setAttribute("getAlert", "Yes");
 		orderModel.UpdateDataOrder(order);
 		return "redirect:/shipper/order/detail/{id}";
 	}
