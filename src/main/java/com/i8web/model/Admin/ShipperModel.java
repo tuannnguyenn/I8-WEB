@@ -38,7 +38,6 @@ public class ShipperModel{
 			return false;
 		}
 	}
-
 	public void getError(String errorStr) {
 		errorMessageString = errorStr;
 	}

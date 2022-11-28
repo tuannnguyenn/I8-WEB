@@ -39,6 +39,17 @@
                     <div class="wp-inner clearfix">
                         <a href="?page=list_post" title="" id="logo" class="fl-left">ADMIN</a>
                         <ul id="main-menu" class="fl-left">
+                         <li>
+                                <a href="/i8-web/admin/user/list" title="">Quản lý tài khoản</a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="/i8-web/admin/user/list" title="">Tài khoản Khách hàng</a> 
+                                    </li>
+                                    <li>
+                                        <a href="/i8-web/admin/shipper/list" title="">Tài khoản Shipper</a> 
+                                    </li>
+                                </ul>
+                            </li>
                             <li>
                                 <a href="/i8-web/admin/product/list" title="">Sản phẩm</a>
                                 <ul class="sub-menu">
@@ -73,6 +84,8 @@
                                     </li>
                                 </ul>
                             </li>
+                            <li>
+                       
                             <li>
                                 <a href="/i8-web/admin/report/product" title="">Thống kê</a>
                                 <ul class="sub-menu">

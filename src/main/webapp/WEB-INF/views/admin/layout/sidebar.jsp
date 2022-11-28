@@ -2,6 +2,20 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <div id="sidebar" class="fl-left">
     <ul id="sidebar-menu">
+     <li class="nav-item">
+            <a href="" title="" class="nav-link nav-toggle">
+                <span class="fa fa-database icon"></span>
+                <span class="title">Quản lý tài khoản</span>
+            </a>
+            <ul class="sub-menu">
+                <li class="nav-item">
+                    <a href="/i8-web/admin/user/líst" title="" class="nav-link">Tài khoản khách hàng</a>
+                </li>
+            	<li class="nav-item">
+                    <a href="/i8-web/admin/shipper/líst" title="" class="nav-link">Tài khoản shipper</a>
+                </li>
+            </ul>
+        </li>
         <li class="nav-item">
             <a href="" title="" class="nav-link nav-toggle">
                 <span class="fa fa-product-hunt icon"></span>
