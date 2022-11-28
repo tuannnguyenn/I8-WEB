@@ -33,21 +33,21 @@
                     <div class="form-row clearfix">
                         <div class="form-col fl-left">
                             <label for="fullname">Họ tên*</label>
-                            <input type="text" name="fullname" id="fullname" >
+                            <input required type="text" name="fullname" id="fullname" >
                         </div>
                         <div class="form-col fl-right">
                             <label for="email">Email*</label>
-                            <input type="email" name="email" id="email">
+                            <input required type="email" name="email" id="email">
                         </div>
                     </div>
                     <div class="form-row clearfix">
                         <div class="form-col fl-left">
                             <label for="address">Địa chỉ*</label>
-                            <input type="text" name="address" id="address">
+                            <input required type="text" name="address" id="address">
                         </div>
                         <div class="form-col fl-right">
                             <label for="phone">Số điện thoại*</label>
-                            <input type="tel" name="phone" id="phone" pattern="[0-9]{5,20}">
+                            <input required type="tel" name="phone" id="phone" pattern="[0-9]{5,20}">
                         </div>
                     </div>
                     <div class="form-row">
@@ -95,7 +95,7 @@
                     </ul>
                 </div>
   				<div class="place-order-wp clearfix">
-  				<input type="submit" id="order-now" onclick ="display()" value="Đặt hàng">
+  				<input type="submit" id="order-now"  value="Đặt hàng">
                 </div>
                 <div class="popup" id="success">
 									<div class="popup-content">

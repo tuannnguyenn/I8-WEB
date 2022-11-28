@@ -9,10 +9,10 @@
             </a>
             <ul class="sub-menu">
                 <li class="nav-item">
-                    <a href="/i8-web/admin/user/líst" title="" class="nav-link">Tài khoản khách hàng</a>
+                    <a href="/i8-web/admin/user/list" title="" class="nav-link">Tài khoản khách hàng</a>
                 </li>
             	<li class="nav-item">
-                    <a href="/i8-web/admin/shipper/líst" title="" class="nav-link">Tài khoản shipper</a>
+                    <a href="/i8-web/admin/shipper/list" title="" class="nav-link">Tài khoản shipper</a>
                 </li>
             </ul>
         </li>
